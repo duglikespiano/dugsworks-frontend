@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import RootAll from './RootAll';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import RootEn from './en/components/RootEn';
+import HomeEn from './en/components/HomeEn';
+
+import RootKo from './ko/components/RootKo';
+import HomeKo from './ko/components/HomeKo';
+
+import RootJa from './ja/components/RootJa';
+import HomeJa from './ja/components/HomeJa';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <RootAll />,
+	},
+	{ path: '/en', element: <RootEn />, children: [{ path: '', element: <HomeEn /> }] },
+	{ path: '/ko', element: <RootKo />, children: [{ path: '', element: <HomeKo /> }] },
+	{ path: '/ja', element: <RootJa />, children: [{ path: '', element: <HomeJa /> }] },
+]);
+
+export default function App() {
+	return <RouterProvider router={router} />;
 }
-
-export default App;
