@@ -1,15 +1,14 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.css';
 import RootAll from './RootAll';
 
-import RootEn from './en/components/RootEn';
-import HomeEn from './en/components/HomeEn';
+import RootEn from './components/en/RootEn';
+import HomeEn from './components/en/HomeEn/HomeEn';
 
-import RootKo from './ko/components/RootKo';
-import HomeKo from './ko/components/HomeKo';
+import RootKo from './components/ko/RootKo';
+import HomeKo from './components/ko/HomeKo/HomeKo';
 
-import RootJa from './ja/components/RootJa';
-import HomeJa from './ja/components/HomeJa';
+import RootJa from './components/ja/RootJa';
+import HomeJa from './components/ja/HomeJa/HomeJa';
 
 const router = createBrowserRouter([
 	{

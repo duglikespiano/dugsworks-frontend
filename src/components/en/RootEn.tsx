@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { Fragment } from 'react';
-import HeaderEn from './HeaderEn';
-import NavEn from './NavEn';
-import FooterEn from './FooterEn';
+import HeaderEn from './shared/HeaderEn';
+import NavEn from './shared/NavEn/NavEn';
+import FooterEn from './shared/FooterEn';
 
 export default function MainJp() {
 	return (

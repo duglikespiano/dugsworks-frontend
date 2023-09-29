@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { Fragment } from 'react';
-import HeaderKo from './HeaderKo';
-import NavKo from './NavKo';
-import FooterKo from './FooterKo';
+import HeaderKo from './shared/HeaderKo';
+import NavKo from './shared/NavKo/NavKo';
+import FooterKo from './shared/FooterKo';
 
 export default function MainJp() {
 	return (
