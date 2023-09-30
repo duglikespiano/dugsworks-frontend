@@ -1,0 +1,18 @@
+.footer-links {
+	display: flex;
+	height: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	gap: 2rem;
+}
+
+.footer-link {
+	font-size: 1rem;
+	text-wrap: nowrap;
+}
+
+.footer-link:hover,
+.footer-link:active {
+	cursor: pointer;
+}
