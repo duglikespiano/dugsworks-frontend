@@ -1,6 +1,5 @@
 .nav-links {
 	display: flex;
-	margin-right: 4rem;
 	align-items: center;
 	list-style-type: none;
 }
@@ -8,6 +7,7 @@
 .nav-link {
 	margin-left: 4rem;
 	font-size: 2rem;
+	text-wrap: nowrap;
 }
 
 .nav-link:hover,
