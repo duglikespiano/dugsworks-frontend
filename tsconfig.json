@@ -16,5 +16,5 @@
 		"noEmit": true,
 		"jsx": "react-jsx"
 	},
-	"include": ["src", "ja/shared", "ja/shared/FooterJa.tsx", "ko/shared"]
+	"include": ["src"]
 }

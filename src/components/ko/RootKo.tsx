@@ -2,13 +2,16 @@ import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import HeaderKo from './shared/HeaderKo';
 import FooterKo from './shared/FooterKo';
+import styles from './RootKo.module.css';
 
 export default function MainJp() {
 	return (
 		<Fragment>
-			<HeaderKo />
-			<Outlet />
-			<FooterKo />
+			<div className={styles['font-ko']}>
+				<HeaderKo />
+				<Outlet />
+				<FooterKo />
+			</div>
 		</Fragment>
 	);
 }

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-export default function FooterUs() {
+export default function FooterEn() {
 	return (
 		<Fragment>
 			<ul>
