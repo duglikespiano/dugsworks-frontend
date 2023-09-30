@@ -1,4 +1,13 @@
 import { Fragment } from 'react';
 export default function NavEn() {
-	return <Fragment>영어네브바</Fragment>;
+	return (
+		<Fragment>
+			<ul>
+				<li>About</li>
+				<li>Projects</li>
+				<li>Contact</li>
+				<li>Guestbook</li>
+			</ul>
+		</Fragment>
+	);
 }

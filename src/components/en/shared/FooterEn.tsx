@@ -1,4 +1,13 @@
 import { Fragment } from 'react';
 export default function FooterUs() {
-	return <Fragment>영어푸터</Fragment>;
+	return (
+		<Fragment>
+			<ul>
+				<li>About</li>
+				<li>Projects</li>
+				<li>Contact</li>
+				<li>Guestbook</li>
+			</ul>
+		</Fragment>
+	);
 }

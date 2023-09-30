@@ -1,4 +1,11 @@
 import { Fragment } from 'react';
+import NavEn from './NavEn/NavEn';
+
 export default function HeaderEn() {
-	return <Fragment>영어헤더</Fragment>;
+	return (
+		<Fragment>
+			Dug's Works
+			<NavEn />
+		</Fragment>
+	);
 }

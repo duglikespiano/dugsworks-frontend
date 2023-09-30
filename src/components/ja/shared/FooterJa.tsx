@@ -1,4 +1,13 @@
 import { Fragment } from 'react';
 export default function FooterJa() {
-	return <Fragment>일본어푸터</Fragment>;
+	return (
+		<Fragment>
+			<ul>
+				<li>紹介</li>
+				<li>プロジェクト</li>
+				<li>問い合わせ</li>
+				<li>芳名録</li>
+			</ul>
+		</Fragment>
+	);
 }

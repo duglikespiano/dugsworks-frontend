@@ -1,4 +1,10 @@
 import { Fragment } from 'react';
+import NavJa from './NavJa/NavJa';
 export default function HeaderJa() {
-	return <Fragment>일본어헤더</Fragment>;
+	return (
+		<Fragment>
+			Dug's Works
+			<NavJa />
+		</Fragment>
+	);
 }
