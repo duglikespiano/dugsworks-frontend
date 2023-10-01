@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+
+.language-selector-box-ko {
+	text-wrap: nowrap;
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.language-selector-ko {
+	text-decoration: none;
+	color: $font-color-dark;
+}
+
+.language-selector-ko:hover,
+.language-selector-ko:active {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}

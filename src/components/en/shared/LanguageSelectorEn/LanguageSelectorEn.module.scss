@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+
+.language-selector-box-en {
+	text-wrap: nowrap;
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.language-selector-en {
+	text-decoration: none;
+	color: $font-color-dark;
+}
+
+.language-selector-en:hover,
+.language-selector-en:active {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}

@@ -4,7 +4,6 @@
 	height: 6rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	padding-left: 3rem;
 	padding-right: 3rem;
 	margin-bottom: 5rem;
@@ -14,6 +13,7 @@
 	font-size: 3rem;
 	text-wrap: nowrap;
 	text-decoration: none;
+	flex-grow: 1;
 }
 
 .page-title:visited,

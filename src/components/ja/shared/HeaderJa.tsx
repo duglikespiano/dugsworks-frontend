@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import NavJa from './NavJa/NavJa';
+import LanguageSelectorJa from './LanguageSelectorJa/LanguageSelectorJa';
 import styles from './HeaderJa.module.scss';
 
 export default function HeaderJa() {
@@ -10,9 +11,8 @@ export default function HeaderJa() {
 				<Link className={styles['page-title']} to={'/ja'}>
 					Dug's Works
 				</Link>
-				<nav>
-					<NavJa />
-				</nav>
+				<NavJa />
+				<LanguageSelectorJa />
 			</header>
 		</Fragment>
 	);

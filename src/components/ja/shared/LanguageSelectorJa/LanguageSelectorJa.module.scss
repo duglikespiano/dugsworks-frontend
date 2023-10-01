@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+
+.language-selector-box-ja {
+	text-wrap: nowrap;
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.language-selector-ja {
+	text-decoration: none;
+	color: $font-color-dark;
+}
+
+.language-selector-ja:hover,
+.language-selector-ja:active {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}

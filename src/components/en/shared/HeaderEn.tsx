@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import NavEn from './NavEn/NavEn';
+import LanguageSelectorEn from './LanguageSelectorEn/LanguageSelectorEn';
 import styles from './HeaderEn.module.scss';
 
 export default function HeaderEn() {
@@ -10,9 +11,8 @@ export default function HeaderEn() {
 				<Link className={styles['page-title']} to={'/en'}>
 					Dug's Works
 				</Link>
-				<nav>
-					<NavEn />
-				</nav>
+				<NavEn />
+				<LanguageSelectorEn />
 			</header>
 		</Fragment>
 	);

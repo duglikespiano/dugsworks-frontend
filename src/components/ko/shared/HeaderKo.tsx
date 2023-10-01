@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import NavKo from './NavKo/NavKo';
+import LanguageSelectorKo from './LanguageSelectorKo/LanguageSelectorKo';
 import styles from './HeaderKo.module.scss';
 
 export default function HeaderKo() {
@@ -10,9 +11,8 @@ export default function HeaderKo() {
 				<Link className={styles['page-title']} to={'/ko'}>
 					Dug's Works
 				</Link>
-				<nav>
-					<NavKo />
-				</nav>
+				<NavKo />
+				<LanguageSelectorKo />
 			</header>
 		</Fragment>
 	);
