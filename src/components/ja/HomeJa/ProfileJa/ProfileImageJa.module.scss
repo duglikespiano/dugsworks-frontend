@@ -1,6 +1,10 @@
+$image-size: 25rem;
+
 .home-profile-image-cropper-ja {
-	width: 25rem;
-	height: 25rem;
+	width: $image-size;
+	height: $image-size;
+	min-width: $image-size;
+	max-height: $image-size;
 	overflow: hidden;
 	border-radius: 50%;
 }
