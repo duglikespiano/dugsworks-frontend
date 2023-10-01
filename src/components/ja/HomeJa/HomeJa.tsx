@@ -1,5 +1,15 @@
 import { Fragment } from 'react';
+import ProfileImageJa from './ProfileJa/ProfileImageJa';
+import ProfileTextJa from './ProfileJa/ProfileTextJa';
+import styles from './HomeJa.module.scss';
 
 export default function HomeJa() {
-	return <Fragment>일본어용 홈페이지</Fragment>;
+	return (
+		<Fragment>
+			<div className={styles['home-profile-ja']}>
+				<ProfileImageJa />
+				<ProfileTextJa />
+			</div>
+		</Fragment>
+	);
 }

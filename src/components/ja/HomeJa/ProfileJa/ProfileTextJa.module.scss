@@ -1,0 +1,54 @@
+@import '../../../../variables.scss';
+$icons-width: 2.5rem;
+
+.home-profile-texts-icons-box-ja {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1rem;
+}
+
+.home-profile-texts-box-ja {
+	text-align: center;
+}
+
+.home-profile-hi-ja {
+	font-size: 2rem;
+	font-weight: 400;
+	padding-bottom: 2rem;
+}
+
+.home-profile-name-ja {
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+.home-profile-furigana-ja {
+	font-size: 1rem;
+	padding-bottom: 2rem;
+	text-align: left;
+}
+
+.home-profile-title-ja {
+	font-size: 3rem;
+	font-weight: 500;
+}
+
+.home-profile-aim-ja {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-align: right;
+	padding-bottom: 2rem;
+}
+
+.home-iconbox-ja {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.home-iconbox-icon-ja {
+	width: $icons-width;
+	height: $icons-width;
+	color: $font-color-dark;
+	cursor: pointer;
+}

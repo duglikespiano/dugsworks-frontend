@@ -1,0 +1,49 @@
+@import '../../../../variables.scss';
+$icons-width: 2.5rem;
+
+.home-profile-texts-icons-box-en {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1rem;
+}
+
+.home-profile-texts-box-en {
+	text-align: center;
+}
+
+.home-profile-hi-en {
+	font-size: 2rem;
+	font-weight: 400;
+	padding-bottom: 2rem;
+}
+
+.home-profile-name-en {
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+.home-profile-title-en {
+	font-size: 3rem;
+	font-weight: 500;
+	padding-bottom: 2rem;
+}
+
+.home-profile-aim-en {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-align: right;
+	padding-bottom: 2rem;
+}
+
+.home-iconbox-en {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.home-iconbox-icon-en {
+	width: $icons-width;
+	height: $icons-width;
+	color: $font-color-dark;
+	cursor: pointer;
+}
