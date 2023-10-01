@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import styles from './ProfileImageKo.module.scss';
 import profileImage from '../../../../images/profile-image.jpg';
 
-export default function ProfileEn() {
+export default function ProfileImageKo() {
 	return (
 		<Fragment>
 			<div className={styles['home-profile-image-cropper-ko']}>

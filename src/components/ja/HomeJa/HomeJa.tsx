@@ -1,15 +1,10 @@
 import { Fragment } from 'react';
-import ProfileImageJa from './ProfileJa/ProfileImageJa';
-import ProfileTextJa from './ProfileJa/ProfileTextJa';
-import styles from './HomeJa.module.scss';
+import ProfileJa from './ProfileJa/ProfileJa';
 
 export default function HomeJa() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-ja']}>
-				<ProfileImageJa />
-				<ProfileTextJa />
-			</div>
+			<ProfileJa />
 		</Fragment>
 	);
 }

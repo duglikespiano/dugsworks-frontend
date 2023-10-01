@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './ProfileTextEn.module.scss';
 import { PiInstagramLogo, PiGithubLogo } from 'react-icons/pi';
 
-export default function ProfileEn() {
+export default function ProfileTextEn() {
 	return (
 		<Fragment>
 			<div className={styles['home-profile-texts-icons-box-en']}>

@@ -1,15 +1,12 @@
 import { Fragment } from 'react';
-import ProfileImageEn from './ProfileEn/ProfileImageEn';
-import ProfileTextEn from './ProfileEn/ProfileTextEn';
-import styles from './HomeEn.module.scss';
+import ProfileEn from './ProfileEn/ProfileEn';
+import CharacteristicEn from './CharacteristicEn/CharacteristicEn';
 
 export default function HomeEn() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-en']}>
-				<ProfileImageEn />
-				<ProfileTextEn />
-			</div>
+			<ProfileEn />
+			<CharacteristicEn />
 		</Fragment>
 	);
 }
