@@ -1,0 +1,34 @@
+$image-size-height: 30rem;
+$image-size-width: calc($image-size-height * 4 / 3);
+
+@mixin characteristic-box-ko {
+	display: flex;
+	width: 80rem;
+	height: $image-size-height;
+	margin-bottom: 1.5rem;
+}
+
+.characteristic-box-left-ko {
+	@include characteristic-box-ko;
+	float: left;
+}
+
+.characteristic-box-right-ko {
+	@include characteristic-box-ko;
+	float: right;
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.characteristic-image-cropper-ko {
+	width: $image-size-width;
+	min-width: $image-size-width;
+	height: $image-size-height;
+	max-height: $image-size-height;
+	overflow: hidden;
+}
+
+.characteristic-picture {
+	width: 100%;
+	height: 100%;
+}
