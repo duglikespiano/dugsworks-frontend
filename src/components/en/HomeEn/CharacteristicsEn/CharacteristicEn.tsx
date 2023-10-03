@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styles from './CharacteristicEn.module.scss';
-import CharacteristicBox from './CharacteristicBox/CharacteristicBox';
+import CharacteristicBoxEn from './CharacteristicBoxEn/CharacteristicBoxEn';
 import turtleImageURL from '../../../../images/turtle-image.jpg';
 import theGoldenGateBridgeImageURL from '../../../../images/the-golden-gate-bridge-image.jpg';
 import cloversImageURL from '../../../../images/clovers-image.jpg';
@@ -40,9 +40,9 @@ export default function CharacteristicEn() {
 	return (
 		<Fragment>
 			<div className={styles['characteristics-boxes-en']}>
-				<CharacteristicBox info={turtleInfo} />
-				<CharacteristicBox info={theGoldenGateBridgeInfo} />
-				<CharacteristicBox info={cloversInfo} />
+				<CharacteristicBoxEn info={turtleInfo} />
+				<CharacteristicBoxEn info={theGoldenGateBridgeInfo} />
+				<CharacteristicBoxEn info={cloversInfo} />
 				<div style={{ clear: 'both' }} />
 			</div>
 		</Fragment>

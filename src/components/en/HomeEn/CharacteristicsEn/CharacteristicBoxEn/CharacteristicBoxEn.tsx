@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import CharacteristicTextEn from './CharacteristicTextEn';
-import styles from './CharacteristicBox.module.scss';
+import styles from './CharacteristicBoxEn.module.scss';
 
 export interface CharacteristicBoxProps {
 	info: {
@@ -13,7 +13,7 @@ export interface CharacteristicBoxProps {
 	};
 }
 
-export default function CharacteristicBox(props: CharacteristicBoxProps) {
+export default function CharacteristicBoxEn(props: CharacteristicBoxProps) {
 	return (
 		<Fragment>
 			<div className={styles[`characteristic-box-${props.info.boxSide}-en`]}>
