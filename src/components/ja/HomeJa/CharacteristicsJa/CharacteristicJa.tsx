@@ -8,7 +8,7 @@ import cloversImageURL from '../../../../images/clovers-image.jpg';
 const turtleInfo = {
 	imageUrl: turtleImageURL,
 	imageAlt: 'turtle',
-	keyword: '絶対に諦めない',
+	keyword: 'カメ',
 	title: '私は諦めないカメです',
 	contents: ['ウサギのみたいに早いではないんですが', '絶対に諦めません', '最後まど努力して目標を遂げます'],
 	boxSide: 'left',
@@ -26,7 +26,7 @@ const theGoldenGateBridgeInfo = {
 const cloversInfo = {
 	imageUrl: cloversImageURL,
 	imageAlt: 'clovers',
-	keyword: 'たゆまぬ努力',
+	keyword: '努力',
 	title: '私は毎日成長します',
 	contents: ['私はたゆまぬ努力の力を信じています', '今はジュニア開発者ですが', '将来に必ずウェブ専門家になります'],
 	boxSide: 'left',

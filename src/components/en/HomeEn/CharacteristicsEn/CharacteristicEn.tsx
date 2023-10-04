@@ -8,7 +8,7 @@ import cloversImageURL from '../../../../images/clovers-image.jpg';
 const turtleInfo = {
 	imageUrl: turtleImageURL,
 	imageAlt: 'turtle',
-	keyword: 'Never give up',
+	keyword: 'Turtle',
 	title: 'I am a turtle who never stops',
 	contents: ['Although I am not quick like a rabbit', 'Nobody can stop me', 'I will achieve a goal in the end'],
 	boxSide: 'left',
@@ -17,7 +17,7 @@ const turtleInfo = {
 const theGoldenGateBridgeInfo = {
 	imageUrl: theGoldenGateBridgeImageURL,
 	imageAlt: 'theGoldenGateBridge',
-	keyword: 'Always dream  ',
+	keyword: 'Dream',
 	title: 'I always dream',
 	contents: [
 		'My dream is becoming a fullstack engineer',
@@ -30,7 +30,7 @@ const theGoldenGateBridgeInfo = {
 const cloversInfo = {
 	imageUrl: cloversImageURL,
 	imageAlt: 'clovers',
-	keyword: 'Steady growth',
+	keyword: 'Effort',
 	title: 'I grow everyday',
 	contents: ["I believe in everyday's discipline", "I'm a junior developer now", 'But I will be an web expert someday'],
 	boxSide: 'left',

@@ -8,11 +8,12 @@
 
 .language-selector-en {
 	text-decoration: none;
-	color: $font-color-dark;
+	color: $font-color-main-dark;
 }
 
 .language-selector-en:hover,
 .language-selector-en:active {
+	color: $font-color-emphasize-dark;
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
 }

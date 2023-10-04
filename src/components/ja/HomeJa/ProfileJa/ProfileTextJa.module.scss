@@ -14,12 +14,14 @@ $icons-width: 2.5rem;
 }
 
 .home-profile-hi-ja {
+	color: $font-color-sub1-dark;
 	font-size: 2rem;
 	font-weight: 400;
 	padding-bottom: 2rem;
 }
 
 .home-profile-name-ja {
+	color: $font-color-emphasize-dark;
 	font-size: 4rem;
 	font-weight: 900;
 }
@@ -31,6 +33,7 @@ $icons-width: 2.5rem;
 }
 
 .home-profile-title-ja {
+	color: $font-color-sub2-dark;
 	font-size: 3rem;
 	font-weight: 500;
 }
@@ -50,6 +53,6 @@ $icons-width: 2.5rem;
 .home-iconbox-icon-ja {
 	width: $icons-width;
 	height: $icons-width;
-	color: $font-color-dark;
+	color: $font-color-emphasize-dark;
 	cursor: pointer;
 }

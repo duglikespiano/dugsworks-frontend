@@ -17,17 +17,20 @@ $icons-width: 2.5rem;
 	font-size: 2rem;
 	font-weight: 400;
 	padding-bottom: 2rem;
+	color: $font-color-sub1-dark;
 }
 
 .home-profile-name-en {
 	font-size: 4rem;
 	font-weight: 900;
+	color: $font-color-emphasize-dark;
 }
 
 .home-profile-title-en {
 	font-size: 3rem;
 	font-weight: 500;
 	padding-bottom: 2rem;
+	color: $font-color-sub2-dark;
 }
 
 .home-profile-aim-en {
@@ -45,6 +48,6 @@ $icons-width: 2.5rem;
 .home-iconbox-icon-en {
 	width: $icons-width;
 	height: $icons-width;
-	color: $font-color-dark;
+	color: $font-color-emphasize-dark;
 	cursor: pointer;
 }
