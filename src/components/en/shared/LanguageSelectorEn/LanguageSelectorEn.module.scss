@@ -1,17 +1,19 @@
 @import '../../../../variables.scss';
 
-.language-selector-box-en {
+.language-selector-box {
 	text-wrap: nowrap;
 	font-size: 2rem;
 	margin-left: 1rem;
 }
 
-.language-selector-en {
+.language-selector {
 	text-decoration: none;
 	color: $font-color-main-dark;
+	cursor: pointer;
 }
 
-.language-selector-en:hover,
-.language-selector-en:active {
+.language-selector:hover,
+.language-selector:active {
 	color: $font-color-emphasize-dark;
+	cursor: pointer;
 }

@@ -9,3 +9,8 @@ export const frontEndSkillSets = ['HTML/CSS', 'Javascript/Typescript', 'React', 
 export const backEndSkillSets = ['Node.js', 'Javascript/Typescript', 'Express', 'Python', 'MySQL', 'Socket.io'];
 export const cloudSkillSets = ['AWS', 'Netlify', 'CloudType', 'DNS'];
 export const miscSkillSets = ['Git', 'Linux', 'UnitTest'];
+export const languages = [
+	{ language: 'Eng', to: '/en' },
+	{ language: '한글', to: '/ko' },
+	{ language: '日本語', to: '/ja' },
+];
