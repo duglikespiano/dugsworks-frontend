@@ -6,19 +6,19 @@
 }
 
 .characteristic-text-keyword-en {
-	font-size: 3rem;
+	font-size: $font-size-emphasize;
 	font-weight: 900;
 	color: $font-color-emphasize-dark;
 	margin-bottom: 1.5rem;
 }
 .characteristic-text-title-en {
-	font-size: 2.5rem;
+	font-size: $font-size-main;
 	font-weight: 500;
 	margin-bottom: 1rem;
 }
 
 .characteristic-text-content-en {
-	font-size: 2rem;
+	font-size: $font-size-content;
 	font-weight: 400;
 	color: $font-color-sub2-dark;
 }
