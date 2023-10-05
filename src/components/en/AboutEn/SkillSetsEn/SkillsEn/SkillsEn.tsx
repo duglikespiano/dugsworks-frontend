@@ -1,22 +1,18 @@
 import { Fragment } from 'react';
 import styles from './SkillsEn.module.scss';
 
-interface SkillsObject {
-	title?: string;
-	skills?: string[];
-}
-
 interface PropsType {
-	skills: SkillsObject[];
+	title: string;
+	skills: string[];
 }
 
 export default function SkillsEn(props: PropsType) {
 	return (
 		<Fragment>
 			<div className={styles['skillsets-box-en']}>
-				<div className={styles['skillsets-title-en']}>{props.skills[0].title}</div>
+				<div className={styles['skillsets-title-en']}>{props.title}</div>
 				<ul className={styles['skillsets-texts-box-en']}>
-					{props.skills[1].skills!.map((item: string, i: number) => (
+					{props.skills.map((item: string, i: number) => (
 						<li className={styles['skillsets-texts-en']} key={i}>
 							{item}
 						</li>

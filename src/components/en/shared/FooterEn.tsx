@@ -1,13 +1,7 @@
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './FooterEn.module.scss';
-
-const menus: string[][] = [
-	['About', '소개', '紹介'],
-	['Projects', '프로젝트', 'プロジェクト'],
-	['Contact', '문의처', '問い合わせ'],
-	['Guestbook', '방명록', '芳名録'],
-];
+import { menus } from '../../../variables';
 
 export default function FooterEn() {
 	const location = useLocation();

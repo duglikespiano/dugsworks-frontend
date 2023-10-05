@@ -1,28 +1,18 @@
 import { Fragment } from 'react';
 import SkillsEn from './SkillsEn/SkillsEn';
 import styles from './SkillSetsEn.module.scss';
-
-const frondEndSkillSets = [
-	{ title: 'FrontEnd' },
-	{ skills: ['HTML/CSS', 'Javascript/Typescript', 'React', 'Vue', 'Wordpress', 'Sass'] },
-];
-const backEndSkillSets = [
-	{ title: 'BackEnd' },
-	{ skills: ['Node.js', 'Javascript/Typescript', 'Express', 'Python', 'MySQL', 'Socket.io'] },
-];
-const cloudSkillSets = [{ title: 'Clouds' }, { skills: ['AWS', 'Netlify', 'CloudType', 'DNS'] }];
-const miscSkillSets = [{ title: 'Misc' }, { skills: ['Git', 'Linux', 'UnitTest'] }];
+import { frontEndSkillSets, backEndSkillSets, cloudSkillSets, miscSkillSets } from '../../../../variables';
 
 export default function SkillSetsEn() {
 	return (
 		<Fragment>
 			<div className={styles['skillsets-box-en']}>
-				<div className={styles['skillsets-box-title-en']}>Usable Skillsets</div>
+				<div className={styles['skillsets-box-title-en']}>Skillsets</div>
 				<div className={styles['skillsets-box-content-en']}>
-					<SkillsEn skills={frondEndSkillSets} />
-					<SkillsEn skills={backEndSkillSets} />
-					<SkillsEn skills={cloudSkillSets} />
-					<SkillsEn skills={miscSkillSets} />
+					<SkillsEn title={'FrontEnd'} skills={frontEndSkillSets} />
+					<SkillsEn title={'BackEnd'} skills={backEndSkillSets} />
+					<SkillsEn title={'Cloud'} skills={cloudSkillSets} />
+					<SkillsEn title={'Misc'} skills={miscSkillSets} />
 				</div>
 			</div>
 			<hr />
