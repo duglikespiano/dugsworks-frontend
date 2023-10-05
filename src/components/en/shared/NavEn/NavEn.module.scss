@@ -12,6 +12,23 @@
 	text-wrap: nowrap;
 }
 
+.nav-link-active {
+	font-size: 2rem;
+	color: $font-color-emphasize-dark;
+	text-wrap: nowrap;
+}
+
+.nav-link-active:link,
+.nav-link-active:active {
+	text-decoration: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+	color: $font-color-main-dark;
+	text-decoration: none;
+}
+
 .nav-link:hover,
 .nav-link:active {
 	color: $font-color-emphasize-dark;
