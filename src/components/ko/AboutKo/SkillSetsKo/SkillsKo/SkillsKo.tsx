@@ -1,12 +1,8 @@
 import { Fragment } from 'react';
 import styles from './SkillsKo.module.scss';
+import { SkillSetsPropsType } from '../../../../types/types';
 
-interface PropsType {
-	title: string;
-	skills: string[];
-}
-
-export default function SkillsKo(props: PropsType) {
+export default function SkillsKo(props: SkillSetsPropsType) {
 	return (
 		<Fragment>
 			<div className={styles['skillsets-box-ko']}>

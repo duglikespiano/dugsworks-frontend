@@ -1,19 +1,9 @@
 import { Fragment } from 'react';
 import CharacteristicTextJa from './CharacteristicTextJa';
 import styles from './CharacteristicBoxJa.module.scss';
+import { CharacteristicBoxPropsType } from '../../../../types/types';
 
-export interface CharacteristicBoxProps {
-	info: {
-		imageUrl: string;
-		imageAlt: string;
-		keyword: string;
-		title: string;
-		contents: string[];
-		boxSide: string;
-	};
-}
-
-export default function CharacteristicBoxJa(props: CharacteristicBoxProps) {
+export default function CharacteristicBoxJa(props: CharacteristicBoxPropsType) {
 	return (
 		<Fragment>
 			<div className={styles[`characteristic-box-${props.info.boxSide}-ja`]}>

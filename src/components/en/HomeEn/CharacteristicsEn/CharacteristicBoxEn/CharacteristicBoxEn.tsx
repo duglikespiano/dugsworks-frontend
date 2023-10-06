@@ -1,19 +1,9 @@
 import { Fragment } from 'react';
 import CharacteristicTextEn from './CharacteristicTextEn';
 import styles from './CharacteristicBoxEn.module.scss';
+import { CharacteristicBoxPropsType } from '../../../../types/types';
 
-export interface CharacteristicBoxProps {
-	info: {
-		imageUrl: string;
-		imageAlt: string;
-		keyword: string;
-		title: string;
-		contents: string[];
-		boxSide: string;
-	};
-}
-
-export default function CharacteristicBoxEn(props: CharacteristicBoxProps) {
+export default function CharacteristicBoxEn(props: CharacteristicBoxPropsType) {
 	return (
 		<Fragment>
 			<div className={styles[`characteristic-box-${props.info.boxSide}-en`]}>

@@ -1,12 +1,8 @@
 import { Fragment } from 'react';
 import styles from './SkillsEn.module.scss';
+import { SkillSetsPropsType } from '../../../../types/types';
 
-interface PropsType {
-	title: string;
-	skills: string[];
-}
-
-export default function SkillsEn(props: PropsType) {
+export default function SkillsEn(props: SkillSetsPropsType) {
 	return (
 		<Fragment>
 			<div className={styles['skillsets-box-en']}>

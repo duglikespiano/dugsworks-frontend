@@ -1,13 +1,8 @@
 import { Fragment } from 'react';
 import styles from './CharacteristicTextJa.module.scss';
+import { CharacteristicTextPropsType } from '../../../../types/types';
 
-interface CharacteristicTextProps {
-	keyword: string;
-	title: string;
-	contents: string[];
-}
-
-export default function CharacteristicTextJa(props: CharacteristicTextProps) {
+export default function CharacteristicTextJa(props: CharacteristicTextPropsType) {
 	return (
 		<Fragment>
 			<div className={styles['characteristic-texts-box-ja']}>

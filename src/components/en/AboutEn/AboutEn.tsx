@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import SkillSetsEn from './SkillSetsEn/SkillSetsEn';
+import HistoryEn from './HistoryEn/HistoryEn';
 import styles from './AboutEn.module.scss';
 
 export default function AboutEn() {
@@ -7,6 +8,7 @@ export default function AboutEn() {
 		<Fragment>
 			<div className={styles['about-box-en']}>
 				<SkillSetsEn />
+				<HistoryEn />
 			</div>
 		</Fragment>
 	);

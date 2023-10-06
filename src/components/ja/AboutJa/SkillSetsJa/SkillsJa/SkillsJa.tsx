@@ -1,12 +1,8 @@
 import { Fragment } from 'react';
 import styles from './SkillsJa.module.scss';
+import { SkillSetsPropsType } from '../../../../types/types';
 
-interface PropsType {
-	title: string;
-	skills: string[];
-}
-
-export default function SkillsJa(props: PropsType) {
+export default function SkillsJa(props: SkillSetsPropsType) {
 	return (
 		<Fragment>
 			<div className={styles['skillsets-box-ja']}>

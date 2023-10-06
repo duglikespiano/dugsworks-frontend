@@ -1,19 +1,9 @@
 import { Fragment } from 'react';
 import CharacteristicTextKo from './CharacteristicTextKo';
 import styles from './CharacteristicBoxKo.module.scss';
+import { CharacteristicBoxPropsType } from '../../../../types/types';
 
-export interface CharacteristicBoxProps {
-	info: {
-		imageUrl: string;
-		imageAlt: string;
-		keyword: string;
-		title: string;
-		contents: string[];
-		boxSide: string;
-	};
-}
-
-export default function CharacteristicBoxKo(props: CharacteristicBoxProps) {
+export default function CharacteristicBoxKo(props: CharacteristicBoxPropsType) {
 	return (
 		<Fragment>
 			<div className={styles[`characteristic-box-${props.info.boxSide}-ko`]}>

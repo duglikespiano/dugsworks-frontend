@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+.history-boxes-gap-line {
+	width: 0.01px;
+	height: $menu-contents-gap;
+	background-color: white;
+	border: 0.2rem solid white;
+	margin: auto;
+}
+
+.history-ja {
+	margin-top: $menu-main-gap;
+}
+
+.history-title-ja {
+	color: $font-color-emphasize-dark;
+	font-size: $font-size-emphasize;
+	margin-bottom: $menu-title-gap;
+}
