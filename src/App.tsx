@@ -1,9 +1,13 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './sliceStore';
+
 import RootAll from './RootAll';
 
 import RootEn from './components/en/RootEn';
 import HomeEn from './components/en/HomeEn/HomeEn';
 import AboutEn from './components/en/AboutEn/AboutEn';
+import ProjectsEn from './components/en/ProjectsEn/ProjectsEn';
 
 import RootKo from './components/ko/RootKo';
 import HomeKo from './components/ko/HomeKo/HomeKo';
@@ -24,6 +28,7 @@ const router = createBrowserRouter([
 		children: [
 			{ path: '', element: <HomeEn /> },
 			{ path: 'about', element: <AboutEn /> },
+			{ path: 'projects', element: <ProjectsEn /> },
 		],
 	},
 	{
@@ -45,5 +50,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-	return <RouterProvider router={router} />;
+	return (
+		<Provider store={store}>
+			<RouterProvider router={router} />
+		</Provider>
+	);
 }
