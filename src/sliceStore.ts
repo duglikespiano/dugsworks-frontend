@@ -22,10 +22,10 @@ const projectsSlice = createSlice({
 		{ name: 'AWS', selected: false },
 		{ name: 'Netlify', selected: false },
 		{ name: 'CloudType', selected: false },
-		{ name: 'DNS', selected: false },
+		{ name: 'Deployment', selected: false },
 		{ name: 'Git', selected: false },
 		{ name: 'Linux', selected: false },
-		{ name: 'UnitTest', selected: false },
+		{ name: 'Vitest', selected: false },
 	],
 	reducers: {
 		statusToggle(state, { payload }: type) {

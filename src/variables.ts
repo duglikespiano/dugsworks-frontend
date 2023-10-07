@@ -147,7 +147,7 @@ export const schoolHistory: HistoryType[] = [
 	},
 ];
 
-export const frontEndSkillSets = ['HTML/CSS', 'Javascript/Typescript', 'React', 'Vue', 'Wordpress', 'Sass'];
+export const frontEndSkillSets = ['HTML/CSS', 'Javascript/Typescript', 'React', 'Redux', 'Vue', 'Sass'];
 export const backEndSkillSets = ['Node.js', 'Javascript/Typescript', 'Express', 'Python', 'MySQL', 'Socket.io'];
-export const cloudSkillSets = ['AWS', 'Netlify', 'CloudType', 'DNS'];
-export const miscSkillSets = ['Git', 'Linux', 'UnitTest'];
+export const cloudSkillSets = ['AWS', 'Netlify', 'CloudType', 'Deployment'];
+export const miscSkillSets = ['Git', 'Linux', 'Vitest'];
