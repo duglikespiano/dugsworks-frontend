@@ -1,16 +1,19 @@
 import { Fragment } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../sliceStore';
-import { projectsActions } from '../../../sliceStore';
+import ProjectsKeywordsEn from './ProjectsKeywordsEn/ProjectsKeywordsEn';
+import ProjectsListEn from './ProjectsListEn/ProjectsListEn';
 import styles from './ProjectsEn.module.scss';
 
 export default function ProjectsEn() {
-	const projects = useSelector((state: RootState) => state.projects);
-	const dispatch = useDispatch();
-
-	const projectStatusHandler = (i: number) => {
-		dispatch(projectsActions.statusToggle(i));
-	};
-
-	return <Fragment></Fragment>;
+	return (
+		<Fragment>
+			<div className={styles['projects-box']}>
+				<div className={styles['skills-filter-title']}>Skills filter</div>
+				<div className={styles['projects-skills-filter-description']}>Click skills to filter projects</div>
+				<ProjectsKeywordsEn />
+				<hr className={styles['horizontalrule']} />
+				<div className={styles['projects-title']}>Projects</div>
+				<ProjectsListEn />
+			</div>
+		</Fragment>
+	);
 }

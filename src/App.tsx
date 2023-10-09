@@ -12,10 +12,12 @@ import ProjectsEn from './components/en/ProjectsEn/ProjectsEn';
 import RootKo from './components/ko/RootKo';
 import HomeKo from './components/ko/HomeKo/HomeKo';
 import AboutKo from './components/ko/AboutKo/AboutKo';
+import ProjectsKo from './components/ko/ProjectsKo/ProjectsKo';
 
 import RootJa from './components/ja/RootJa';
 import HomeJa from './components/ja/HomeJa/HomeJa';
 import AboutJa from './components/ja/AboutJa/AboutJa';
+import ProjectsJa from './components/ja/ProjectsJa/ProjectsJa';
 
 const router = createBrowserRouter([
 	{
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
 		children: [
 			{ path: '', element: <HomeKo /> },
 			{ path: 'about', element: <AboutKo /> },
+			{ path: 'projects', element: <ProjectsKo /> },
 		],
 	},
 	{
@@ -45,6 +48,7 @@ const router = createBrowserRouter([
 		children: [
 			{ path: '', element: <HomeJa /> },
 			{ path: 'about', element: <AboutJa /> },
+			{ path: 'projects', element: <ProjectsJa /> },
 		],
 	},
 ]);
