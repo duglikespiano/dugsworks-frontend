@@ -19,6 +19,18 @@ export interface projectsListType {
 	};
 }
 
+export interface projectInfoType {
+	title: string;
+	descriptionEn: string;
+	descriptionKo: string;
+	descriptionJa: string;
+	deploymentURL: string;
+	frontendRepositoryURL: string;
+	backendRepositoryURL: string;
+	period: string[];
+	skills: string[];
+}
+
 export interface projectsKeywordsType {
 	keyword: string;
 	selected: boolean;
@@ -191,9 +203,9 @@ const projectsListSlice = createSlice({
 });
 
 const stringArrayType: string[] = [];
-const anyObjectType: {
+const selectedProjectsSliceInitialstate: {
 	selectedKeywords: string[];
-	selectedKeywordsIncludeProjects: any[];
+	selectedKeywordsIncludeProjects: projectInfoType[];
 } = {
 	selectedKeywords: [],
 	selectedKeywordsIncludeProjects: [],
@@ -216,20 +228,20 @@ const selectedProjectKeywordsSlice = createSlice({
 
 const selectedProjectKeywordsIncludeProjectsSlice = createSlice({
 	name: 'selectedprojectkeywordsincludeprojects',
-	initialState: anyObjectType,
+	initialState: selectedProjectsSliceInitialstate,
 	reducers: {
-		test(state, { payload }) {
+		filterProjectsBySkills(state, { payload }) {
 			if (!current(state).selectedKeywords.includes(payload.projectsKeywords)) {
 				const selectedKeywords = [...current(state).selectedKeywords, payload.projectsKeywords];
-				const selectedKeywordsIncludeProjects: any = [];
+				const selectedKeywordsIncludeProjects: projectInfoType[] | any = [];
 				selectedKeywords.forEach((keyword) => {
-					payload.projectsList.forEach((project: any) => {
+					payload.projectsList.forEach((project: projectInfoType) => {
 						if (project.skills.includes(keyword) && !selectedKeywordsIncludeProjects.includes(project)) {
 							selectedKeywordsIncludeProjects.push(project);
 						}
 					});
 				});
-				selectedKeywordsIncludeProjects.sort(function (a: any, b: any) {
+				selectedKeywordsIncludeProjects.sort(function (a: projectInfoType, b: projectInfoType) {
 					if (a.period[0] < b.period[0]) return 1;
 					if (a.period[0] === b.period[0]) return 0;
 					if (a.period[0] > b.period[0]) return -1;
@@ -238,16 +250,16 @@ const selectedProjectKeywordsIncludeProjectsSlice = createSlice({
 				return { selectedKeywords, selectedKeywordsIncludeProjects };
 			} else {
 				const selectedKeywords = current(state).selectedKeywords.slice();
-				const selectedKeywordsIncludeProjects: any = [];
+				const selectedKeywordsIncludeProjects: projectInfoType[] | any = [];
 				selectedKeywords.splice(selectedKeywords.indexOf(payload.projectsKeywords), 1);
 				selectedKeywords.forEach((keyword) => {
-					payload.projectsList.forEach((project: any) => {
+					payload.projectsList.forEach((project: projectInfoType) => {
 						if (project.skills.includes(keyword) && !selectedKeywordsIncludeProjects.includes(project)) {
 							selectedKeywordsIncludeProjects.push(project);
 						}
 					});
 				});
-				selectedKeywordsIncludeProjects.sort(function (a: any, b: any) {
+				selectedKeywordsIncludeProjects.sort(function (a: projectInfoType, b: projectInfoType): projectInfoType[] | number {
 					if (a.period[0] < b.period[0]) return 1;
 					if (a.period[0] === b.period[0]) return 0;
 					if (a.period[0] > b.period[0]) return -1;

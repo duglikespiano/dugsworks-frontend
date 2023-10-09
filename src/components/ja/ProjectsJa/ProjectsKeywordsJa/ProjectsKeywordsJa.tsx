@@ -5,6 +5,7 @@ import {
 	projectsKeywordsActions,
 	selectedProjectKeywordsActions,
 	selectedProjectKeywordsIncludeProjectsActions,
+	projectInfoType,
 } from '../../../../sliceStore';
 import styles from './ProjectsKeywordsJa.module.scss';
 
@@ -21,8 +22,8 @@ export default function ProjectsKeywordsJa() {
 		dispatch(selectedProjectKeywordsActions.checkToggle(keyword));
 	};
 
-	const selectedProjectKeywordsIncludeProjectsHandler = (projectsList: any, projectsKeywords: string) => {
-		dispatch(selectedProjectKeywordsIncludeProjectsActions.test({ projectsList, projectsKeywords }));
+	const selectedProjectKeywordsIncludeProjectsHandler = (projectsList: projectInfoType[], projectsKeywords: string) => {
+		dispatch(selectedProjectKeywordsIncludeProjectsActions.filterProjectsBySkills({ projectsList, projectsKeywords }));
 	};
 
 	return (
