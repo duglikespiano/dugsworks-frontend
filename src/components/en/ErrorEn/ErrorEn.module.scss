@@ -1,0 +1,32 @@
+@import '../../../variables.scss';
+
+.error-page {
+	width: 60rem;
+	margin: auto;
+}
+
+.error-page-icon-box {
+	width: 30%;
+	margin: auto;
+	margin-bottom: $menu-main-gap;
+}
+
+.error-page-icon {
+	font-size: 15rem;
+	color: $font-color-emphasize-dark;
+}
+
+.error-page-text-oops {
+	font-size: $font-size-emphasize;
+	color: $font-color-sub1-dark;
+	text-align: center;
+	margin-bottom: $menu-title-gap;
+}
+
+.error-page-text {
+	@extend .error-page-text-oops;
+	font-size: $font-size-main;
+	color: $font-color-sub2-dark;
+	text-align: center;
+	margin-bottom: calc($menu-title-gap/2);
+}
