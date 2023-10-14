@@ -15,10 +15,10 @@ export default function ProfileTextEn() {
 				</div>
 
 				<div className={styles['home-iconbox-en']}>
-					<Link to="https://www.instagram.com/piano_dug">
+					<Link to="https://www.instagram.com/piano_dug" target="_blank">
 						<PiInstagramLogo className={styles['home-iconbox-icon-en']} />
 					</Link>
-					<Link to="https://github.com/duglikespiano">
+					<Link to="https://github.com/duglikespiano" target="_blank">
 						<PiGithubLogo className={styles['home-iconbox-icon-en']} />{' '}
 					</Link>
 				</div>

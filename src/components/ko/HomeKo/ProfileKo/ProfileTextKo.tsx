@@ -15,11 +15,11 @@ export default function ProfileTextKo() {
 				</div>
 
 				<div className={styles['home-iconbox-ko']}>
-					<Link to="https://www.instagram.com/piano_dug">
+					<Link to="https://www.instagram.com/piano_dug" target="_blank">
 						<PiInstagramLogo className={styles['home-iconbox-icon-ko']} />
 					</Link>
-					<Link to="https://github.com/duglikespiano">
-						<PiGithubLogo className={styles['home-iconbox-icon-ko']} />{' '}
+					<Link to="https://github.com/duglikespiano" target="_blank">
+						<PiGithubLogo className={styles['home-iconbox-icon-ko']} />
 					</Link>
 				</div>
 			</div>

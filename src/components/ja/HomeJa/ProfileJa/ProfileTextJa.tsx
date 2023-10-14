@@ -16,10 +16,10 @@ export default function ProfileTextJa() {
 				</div>
 
 				<div className={styles['home-iconbox-ja']}>
-					<Link to="https://www.instagram.com/piano_dug">
+					<Link to="https://www.instagram.com/piano_dug" target="_blank">
 						<PiInstagramLogo className={styles['home-iconbox-icon-ja']} />
 					</Link>
-					<Link to="https://github.com/duglikespiano">
+					<Link to="https://github.com/duglikespiano" target="_blank">
 						<PiGithubLogo className={styles['home-iconbox-icon-ja']} />{' '}
 					</Link>
 				</div>
