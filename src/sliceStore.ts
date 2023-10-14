@@ -203,13 +203,7 @@ const projectsListSlice = createSlice({
 });
 
 const stringArrayType: string[] = [];
-const selectedProjectsSliceInitialstate: {
-	selectedKeywords: string[];
-	selectedKeywordsIncludeProjects: projectInfoType[];
-} = {
-	selectedKeywords: [],
-	selectedKeywordsIncludeProjects: [],
-};
+
 const selectedProjectKeywordsSlice = createSlice({
 	name: 'selectedprojectkeywords',
 	initialState: stringArrayType,
@@ -226,6 +220,13 @@ const selectedProjectKeywordsSlice = createSlice({
 	},
 });
 
+const selectedProjectsSliceInitialstate: {
+	selectedKeywords: string[];
+	selectedKeywordsIncludeProjects: projectInfoType[];
+} = {
+	selectedKeywords: [],
+	selectedKeywordsIncludeProjects: [],
+};
 const selectedProjectKeywordsIncludeProjectsSlice = createSlice({
 	name: 'selectedprojectkeywordsincludeprojects',
 	initialState: selectedProjectsSliceInitialstate,
@@ -271,12 +272,63 @@ const selectedProjectKeywordsIncludeProjectsSlice = createSlice({
 	},
 });
 
+export interface messagesSliceType {
+	id: number;
+	writer: string;
+	password: number;
+	message: string;
+	date: string;
+}
+
+export interface messagesSlicePropsType {
+	message: {
+		id: number;
+		writer: string;
+		password: number;
+		message: string;
+		date: string;
+	};
+}
+
+const messagesSlice = createSlice({
+	name: 'messages',
+	initialState: [
+		{
+			id: 1,
+			writer: '박더그',
+			password: 1234,
+			message: '화이팅~',
+			date: 'Sun Oct 15 2023 00:13:33 GMT+0900 (GMT+09:00)',
+		},
+		{
+			id: 2,
+			writer: 'Dug Park',
+			password: 1234,
+			message: 'Go Go Man!',
+			date: 'Sun Oct 15 2023 00:23:33 GMT+0900 (GMT+09:00)',
+		},
+		{
+			id: 3,
+			writer: 'ダグ',
+			password: 1234,
+			message: 'まさか？！',
+			date: 'Sun Oct 15 2023 00:33:33 GMT+0900 (GMT+09:00)',
+		},
+	],
+	reducers: {
+		addMessage(state, { payload }) {
+			state.push(JSON.parse(payload));
+		},
+	},
+});
+
 const store = configureStore({
 	reducer: {
 		projectsKeywords: projectsKeywordsSlice.reducer,
 		projectsList: projectsListSlice.reducer,
 		selectedProjectKeywords: selectedProjectKeywordsSlice.reducer,
 		selectedProjectKeywordsIncludeProjects: selectedProjectKeywordsIncludeProjectsSlice.reducer,
+		messagesList: messagesSlice.reducer,
 	},
 });
 
@@ -286,4 +338,34 @@ export const projectsKeywordsActions = projectsKeywordsSlice.actions;
 export const projectsListActions = projectsListSlice.actions;
 export const selectedProjectKeywordsActions = selectedProjectKeywordsSlice.actions;
 export const selectedProjectKeywordsIncludeProjectsActions = selectedProjectKeywordsIncludeProjectsSlice.actions;
+export const messagesActions = messagesSlice.actions;
 export default store;
+
+// {
+// 	id: 1,
+// 	writer: '뭐여이건..',
+// 	password: 1234,
+// 	message: 'ㅋㅋ루삥뽕~',
+// 	date: 'Sun Oct 15 2023 00:13:33 GMT+0900 (GMT+09:00)',
+// },
+// {
+// 	id: 2,
+// 	writer: '잠오는구만..',
+// 	password: 1234,
+// 	message: '시작해봅시다',
+// 	date: 'Sun Oct 15 2023 00:23:33 GMT+0900 (GMT+09:00)',
+// },
+// {
+// 	id: 3,
+// 	writer: '에러환장하것네유..',
+// 	password: 1234,
+// 	message: '과연?',
+// 	date: 'Sun Oct 15 2023 00:33:33 GMT+0900 (GMT+09:00)',
+// },
+// {
+// 	id: 4,
+// 	writer: '이것이뭐시덩가....',
+// 	password: 1234,
+// 	message: '어떻게 될 것인지?',
+// 	date: 'Sun Oct 15 2023 01:13:33 GMT+0900 (GMT+09:00)',
+// },

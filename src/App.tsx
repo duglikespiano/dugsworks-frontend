@@ -11,6 +11,7 @@ import HomeEn from './components/en/HomeEn/HomeEn';
 import AboutEn from './components/en/AboutEn/AboutEn';
 import ProjectsEn from './components/en/ProjectsEn/ProjectsEn';
 import ContactEn from './components/en/ContactEn/ContactEn';
+import GuestbookEn from './components/en/GuestbookEn/GuestbookEn';
 
 import RootKo from './components/ko/RootKo';
 import ErrorKo from './components/ko/ErrorKo/ErrorKo';
@@ -18,6 +19,7 @@ import HomeKo from './components/ko/HomeKo/HomeKo';
 import AboutKo from './components/ko/AboutKo/AboutKo';
 import ProjectsKo from './components/ko/ProjectsKo/ProjectsKo';
 import ContactKo from './components/ko/ContactKo/ContactKo';
+import GuestbookKo from './components/ko/GuestbookKo/GuestbookKo';
 
 import RootJa from './components/ja/RootJa';
 import ErrorJa from './components/ja/ErrorJa/ErrorJa';
@@ -25,6 +27,7 @@ import HomeJa from './components/ja/HomeJa/HomeJa';
 import AboutJa from './components/ja/AboutJa/AboutJa';
 import ProjectsJa from './components/ja/ProjectsJa/ProjectsJa';
 import ContactJa from './components/ja/ContactJa/ContactJa';
+import GuestbookJa from './components/ja/GuestbookJa/GuestbookJa';
 
 const router = createBrowserRouter([
 	{
@@ -41,6 +44,7 @@ const router = createBrowserRouter([
 			{ path: 'about', element: <AboutEn /> },
 			{ path: 'projects', element: <ProjectsEn /> },
 			{ path: 'contact', element: <ContactEn /> },
+			{ path: 'guestbook', element: <GuestbookEn /> },
 		],
 	},
 	{
@@ -52,6 +56,7 @@ const router = createBrowserRouter([
 			{ path: 'about', element: <AboutKo /> },
 			{ path: 'projects', element: <ProjectsKo /> },
 			{ path: 'contact', element: <ContactKo /> },
+			{ path: 'guestbook', element: <GuestbookKo /> },
 		],
 	},
 	{
@@ -63,6 +68,7 @@ const router = createBrowserRouter([
 			{ path: 'about', element: <AboutJa /> },
 			{ path: 'projects', element: <ProjectsJa /> },
 			{ path: 'contact', element: <ContactJa /> },
+			{ path: 'guestbook', element: <GuestbookJa /> },
 		],
 	},
 ]);
