@@ -44,14 +44,8 @@
 	height: $font-size-main;
 	font-size: $font-size-sub;
 	color: $background-color-emphasize-dark;
-	background-color: $font-color-sub2-dark;
+	background-color: $font-color-main-dark;
 	border: none;
 	border-radius: calc($content-box-border-radius/5);
-	cursor: not-allowed;
-}
-
-.contact-form-submit-button-active {
-	@extend .contact-form-submit-button;
-	background-color: $font-color-main-dark;
 	cursor: pointer;
 }

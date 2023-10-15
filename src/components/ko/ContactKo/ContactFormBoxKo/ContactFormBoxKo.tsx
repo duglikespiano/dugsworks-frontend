@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ContactFormSubmitModalKo from './ContactFormSubmitModalKo/ContactFormSubmitModalKo';
-import ContactFormContentsRequireComponentEn from './ContactFormContentsRequireComponentKo/ContactFormContentsRequireComponentKo';
+import ContactFormContentsRequireComponentKo from './ContactFormContentsRequireComponentKo/ContactFormContentsRequireComponentKo';
+import GuestbookInputFormModalKo from '../../GuestbookKo/GuestbookInputFormKo/GuestbookInputFormModalKo/GuestbookInputFormModalKo';
 import styles from './ContactFormBoxKo.module.scss';
 
 export default function ContactFormBoxKo() {
@@ -12,7 +13,7 @@ export default function ContactFormBoxKo() {
 	const [emailTouched, setEmailTouched] = useState(false);
 	const [messageTouched, setMessageTouched] = useState(false);
 
-	const [isFormReady, setIsFormReady] = useState(false);
+	const [isFormReady, setIsFormReady] = useState(true);
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
 	const nameInputRef = useRef<HTMLInputElement>(null);
@@ -20,7 +21,6 @@ export default function ContactFormBoxKo() {
 		if (nameInputRef.current) {
 			setEnteredName(nameInputRef.current.value);
 			setNameTouched(true);
-			allInputChecker();
 		}
 	};
 
@@ -29,7 +29,6 @@ export default function ContactFormBoxKo() {
 		if (emailInputRef.current) {
 			setEnteredEmail(emailInputRef.current.value.toLowerCase());
 			setEmailTouched(true);
-			allInputChecker();
 		}
 	};
 
@@ -38,19 +37,6 @@ export default function ContactFormBoxKo() {
 		if (messageInputRef.current) {
 			setEnteredMessage(messageInputRef.current.value);
 			setMessageTouched(true);
-			allInputChecker();
-		}
-	};
-
-	const allInputChecker = () => {
-		if (
-			nameInputRef.current!.value.trim() !== '' &&
-			emailInputRef.current!.value.trim() !== '' &&
-			messageInputRef.current!.value.trim() !== ''
-		) {
-			setIsFormReady(true);
-		} else {
-			setIsFormReady(false);
 		}
 	};
 
@@ -66,8 +52,8 @@ export default function ContactFormBoxKo() {
 		setMessageTouched(boolean);
 	};
 
-	const isFormReadyHandler = (boolean: boolean) => {
-		setIsFormReady(boolean);
+	const isFormReadyHandler = () => {
+		setIsFormReady(!isFormReady);
 	};
 
 	const isFormSubmittedHandler = (boolean: boolean) => {
@@ -76,9 +62,17 @@ export default function ContactFormBoxKo() {
 
 	const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		if (!isFormReady) {
+
+		if (
+			nameInputRef.current!.value.trim() === '' ||
+			emailInputRef.current!.value.trim() === '' ||
+			messageInputRef.current!.value.trim() === ''
+		) {
+			setIsFormReady(false);
 			return;
-		} else {
+		}
+
+		if (isFormReady) {
 			const contactInfoObject = {
 				name: enteredName,
 				email: enteredEmail,
@@ -92,7 +86,8 @@ export default function ContactFormBoxKo() {
 			setNameTouched(false);
 			setEmailTouched(false);
 			setMessageTouched(false);
-			isFormReadyHandler(false);
+			setIsFormReady(true);
+			return;
 		}
 	};
 
@@ -105,6 +100,7 @@ export default function ContactFormBoxKo() {
 					}}
 				/>
 			)}
+			{!isFormReady && <GuestbookInputFormModalKo isFormFilledProperlyHandler={isFormReadyHandler} />}
 			<div className={styles['contact-form-elements-box']}>
 				<div className={styles['contact-form-elements-title']}>성함</div>
 				<input
@@ -120,7 +116,7 @@ export default function ContactFormBoxKo() {
 					value={enteredName}
 					ref={nameInputRef}
 				/>
-				{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+				{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
 			</div>
 
 			<div className={styles['contact-form-elements-box']}>
@@ -138,7 +134,7 @@ export default function ContactFormBoxKo() {
 					value={enteredEmail}
 					ref={emailInputRef}
 				/>
-				{emailTouched && emailInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+				{emailTouched && emailInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
 			</div>
 
 			<div className={styles['contact-form-elements-box']}>
@@ -155,13 +151,11 @@ export default function ContactFormBoxKo() {
 					value={enteredMessage}
 					ref={messageInputRef}
 				/>
-				{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+				{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
 			</div>
 
 			<div className={styles['contact-form-submit-button-box']}>
-				<button className={isFormReady ? styles['contact-form-submit-button-active'] : styles['contact-form-submit-button']}>
-					제출하기
-				</button>
+				<button className={styles['contact-form-submit-button']}>제출하기</button>
 			</div>
 		</form>
 	);

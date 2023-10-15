@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ContactFormSubmitModalEn from './ContactFormSubmitModalEn/ContactFormSubmitModalEn';
 import ContactFormContentsRequireComponentEn from './ContactFormContentsRequireComponentEn/ContactFormContentsRequireComponentEn';
+import GuestbookInputFormModalEn from '../../GuestbookEn/GuestbookInputFormEn/GuestbookInputFormModalEn/GuestbookInputFormModalEn';
 import styles from './ContactFormBoxEn.module.scss';
 
 export default function ContactFormBoxEn() {
@@ -12,7 +13,7 @@ export default function ContactFormBoxEn() {
 	const [emailTouched, setEmailTouched] = useState(false);
 	const [messageTouched, setMessageTouched] = useState(false);
 
-	const [isFormReady, setIsFormReady] = useState(false);
+	const [isFormReady, setIsFormReady] = useState(true);
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
 	const nameInputRef = useRef<HTMLInputElement>(null);
@@ -20,7 +21,6 @@ export default function ContactFormBoxEn() {
 		if (nameInputRef.current) {
 			setEnteredName(nameInputRef.current.value);
 			setNameTouched(true);
-			allInputChecker();
 		}
 	};
 
@@ -29,7 +29,6 @@ export default function ContactFormBoxEn() {
 		if (emailInputRef.current) {
 			setEnteredEmail(emailInputRef.current.value.toLowerCase());
 			setEmailTouched(true);
-			allInputChecker();
 		}
 	};
 
@@ -38,19 +37,6 @@ export default function ContactFormBoxEn() {
 		if (messageInputRef.current) {
 			setEnteredMessage(messageInputRef.current.value);
 			setMessageTouched(true);
-			allInputChecker();
-		}
-	};
-
-	const allInputChecker = () => {
-		if (
-			nameInputRef.current!.value.trim() !== '' &&
-			emailInputRef.current!.value.trim() !== '' &&
-			messageInputRef.current!.value.trim() !== ''
-		) {
-			setIsFormReady(true);
-		} else {
-			setIsFormReady(false);
 		}
 	};
 
@@ -66,8 +52,8 @@ export default function ContactFormBoxEn() {
 		setMessageTouched(boolean);
 	};
 
-	const isFormReadyHandler = (boolean: boolean) => {
-		setIsFormReady(boolean);
+	const isFormReadyHandler = () => {
+		setIsFormReady(!isFormReady);
 	};
 
 	const isFormSubmittedHandler = (boolean: boolean) => {
@@ -76,9 +62,17 @@ export default function ContactFormBoxEn() {
 
 	const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		if (!isFormReady) {
+
+		if (
+			nameInputRef.current!.value.trim() === '' ||
+			emailInputRef.current!.value.trim() === '' ||
+			messageInputRef.current!.value.trim() === ''
+		) {
+			setIsFormReady(false);
 			return;
-		} else {
+		}
+
+		if (isFormReady) {
 			const contactInfoObject = {
 				name: enteredName,
 				email: enteredEmail,
@@ -92,7 +86,8 @@ export default function ContactFormBoxEn() {
 			setNameTouched(false);
 			setEmailTouched(false);
 			setMessageTouched(false);
-			isFormReadyHandler(false);
+			setIsFormReady(true);
+			return;
 		}
 	};
 
@@ -105,6 +100,7 @@ export default function ContactFormBoxEn() {
 					}}
 				/>
 			)}
+			{!isFormReady && <GuestbookInputFormModalEn isFormFilledProperlyHandler={isFormReadyHandler} />}
 			<div className={styles['contact-form-elements-box']}>
 				<div className={styles['contact-form-elements-title']}>Name</div>
 				<input
@@ -159,9 +155,7 @@ export default function ContactFormBoxEn() {
 			</div>
 
 			<div className={styles['contact-form-submit-button-box']}>
-				<button className={isFormReady ? styles['contact-form-submit-button-active'] : styles['contact-form-submit-button']}>
-					Submit
-				</button>
+				<button className={styles['contact-form-submit-button']}>Submit</button>
 			</div>
 		</form>
 	);
