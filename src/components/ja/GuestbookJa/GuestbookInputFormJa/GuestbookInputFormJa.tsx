@@ -75,6 +75,9 @@ export default function GuestbookInputFormKo() {
 			setEnteredName('');
 			setEnteredPassword('');
 			setEnteredMessage('');
+			setNameTouched(false);
+			setPasswordTouched(false);
+			setMessageTouched(false);
 		}
 	};
 
