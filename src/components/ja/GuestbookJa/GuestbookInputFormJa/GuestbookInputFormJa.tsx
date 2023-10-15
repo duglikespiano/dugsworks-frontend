@@ -1,6 +1,7 @@
 import { useState, useRef, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import GuestbookInputFormModalJa from './GuestbookInputFormModalJa/GuestbookInputFormModalJa';
+import ContactFormContentsRequireComponentJa from '../../ContactJa/ContactFormBoxJa/ContactFormContentsRequireComponentJa/ContactFormContentsRequireComponentJa';
 import { messagesActions, RootState } from '../../../../sliceStore';
 import styles from './GuestbookInputFormJa.module.scss';
 
@@ -33,19 +34,26 @@ export default function GuestbookInputFormKo() {
 	const [enteredName, setEnteredName] = useState('');
 	const [enteredPassword, setEnteredPassword] = useState('');
 	const [enteredMessage, setEnteredMessage] = useState('');
+
+	const [nameTouched, setNameTouched] = useState(false);
+	const [passwordTouched, setPasswordTouched] = useState(false);
+	const [messageTouched, setMessageTouched] = useState(false);
+
 	const [isFormFilledProperly, setIsFormFilledProperly] = useState(true);
 
 	const nameInputRef = useRef<HTMLInputElement>(null);
 	const nameInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
 		if (nameInputRef.current) {
 			setEnteredName(nameInputRef.current.value);
+			setNameTouched(true);
 		}
 	};
 
 	const passwordInputRef = useRef<HTMLInputElement>(null);
 	const passwordInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
 		if (passwordInputRef.current) {
-			setEnteredPassword(passwordInputRef.current.value.toLowerCase());
+			setEnteredPassword(passwordInputRef.current.value);
+			setPasswordTouched(true);
 		}
 	};
 
@@ -53,6 +61,7 @@ export default function GuestbookInputFormKo() {
 	const messageInputChangeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
 		if (messageInputRef.current) {
 			setEnteredMessage(messageInputRef.current.value);
+			setMessageTouched(true);
 		}
 	};
 
@@ -67,6 +76,18 @@ export default function GuestbookInputFormKo() {
 			setEnteredPassword('');
 			setEnteredMessage('');
 		}
+	};
+
+	const nameTouchedHandler = (boolean: boolean) => {
+		setNameTouched(boolean);
+	};
+
+	const passwordTouchedHandler = (boolean: boolean) => {
+		setPasswordTouched(boolean);
+	};
+
+	const messageTouchedHandler = (boolean: boolean) => {
+		setMessageTouched(boolean);
 	};
 
 	const isFormFilledProperlyHandler = () => {
@@ -87,9 +108,13 @@ export default function GuestbookInputFormKo() {
 							maxLength={30}
 							placeholder="お名前をご入力してください"
 							onChange={nameInputChangeHandler}
+							onBlur={() => {
+								nameTouchedHandler(true);
+							}}
 							value={enteredName}
 							ref={nameInputRef}
 						/>
+						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentJa />}
 					</div>
 
 					<div className={styles['guestbook-form-password-box']}>
@@ -101,11 +126,16 @@ export default function GuestbookInputFormKo() {
 							maxLength={30}
 							placeholder="パスワードをご入力してください"
 							onChange={passwordInputChangeHandler}
+							onBlur={() => {
+								passwordTouchedHandler(true);
+							}}
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentJa />}
 					</div>
 				</div>
+
 				<div className={styles['guestbook-form-elements-box']}>
 					<div className={styles['guestbook-form-elements-title']}>メッセージ</div>
 					<textarea
@@ -114,9 +144,13 @@ export default function GuestbookInputFormKo() {
 						maxLength={500}
 						placeholder={'メッセージをご入力ください'}
 						onChange={messageInputChangeHandler}
+						onBlur={() => {
+							messageTouchedHandler(true);
+						}}
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
+					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentJa />}
 				</div>
 
 				<div className={styles['guestbook-form-submit-button-box']}>
