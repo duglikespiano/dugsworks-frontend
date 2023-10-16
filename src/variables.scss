@@ -29,3 +29,64 @@ $submenu-title-gap: 1rem;
 $content-box-border: 0.3rem solid white;
 $content-box-border-radius: 2rem;
 $content-box-padding: 2rem;
+
+.shared-modal-background {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+.shared-modal-box {
+	background-color: $font-color-main-dark;
+	width: 35rem;
+	height: 35rem;
+	padding: 15px;
+	border: $content-box-border;
+	border-color: $background-color-sub1-dark;
+	border-radius: $content-box-border-radius;
+}
+
+.shared-modal-icon-box {
+	width: 10rem;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.shared-modal-icon {
+	font-size: 10rem;
+	color: $background-color-sub1-dark;
+}
+
+.shared-modal-text {
+	font-size: $font-size-emphasize;
+	color: $background-color-sub1-dark;
+	text-align: center;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.shared-modal-confirm-icon-box {
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	margin-top: 5rem;
+}
+
+.shared-modal-confirm-icon {
+	width: 100%;
+	background-color: $font-color-emphasize-dark;
+	font-family: 'Gabarito', cursive;
+	font-size: 2.5rem;
+	text-align: center;
+	border: $content-box-border;
+	border-color: $background-color-sub1-dark;
+	border-radius: calc($content-box-border-radius/2);
+	cursor: pointer;
+}
