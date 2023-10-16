@@ -2,7 +2,11 @@ import { useEffect } from 'react';
 import { BiMessageError } from 'react-icons/bi';
 import styles from './GuestbookInputFormModalKo.module.scss';
 
-export default function GuestbookInputFormModalKo({ isFormFilledProperlyHandler }: any) {
+interface props {
+	isFormFilledProperlyHandler: () => void;
+}
+
+export default function GuestbookInputFormModalKo({ isFormFilledProperlyHandler }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
