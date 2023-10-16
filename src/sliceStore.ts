@@ -340,32 +340,3 @@ export const selectedProjectKeywordsActions = selectedProjectKeywordsSlice.actio
 export const selectedProjectKeywordsIncludeProjectsActions = selectedProjectKeywordsIncludeProjectsSlice.actions;
 export const messagesActions = messagesSlice.actions;
 export default store;
-
-// {
-// 	id: 1,
-// 	writer: '뭐여이건..',
-// 	password: 1234,
-// 	message: 'ㅋㅋ루삥뽕~',
-// 	date: 'Sun Oct 15 2023 00:13:33 GMT+0900 (GMT+09:00)',
-// },
-// {
-// 	id: 2,
-// 	writer: '잠오는구만..',
-// 	password: 1234,
-// 	message: '시작해봅시다',
-// 	date: 'Sun Oct 15 2023 00:23:33 GMT+0900 (GMT+09:00)',
-// },
-// {
-// 	id: 3,
-// 	writer: '에러환장하것네유..',
-// 	password: 1234,
-// 	message: '과연?',
-// 	date: 'Sun Oct 15 2023 00:33:33 GMT+0900 (GMT+09:00)',
-// },
-// {
-// 	id: 4,
-// 	writer: '이것이뭐시덩가....',
-// 	password: 1234,
-// 	message: '어떻게 될 것인지?',
-// 	date: 'Sun Oct 15 2023 01:13:33 GMT+0900 (GMT+09:00)',
-// },
