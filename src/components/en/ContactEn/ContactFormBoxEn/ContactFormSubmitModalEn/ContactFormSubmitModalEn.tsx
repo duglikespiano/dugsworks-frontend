@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
-import { PiCheckFatBold } from 'react-icons/pi';
+import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
 import styles from './ContactFormSubmitModalEn.module.scss';
 
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;
+	isProcessdProperly: boolean;
 }
 
-export default function ContactFormSubmitModalEn({ isFormSubmittedHandler }: props) {
+export default function ContactFormSubmitModalEn({ isFormSubmittedHandler, isProcessdProperly }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
-			position: fixed; 
+			position: fixed;
 			top: -${window.scrollY}px;
 			overflow-y: scroll;
 			width: 100%;`;
@@ -32,12 +33,15 @@ export default function ContactFormSubmitModalEn({ isFormSubmittedHandler }: pro
 		>
 			<div className={styles['contact-form-submit-modal-content-box']}>
 				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					<PiCheckFatBold className={styles['contact-form-submit-modal-checkicon']} />
+					{isProcessdProperly && <BiMessageCheck className={styles['contact-form-submit-modal-checkicon']} />}
+					{!isProcessdProperly && <BiMessageError className={styles['contact-form-submit-modal-checkicon']} />}
 				</div>
 				<div className={styles['contact-form-submit-modal-resulttext']}>
-					Your message
+					{isProcessdProperly && 'Your message'}
+					{!isProcessdProperly && 'Error Occurred'}
 					<br />
-					has been delivered
+					{isProcessdProperly && 'has been delivered'}
+					{!isProcessdProperly && 'Please contact to Dug'}
 				</div>
 				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
 					<button

@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import { PiCheckFatBold } from 'react-icons/pi';
+import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
 import styles from './ContactFormSubmitModalKo.module.scss';
 
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;
+	isProcessdProperly: boolean;
 }
 
-export default function ContactFormSubmitModalKo({ isFormSubmittedHandler }: props) {
+export default function ContactFormSubmitModalKo({ isFormSubmittedHandler, isProcessdProperly }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -32,12 +33,16 @@ export default function ContactFormSubmitModalKo({ isFormSubmittedHandler }: pro
 		>
 			<div className={styles['contact-form-submit-modal-content-box']}>
 				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					<PiCheckFatBold className={styles['contact-form-submit-modal-checkicon']} />
+					{isProcessdProperly && <BiMessageCheck className={styles['contact-form-submit-modal-checkicon']} />}
+					{!isProcessdProperly && <BiMessageError className={styles['contact-form-submit-modal-checkicon']} />}
 				</div>
 				<div className={styles['contact-form-submit-modal-resulttext']}>
-					정상적으로
+					{isProcessdProperly && '정상적으로'}
+					{!isProcessdProperly && '오류가 발생했습니다'}
 					<br />
-					발신되었습니다
+					{isProcessdProperly && '발신되었습니다'}
+					{!isProcessdProperly && 'Dug에게 연락해주세요'}
+					<br />
 				</div>
 				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
 					<button

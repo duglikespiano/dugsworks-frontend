@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ContactFormSubmitModalEn from './ContactFormSubmitModalEn/ContactFormSubmitModalEn';
 import ContactFormContentsRequireComponentEn from './ContactFormContentsRequireComponentEn/ContactFormContentsRequireComponentEn';
+import ProcessingModalEn from '../../shared/ProcessingModalEn/ProcessingModalEn';
 import GuestbookInputFormModalEn from '../../GuestbookEn/GuestbookInputFormEn/GuestbookInputFormModalEn/GuestbookInputFormModalEn';
 import styles from './ContactFormBoxEn.module.scss';
 
@@ -15,6 +16,8 @@ export default function ContactFormBoxEn() {
 
 	const [isFormReady, setIsFormReady] = useState(true);
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+	const [isProcessing, setIsProcessing] = useState(false);
+	const [isProcessdProperly, setIsProcessdProperly] = useState(true);
 
 	const nameInputRef = useRef<HTMLInputElement>(null);
 	const nameInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,35 +72,84 @@ export default function ContactFormBoxEn() {
 			messageInputRef.current!.value.trim() === ''
 		) {
 			setIsFormReady(false);
+			setNameTouched(true);
+			setEmailTouched(true);
+			setMessageTouched(true);
 			return;
-		}
+		} else {
+			if (isFormReady) {
+				setIsProcessing(true);
 
-		if (isFormReady) {
-			const contactInfoObject = {
-				name: enteredName,
-				email: enteredEmail,
-				message: enteredMessage,
-			};
-			console.log(contactInfoObject);
-			isFormSubmittedHandler(true);
-			setEnteredName('');
-			setEnteredEmail('');
-			setEnteredMessage('');
-			setNameTouched(false);
-			setEmailTouched(false);
-			setMessageTouched(false);
-			setIsFormReady(true);
-			return;
+				const contactInfoMailObject: contactInfoMailObjectType = {
+					name: enteredName,
+					email: enteredEmail,
+					message: enteredMessage,
+				};
+
+				requestToSendContactMail(contactInfoMailObject);
+				return;
+			}
+		}
+	};
+
+	interface contactInfoMailObjectType {
+		name: string;
+		email: string;
+		message: string;
+	}
+
+	const formSubmitResultToComponent = (boolean: boolean) => {
+		setIsProcessing(false);
+		isFormSubmittedHandler(true);
+		setIsFormReady(true);
+		setIsProcessdProperly(boolean);
+	};
+
+	const resetForm = () => {
+		setEnteredName('');
+		setEnteredEmail('');
+		setEnteredMessage('');
+		setNameTouched(false);
+		setEmailTouched(false);
+		setMessageTouched(false);
+		setIsFormReady(true);
+	};
+
+	const requestToSendContactMail = async (mailObj: contactInfoMailObjectType) => {
+		try {
+			const fetchedResult = await fetch(
+				`${process.env.REACT_APP_BACKEND_ENDPOINT}:${process.env.REACT_APP_BACKEND_PORT}/mail/contact`,
+				{
+					method: 'POST',
+					headers: {
+						'Content-type': 'application/json',
+					},
+					body: JSON.stringify(mailObj),
+				}
+			);
+			const parsedFetchedResult = await fetchedResult.json();
+			if (fetchedResult.status !== 200) {
+				throw new Error(parsedFetchedResult.error);
+			} else {
+				formSubmitResultToComponent(true);
+			}
+		} catch (error) {
+			console.log(error);
+			formSubmitResultToComponent(false);
+		} finally {
+			resetForm();
 		}
 	};
 
 	return (
 		<form className={styles['contact-form']} onSubmit={submitHandler}>
+			{isProcessing && <ProcessingModalEn />}
 			{isFormSubmitted && (
 				<ContactFormSubmitModalEn
 					isFormSubmittedHandler={(boolean) => {
 						setIsFormSubmitted(boolean);
 					}}
+					isProcessdProperly={isProcessdProperly}
 				/>
 			)}
 			{!isFormReady && <GuestbookInputFormModalEn isFormFilledProperlyHandler={isFormReadyHandler} />}

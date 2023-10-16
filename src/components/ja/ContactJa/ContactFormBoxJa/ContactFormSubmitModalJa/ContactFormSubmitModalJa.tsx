@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import { PiCheckFatBold } from 'react-icons/pi';
+import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
 import styles from './ContactFormSubmitModalJa.module.scss';
 
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;
+	isProcessdProperly: boolean;
 }
 
-export default function ContactFormSubmitModalJa({ isFormSubmittedHandler }: props) {
+export default function ContactFormSubmitModalJa({ isFormSubmittedHandler, isProcessdProperly }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -32,12 +33,15 @@ export default function ContactFormSubmitModalJa({ isFormSubmittedHandler }: pro
 		>
 			<div className={styles['contact-form-submit-modal-content-box']}>
 				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					<PiCheckFatBold className={styles['contact-form-submit-modal-checkicon']} />
+					{isProcessdProperly && <BiMessageCheck className={styles['contact-form-submit-modal-checkicon']} />}
+					{!isProcessdProperly && <BiMessageError className={styles['contact-form-submit-modal-checkicon']} />}
 				</div>
 				<div className={styles['contact-form-submit-modal-resulttext']}>
-					正常に
+					{isProcessdProperly && '正常に'}
+					{!isProcessdProperly && 'エラーが発生しました'}
 					<br />
-					発信されました
+					{isProcessdProperly && '発信されました'}
+					{!isProcessdProperly && 'Dugにご連絡ください'}
 				</div>
 				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
 					<button
