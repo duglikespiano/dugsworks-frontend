@@ -118,7 +118,7 @@ export default function ContactFormBoxJa() {
 	const requestToSendContactMail = async (mailObj: contactInfoMailObjectType) => {
 		try {
 			const fetchedResult = await fetch(
-				`${process.env.REACT_APP_BACKEND_ENDPOINT}:${process.env.REACT_APP_BACKEND_PORT}/mail/contact`,
+				`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/mail/contact`,
 				{
 					method: 'POST',
 					headers: {
