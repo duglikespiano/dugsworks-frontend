@@ -274,50 +274,47 @@ const selectedProjectKeywordsIncludeProjectsSlice = createSlice({
 
 export interface messagesSliceType {
 	id: number;
-	writer: string;
-	password: number;
+	name: string;
+	password: string;
 	message: string;
-	date: string;
+	created_at: string | number;
 }
+
+export type fetchedMessagesType = {
+	id?: number;
+	name: string;
+	password: string;
+	message: string;
+	created_at: Date | string;
+};
 
 export interface messagesSlicePropsType {
 	message: {
 		id: number;
-		writer: string;
-		password: number;
+		name: string;
+		password: string;
 		message: string;
-		date: string;
+		created_at: string | number;
 	};
 }
 
+type messegeSliceInitialStateType = messagesSliceType[];
+
+const messageSliceInitialState: messegeSliceInitialStateType = [];
+
 const messagesSlice = createSlice({
 	name: 'messages',
-	initialState: [
-		{
-			id: 1,
-			writer: '박더그',
-			password: 1234,
-			message: '화이팅~',
-			date: 'Sun Oct 15 2023 00:13:33 GMT+0900 (GMT+09:00)',
-		},
-		{
-			id: 2,
-			writer: 'Dug Park',
-			password: 1234,
-			message: 'Go Go Man!',
-			date: 'Sun Oct 15 2023 00:23:33 GMT+0900 (GMT+09:00)',
-		},
-		{
-			id: 3,
-			writer: 'ダグ',
-			password: 1234,
-			message: 'まさか？！',
-			date: 'Sun Oct 15 2023 00:33:33 GMT+0900 (GMT+09:00)',
-		},
-	],
+	initialState: messageSliceInitialState,
 	reducers: {
+		resetMessages(state) {
+			state.splice(0);
+		},
 		addMessage(state, { payload }) {
-			state.push(JSON.parse(payload));
+			if (typeof payload === 'string') {
+				state.unshift(JSON.parse(payload));
+			} else {
+				state.unshift(payload);
+			}
 		},
 	},
 });

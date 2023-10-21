@@ -1,34 +1,25 @@
 import { useState, useRef, Fragment } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import GuestbookInputFormModalKo from './GuestbookInputFormModalKo/GuestbookInputFormModalKo';
 import ContactFormContentsRequireComponentKo from '../../ContactKo/ContactFormBoxKo/ContactFormContentsRequireComponentKo/ContactFormContentsRequireComponentKo';
-import { messagesActions, RootState } from '../../../../sliceStore';
+import { messagesActions } from '../../../../sliceStore';
 import styles from './GuestbookInputFormKo.module.scss';
 
 export default function GuestbookInputFormKo() {
+	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
+
 	class Message {
-		id: number;
-		writer: string;
+		name: string;
 		password: string;
 		message: string;
-		date: string;
 
-		constructor(writer: string, password: string, message: string) {
-			let id: number = 0;
-			messagesList.forEach((item) => {
-				if (item.id > id) {
-					id = item.id;
-				}
-			});
-			this.id = id + 1;
-			this.writer = writer;
+		constructor(name: string, password: string, message: string) {
+			this.name = name;
 			this.password = password;
 			this.message = message;
-			this.date = new Date().toString();
 		}
 	}
 
-	const messagesList = useSelector((state: RootState) => state.messagesList);
 	const dispatch = useDispatch();
 
 	const [enteredName, setEnteredName] = useState('');
@@ -71,13 +62,78 @@ export default function GuestbookInputFormKo() {
 		if (enteredName.trim().length === 0 || enteredPassword.trim().length === 0 || enteredMessage.trim().length === 0) {
 			isFormFilledProperlyHandler();
 		} else {
-			dispatch(messagesActions.addMessage(JSON.stringify(newMessage)));
-			setEnteredName('');
-			setEnteredPassword('');
-			setEnteredMessage('');
-			setNameTouched(false);
-			setPasswordTouched(false);
-			setMessageTouched(false);
+			const messageObjectForUnshift = { ...newMessage, created_at: new Date(new Date().getTime() + KR_TIME_DIFF).toISOString() };
+			if (typeof messageObjectForUnshift.created_at === 'string') {
+				let year = messageObjectForUnshift.created_at.split('-')[0] + '년';
+				let month = messageObjectForUnshift.created_at.split('-')[1];
+				let day = messageObjectForUnshift.created_at.split('-')[2].slice(0, 2) + '일';
+				let time: number | string = parseInt(messageObjectForUnshift.created_at.split('-')[2].slice(3, 5));
+				let minutes = messageObjectForUnshift.created_at.split('-')[2].slice(6, 8);
+
+				if (month === '01') {
+					month = '1월';
+				} else if (month === '02') {
+					month = '2월';
+				} else if (month === '03') {
+					month = '3월';
+				} else if (month === '04') {
+					month = '4월';
+				} else if (month === '05') {
+					month = '5월';
+				} else if (month === '06') {
+					month = '6월';
+				} else if (month === '07') {
+					month = '7월';
+				} else if (month === '08') {
+					month = '8월';
+				} else if (month === '09') {
+					month = '9월';
+				} else if (month === '10') {
+					month = '10월';
+				} else if (month === '11') {
+					month = '11월';
+				} else {
+					month = '12월';
+				}
+
+				if (time > 12) {
+					time = (time - 12).toString();
+					if (time === '11' || time === '10') {
+						time = `오후 ${time}`;
+					} else {
+						time = `오후 0${time}`;
+					}
+				} else if (time === 11 || time === 10) {
+					time = '오전 ' + time.toString();
+				} else if (time === 0) {
+					time = '오전 00';
+				} else {
+					time = '오전 0' + time.toString();
+				}
+
+				const convertedDate = `${year} ${month} ${day}, ${time}:${minutes}`;
+				messageObjectForUnshift.created_at = convertedDate;
+			}
+
+			dispatch(messagesActions.addMessage(JSON.stringify(messageObjectForUnshift)));
+			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/guestbook`, {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+				},
+				body: JSON.stringify(newMessage),
+			})
+				.then((res) => res.json())
+				.then((data) => console.log(data))
+				.catch((error) => console.error(error))
+				.finally(() => {
+					setEnteredName('');
+					setEnteredPassword('');
+					setEnteredMessage('');
+					setNameTouched(false);
+					setPasswordTouched(false);
+					setMessageTouched(false);
+				});
 		}
 	};
 
