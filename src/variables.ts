@@ -76,7 +76,7 @@ export const secondCompanyHistory: HistoryType[] = [
 		duty3: 'Managed communication to Japanese headquater',
 	},
 	{
-		period: '2020.12 - 2022. 06',
+		period: '2020. 12 - 2022. 06',
 		name: '한국알박(주)',
 		department: '구매파트',
 		duty1: '일본계 반도체공정장비제조기업 구매부서에서 근무하였습니다',
@@ -84,7 +84,7 @@ export const secondCompanyHistory: HistoryType[] = [
 		duty3: '일본 본사와의 커뮤니케이션을 담당하였습니다',
 	},
 	{
-		period: '2020.12 - 2022. 06',
+		period: '2020. 12 - 2022. 06',
 		name: '韓国アルバック(株)',
 		department: '購買パート',
 		duty1: '日本系半導体工程装備製造企業の購買府署で勤務しました',
@@ -103,7 +103,7 @@ export const firstCompanyHistory: HistoryType[] = [
 		duty3: 'Managed communication to Japanese headquater and American customer',
 	},
 	{
-		period: '2017.06 - 2020. 02',
+		period: '2017. 06 - 2020. 02',
 		name: '크린팩토메이션(주)',
 		department: '설계팀',
 		duty1: '일본계 반도체반송장비제조기업 설계팀에서 근무하였습니다',
@@ -111,7 +111,7 @@ export const firstCompanyHistory: HistoryType[] = [
 		duty3: '미국 고객사 및 일본 본사와의 커뮤니케이션을 담당하였습니다',
 	},
 	{
-		period: '2017.06 - 2020. 02',
+		period: '2017. 06 - 2020. 02',
 		name: 'Clean Factomation, Inc.',
 		department: '設計チーム',
 		duty1: '日本系半導体搬送装備製造企業の設計チームで勤務しました',
@@ -130,7 +130,7 @@ export const schoolHistory: HistoryType[] = [
 		duty3: 'Experienced student exchange at Malaysia',
 	},
 	{
-		period: '2008.03 - 2015.02',
+		period: '2008. 03 - 2015. 02',
 		name: '부경대학교',
 		department: '해양공학과',
 		duty1: '대한민국 부산광역시 소재 국립부경대학교에서 해양공학을 전공하였습니다',
@@ -138,7 +138,7 @@ export const schoolHistory: HistoryType[] = [
 		duty3: '말레이시아 교환학생생활을 경험하였습니다',
 	},
 	{
-		period: '2008.03 - 2015.02',
+		period: '2008. 03 - 2015. 02',
 		name: '釜慶大学(ブギョンデハク)',
 		department: '海洋工学',
 		duty1: '韓国の釜山広域市所在の国立釜慶大学で海洋工学を専攻しました',
