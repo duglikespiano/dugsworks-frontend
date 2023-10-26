@@ -316,6 +316,9 @@ const messagesSlice = createSlice({
 				state.unshift(payload);
 			}
 		},
+		deleteMessage(state, { payload }) {
+			return state.filter((item) => item.id !== payload);
+		},
 	},
 });
 

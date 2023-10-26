@@ -2,7 +2,7 @@ import { useEffect, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { messagesActions } from '../../../../../../sliceStore';
 
-import styles from './GuestbookMessagePasswordModalEn.module.scss';
+import styles from './GuestbookMessagePasswordModalKo.module.scss';
 
 interface props {
 	isPasswordModalRequestedHandler: () => void;
@@ -12,7 +12,7 @@ interface props {
 	messageId: number;
 }
 
-export default function GuestbookMessagePasswordModalEn({
+export default function GuestbookMessagePasswordModalKo({
 	isPasswordModalRequestedHandler,
 	isProcessingHandler,
 	isResultArrivedHandler,
@@ -92,23 +92,23 @@ export default function GuestbookMessagePasswordModalEn({
 				}}
 			>
 				<div className={styles['guestbook-mesasge-password-request-modal-content-box']}>
-					<div className={styles['guestbook-mesasge-password-request-modal-password-request-text']}>Please input password</div>
+					<div className={styles['guestbook-mesasge-password-request-modal-password-request-text']}>비밀번호를 입력해주세요</div>
 					<div className={styles['guestbook-mesasge-password-request-modal-password-request-input-box']}>
 						<input
 							className={styles['guestbook-mesasge-password-request-modal-password-request-input']}
-							placeholder="Your password"
+							placeholder="비밀번호를 입력해주세요"
 							ref={passwordInputRef}
 						></input>
 					</div>
 					<div className={styles['guestbook-mesasge-password-request-modal-icons-box']}>
 						<div className={styles['guestbook-mesasge-password-request-modal-icon-confirm']} onClick={fetchMessageDeleteAPI}>
-							Confirm
+							확인
 						</div>
 						<div
 							className={styles['guestbook-mesasge-password-request-modal-icon-cancel']}
 							onClick={isPasswordModalRequestedHandler}
 						>
-							Cancel
+							취소
 						</div>
 					</div>
 				</div>

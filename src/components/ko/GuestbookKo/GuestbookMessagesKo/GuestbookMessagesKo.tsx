@@ -5,6 +5,7 @@ import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } fr
 
 export default function GuestbookMessagesKo() {
 	const [isReadyToFetch, setIsReadyToFetch] = useState(true);
+
 	const messagesList = useSelector((state: RootState) => state.messagesList);
 	const dispatch = useDispatch();
 
