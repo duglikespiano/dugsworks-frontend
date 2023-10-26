@@ -9,6 +9,7 @@ export default function GuestbookInputFormKo() {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
 
 	class Message {
+		id?: number;
 		name: string;
 		password: string;
 		message: string;
@@ -115,7 +116,6 @@ export default function GuestbookInputFormKo() {
 				messageObjectForUnshift.created_at = convertedDate;
 			}
 
-			dispatch(messagesActions.addMessage(JSON.stringify(messageObjectForUnshift)));
 			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/guestbook`, {
 				method: 'POST',
 				headers: {
@@ -124,7 +124,10 @@ export default function GuestbookInputFormKo() {
 				body: JSON.stringify(newMessage),
 			})
 				.then((res) => res.json())
-				.then((data) => console.log(data))
+				.then((data) => {
+					messageObjectForUnshift.id = data.messageId;
+					dispatch(messagesActions.addMessage(JSON.stringify(messageObjectForUnshift)));
+				})
 				.catch((error) => console.error(error))
 				.finally(() => {
 					setEnteredName('');
