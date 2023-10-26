@@ -1,10 +1,21 @@
 @import '../../../../../variables.scss';
 
 .guestbook-message-box {
+	position: relative;
+	word-break: keep-all;
+	word-wrap: break-word;
 	border: $content-box-border;
 	border-radius: $content-box-border-radius;
 	padding: $content-box-padding;
 	margin-bottom: calc($menu-contents-gap/2);
+}
+
+.guestbook-message-delete-icon {
+	position: absolute;
+	left: 92.5%;
+	top: 15%;
+	font-size: calc($font-size-main/1.5);
+	cursor: pointer;
 }
 
 .guestbook-message-writer-date-box {
