@@ -52,7 +52,7 @@ export default function GuestbookMessageEn({ message }: messagesSlicePropsType) 
 					<RiDeleteBin6Line />{' '}
 				</div>
 				<div className={styles['guestbook-message-writer-date-box']}>
-					<div className={styles['guestbook-message-writer']}>{message.name}di</div>
+					<div className={styles['guestbook-message-writer']}>{message.name}</div>
 					<div className={styles['guestbook-message-date']}>{message.created_at}</div>
 				</div>
 				<div className={styles['guestbook-message-text']}>{message.message}</div>
