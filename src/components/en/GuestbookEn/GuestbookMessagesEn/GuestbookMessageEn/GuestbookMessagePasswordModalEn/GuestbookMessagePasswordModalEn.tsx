@@ -52,28 +52,18 @@ export default function GuestbookMessagePasswordModalEn({
 			body: JSON.stringify(deleteRequestMessageInfo),
 		})
 			.then((res) => {
-				let result;
 				setTimeout(() => {
 					if (res.status === 200) {
 						isProcessingHandler(false);
 						isFetchedProperlyHandler(true);
 						isResultArrivedHandler(true);
-						result = true;
+						dispatch(messagesActions.deleteMessage(messageId));
 					} else {
 						isProcessingHandler(false);
 						isFetchedProperlyHandler(false);
 						isResultArrivedHandler(true);
-						result = false;
 					}
 				}, 1500);
-				return result;
-			})
-			.then((result) => {
-				if (result) {
-					dispatch(messagesActions.deleteMessage(messageId));
-				} else {
-					return;
-				}
 			})
 			.catch((error) => {
 				console.error(error);
