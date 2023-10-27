@@ -57,7 +57,9 @@ export default function GuestbookMessagePasswordModalEn({
 						isProcessingHandler(false);
 						isFetchedProperlyHandler(true);
 						isResultArrivedHandler(true);
-						dispatch(messagesActions.deleteMessage(messageId));
+						setTimeout(() => {
+							dispatch(messagesActions.deleteMessage(messageId));
+						}, 5000);
 					} else {
 						isProcessingHandler(false);
 						isFetchedProperlyHandler(false);
