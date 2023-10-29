@@ -44,7 +44,7 @@ export default function GuestbookMessagePasswordModalKo({
 			password: passwordInputRef.current?.value,
 		};
 
-		fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/guestbook`, {
+		fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}/guestbook`, {
 			method: 'delete',
 			headers: {
 				'Content-type': 'application/json',
@@ -59,7 +59,7 @@ export default function GuestbookMessagePasswordModalKo({
 						isResultArrivedHandler(true);
 						setTimeout(() => {
 							dispatch(messagesActions.deleteMessage(messageId));
-						}, 5000);
+						}, 1000);
 					} else {
 						isProcessingHandler(false);
 						isFetchedProperlyHandler(false);

@@ -116,7 +116,7 @@ export default function GuestbookInputFormKo() {
 				messageObjectForUnshift.created_at = convertedDate;
 			}
 
-			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/guestbook`, {
+			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}/guestbook`, {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json',

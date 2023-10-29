@@ -11,7 +11,7 @@ export default function GuestbookMessagesJa() {
 
 	useEffect(() => {
 		if (isReadyToFetch) {
-			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/guestbook`)
+			fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}/guestbook`)
 				.then((res) => res.json())
 				.then(({ data }) => {
 					data.map((item: fetchedMessagesType) => {

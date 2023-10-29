@@ -117,16 +117,13 @@ export default function ContactFormBoxKo() {
 
 	const requestToSendContactMail = async (mailObj: contactInfoMailObjectType) => {
 		try {
-			const fetchedResult = await fetch(
-				`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}:${process.env.REACT_APP_BACKEND_SERVER_PORT}/mail/contact`,
-				{
-					method: 'POST',
-					headers: {
-						'Content-type': 'application/json',
-					},
-					body: JSON.stringify(mailObj),
-				}
-			);
+			const fetchedResult = await fetch(`${process.env.REACT_APP_BACKEND_SERVER_ENDPOINT}/mail/contact`, {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+				},
+				body: JSON.stringify(mailObj),
+			});
 			const parsedFetchedResult = await fetchedResult.json();
 			if (fetchedResult.status !== 200) {
 				throw new Error(parsedFetchedResult.error);
