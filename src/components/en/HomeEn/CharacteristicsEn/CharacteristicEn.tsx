@@ -10,7 +10,7 @@ const turtleInfo = {
 	imageAlt: 'turtle',
 	keyword: 'Turtle',
 	title: 'I am a turtle who never stops',
-	contents: ['Although I am not quick like a rabbit', 'Nobody can stop me', 'I will achieve a goal in the end'],
+	contents: ['Although I am not quick like a rabbit.', 'Nobody can stop me.', 'I will achieve a goal in the end.'],
 	boxSide: 'left',
 };
 
@@ -20,9 +20,9 @@ const theGoldenGateBridgeInfo = {
 	keyword: 'Dream',
 	title: 'I always dream',
 	contents: [
-		'My dream is becoming a fullstack engineer',
-		'who can speak four languages',
-		'I will work for the people around the world',
+		'My dream is becoming a fullstack engineer.',
+		'who can speak four languages.',
+		'I will work for the people around the world.',
 	],
 	boxSide: 'right',
 };
@@ -32,7 +32,7 @@ const cloversInfo = {
 	imageAlt: 'clovers',
 	keyword: 'Effort',
 	title: 'I grow everyday',
-	contents: ["I believe in everyday's discipline", "I'm a junior developer now", 'But I will be an web expert someday'],
+	contents: ["I believe in everyday's discipline.", "I'm a junior developer now.", 'But I will be an web expert someday.'],
 	boxSide: 'left',
 };
 
