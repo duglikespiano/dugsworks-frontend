@@ -5,9 +5,9 @@ export default function RootAll() {
 	const navigate = useNavigate();
 	useEffect(() => {
 		const userLanguage = navigator.language.toLowerCase();
-		if (userLanguage === 'ko-kr') {
+		if (userLanguage.includes('ko')) {
 			navigate('/ko');
-		} else if (userLanguage === 'ja-jp') {
+		} else if (userLanguage.includes('ja')) {
 			navigate('/ja');
 		} else {
 			navigate('/en');
