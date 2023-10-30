@@ -26,6 +26,15 @@
 	color: $font-color-sub1-dark;
 }
 
+.projects-filtered-description {
+	@extend .projects-skills-filter-description;
+	color: $background-color-sub2-dark;
+}
+
+.projects-filtered-description-emphasize-text {
+	color: $background-color-sub4-dark;
+}
+
 .horizontalrule {
 	margin-bottom: $menu-contents-gap;
 }
