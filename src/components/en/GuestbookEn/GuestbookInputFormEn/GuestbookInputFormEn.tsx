@@ -104,6 +104,8 @@ export default function GuestbookInputFormEn() {
 					} else {
 						time = `pm 0${time}`;
 					}
+				} else if (time === 12) {
+					time = `pm ${time}`;
 				} else if (time === 11 || time === 10) {
 					time = 'am ' + time.toString();
 				} else if (time === 0) {

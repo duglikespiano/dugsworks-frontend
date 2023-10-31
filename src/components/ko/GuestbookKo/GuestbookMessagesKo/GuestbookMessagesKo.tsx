@@ -55,6 +55,8 @@ export default function GuestbookMessagesKo() {
 								} else {
 									time = `오후 0${time}`;
 								}
+							} else if (time === 12) {
+								time = `오후 ${time}`;
 							} else if (time === 11 || time === 10) {
 								time = '오전 ' + time.toString();
 							} else if (time === 0) {

@@ -104,6 +104,8 @@ export default function GuestbookInputFormKo() {
 					} else {
 						time = `午後 0${time}`;
 					}
+				} else if (time === 12) {
+					time = `午後 ${time}`;
 				} else if (time === 11 || time === 10) {
 					time = '午前 ' + time.toString();
 				} else if (time === 0) {
