@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# dugsworks_frontend(kr)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### [Click here for English version](README_EN.md)
 
-## Available Scripts
+##### [日本語バージョンはこちらをクリックして下さい](README_JP.md)
 
-In the project directory, you can run:
+## - 목차 -
 
-### `npm start`
+1. 개요
+2. 프로젝트목표
+3. 개발노트
+4. 개선필요내용
+   </br>
+   </br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. 개요
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 프로젝트명 : dugsworks_frontend
+- URL : https://dugsworks.netlify.app
+- 기간 : 2023.09.29 - 2023.10.31 (1개월)
+- 인원 : 1인
+- 기술스택 : </br>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+  <img src="https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+  <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white">
+  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">
+  </br>
+  </br>
 
-### `npm test`
+### 2. 프로젝트목표
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. 본인의 프로젝트와 관련된 정보를 보여줄 수 있는 페이지를 작성 할 것
+2. Redux를 사용할 것
+3. 백엔드서버와 연동 가능하도록 구현 할 것
+4. 배포하여 유지 보수, 운용 할 것
+   </br>
+   </br>
 
-### `npm run build`
+### 3. 개발노트
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 방명록페이지 메세지삭제 API 추가(20231026)
+- 방명록페이지 백엔드와 연동(20231021)
+- 연락처페이지 백엔드와 연동(20231016)
+- 방명록페이지 추가(20231015)
+- 연락처페이지 추가(20231013)
+- 프로젝트페이지 추가(20231009)
+- Redux/ReduxTookKit 설정 추가(20231009)
+- 소개페이지 추가(20231009)
+- 프로파일페이지 추가(20231009)
+- 언어 선택 NAVBAR 추가(20231002)
+  </br>
+  </br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. 개선필요내용
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 반응형 웹 적용 할 것
+- 야간/주간모드 적용할 것
