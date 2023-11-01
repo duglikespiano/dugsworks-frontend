@@ -12,7 +12,7 @@ export default function ProfileTextJa() {
 					<h3 className={styles['home-profile-title-ja']}>ジュニア開発者</h3>
 					<h2 className={styles['home-profile-name-ja']}>朴 秀浩です</h2>
 					<h2 className={styles['home-profile-furigana-ja']}>(パク スホ)</h2>
-					<h3 className={styles['home-profile-aim-ja']}> - 遅くでも地道に🐢</h3>
+					<h3 className={styles['home-profile-aim-ja']}> - 遅くても地道に🐢</h3>
 				</div>
 
 				<div className={styles['home-iconbox-ja']}>

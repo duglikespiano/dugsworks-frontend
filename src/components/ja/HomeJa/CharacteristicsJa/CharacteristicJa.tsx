@@ -10,7 +10,7 @@ const turtleInfo = {
 	imageAlt: 'turtle',
 	keyword: 'カメ',
 	title: '私は諦めないカメです',
-	contents: ['ウサギのみたいに早いではないんですが、', '絶対に諦めません。', '最後まど努力して目標を遂げます。'],
+	contents: ['ウサギのみたいに早くはないですが、', '絶対に諦めません。', '最後まど努力して目標を遂げます。'],
 	boxSide: 'left',
 };
 
@@ -19,7 +19,7 @@ const theGoldenGateBridgeInfo = {
 	imageAlt: 'theGoldenGateBridge',
 	keyword: '夢',
 	title: '私はいつも夢を持っています',
-	contents: ['私の夢は四個国語ができる、', 'フルスタックエンジニアになる事です。', '全世界の人達のために働きたいです。'],
+	contents: ['私の夢は四か国語ができる、', 'フルスタックエンジニアになることです。', '全世界の人達のために働きたいです。'],
 	boxSide: 'right',
 };
 
