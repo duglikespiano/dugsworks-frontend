@@ -75,7 +75,7 @@ const projectsListSlice = createSlice({
 			descriptionEn: "A website to introduce Dug's works and contact with Dug",
 			descriptionKo: 'Dug의 작품 소개를 위한 웹 사이트',
 			descriptionJa: 'Dugの作品紹介の為のウェブサイト',
-			deploymentURL: '',
+			deploymentURL: 'https://dugsworks.netlify.app',
 			frontendRepositoryURL: 'https://github.com/duglikespiano/dugsworks-frontend',
 			backendRepositoryURL: 'https://github.com/duglikespiano/dugsworks-backend',
 			period: ['2023-09-30', ''],
