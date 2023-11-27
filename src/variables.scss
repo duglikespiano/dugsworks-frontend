@@ -31,6 +31,11 @@ $content-box-border: 0.3rem solid white;
 $content-box-border-radius: 2rem;
 $content-box-padding: 2rem;
 
+$responsive-web-breakpoint-pc-big: 1800px;
+$responsive-web-breakpoint-pc-normal: 1200px;
+$responsive-web-breakpoint-tablet-landscape: 900px;
+$responsive-web-breakpoint-tablet-portrait: 600px;
+
 .shared-modal-background {
 	position: fixed;
 	display: flex;
