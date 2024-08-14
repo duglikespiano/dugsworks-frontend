@@ -20,7 +20,7 @@ export default function ProjectsJa() {
 					<span className={styles['projects-filtered-description-emphasize-text']}>
 						{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.length}
 					</span>{' '}
-					個洗濯
+					個選択
 				</div>
 				<ProjectsKeywordsEn />
 				<hr className={styles['horizontalrule']} />
