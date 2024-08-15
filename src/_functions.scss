@@ -1,0 +1,41 @@
+@mixin sp {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin tab {
+	@media only screen and (max-width: 1280px) and (min-width: 769px) {
+		@content;
+	}
+}
+@mixin tab-s {
+	@media only screen and (max-width: 1050px) and (min-width: 769px) {
+		@content;
+	}
+}
+@mixin pc {
+	@media only screen and (min-width: 769px) {
+		@content;
+	}
+}
+
+@function pcvw($px) {
+	@return calc(#{$px} * (100vw / #{1360}));
+}
+@function vw($px) {
+	@return calc(#{$px} * (100vw / #{375}));
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin preventClick() {
+	user-select: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}

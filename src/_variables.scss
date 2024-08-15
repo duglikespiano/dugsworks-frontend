@@ -1,3 +1,8 @@
+$maxwidth-extra-large: 1600px;
+$maxwidth-large: 1024px;
+$maxwidth-medium: 768px;
+$maxwidth-small: 375px;
+
 $background-color-main-dark: #122235; //main
 $background-color-emphasize-dark: #00296f; // emphasize
 $background-color-sub1-dark: #112d4e; // sub1
@@ -30,11 +35,6 @@ $submenu-title-gap: 1rem;
 $content-box-border: 0.3rem solid white;
 $content-box-border-radius: 2rem;
 $content-box-padding: 2rem;
-
-$responsive-web-breakpoint-pc-big: 1800px;
-$responsive-web-breakpoint-pc-normal: 1200px;
-$responsive-web-breakpoint-tablet-landscape: 900px;
-$responsive-web-breakpoint-tablet-portrait: 600px;
 
 .shared-modal-background {
 	position: fixed;
