@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './ProfileTextKo.module.scss';
+import styles from './ProfileText.module.scss';
 import { PiInstagramLogo, PiGithubLogo } from 'react-icons/pi';
 
 export default function ProfileTextKo() {

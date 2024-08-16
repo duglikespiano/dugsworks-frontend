@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import ContactFormBoxKo from './ContactFormBox/ContactFormBox';
-import styles from './ContactKo.module.scss';
+import styles from './Contact.module.scss';
 
 export default function ContactKo() {
 	return (

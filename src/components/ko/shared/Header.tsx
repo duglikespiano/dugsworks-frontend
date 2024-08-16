@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import NavKo from './Nav/NavKo';
-import LanguageSelectorKo from './LanguageSelector/LanguageSelectorKo';
-import styles from './HeaderKo.module.scss';
+import NavKo from './Nav/Nav';
+import LanguageSelectorKo from './LanguageSelector/LanguageSelector';
+import styles from './Header.module.scss';
 
 export default function HeaderKo() {
 	return (

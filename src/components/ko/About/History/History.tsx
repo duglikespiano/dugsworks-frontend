@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './HistoryKo.module.scss';
+import styles from './History.module.scss';
 import HistoryBoxKo from './HistoryBox/HistoryBox';
 import {
 	afterHistory,

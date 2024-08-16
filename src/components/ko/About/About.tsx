@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import SkillSetsKo from './SkillSets/SkillSets';
 import HistoryKo from './History/History';
-import styles from './AboutKo.module.scss';
+import styles from './About.module.scss';
 
 export default function AboutEn() {
 	return (

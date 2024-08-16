@@ -3,7 +3,7 @@ import ContactFormSubmitModalKo from './ContactFormSubmitModal/ContactFormSubmit
 import ContactFormContentsRequireComponentKo from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import ProcessingModalKo from '../../shared/ProcessingModal/ProcessingModal';
 import GuestbookInputFormModalKo from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
-import styles from './ContactFormBoxKo.module.scss';
+import styles from './ContactFormBox.module.scss';
 
 export default function ContactFormBoxKo() {
 	const [enteredName, setEnteredName] = useState('');

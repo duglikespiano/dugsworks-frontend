@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import GuestbookInputFormModalKo from './GuestbookInputFormModal/GuestbookInputFormModal';
 import ContactFormContentsRequireComponentKo from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../variables/sliceStore';
-import styles from './GuestbookInputFormKo.module.scss';
+import styles from './GuestbookInputForm.module.scss';
 
 export default function GuestbookInputFormKo() {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;

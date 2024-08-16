@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import GuestbookInputFormKo from './GuestbookInputForm/GuestbookInputForm';
 import GuestbookMessagesKo from './GuestbookMessages/GuestbookMessages';
-import styles from './GuestbookKo.module.scss';
+import styles from './Guestbook.module.scss';
 
 export default function GuestbookKo() {
 	return (

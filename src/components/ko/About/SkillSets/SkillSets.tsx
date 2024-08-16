@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import SkillsKo from './Skills/Skills';
-import styles from './SkillSetsKo.module.scss';
+import styles from './SkillSets.module.scss';
 import { frontEndSkillSets, backEndSkillSets, cloudSkillSets, miscSkillSets } from '../../../../variables/variables';
 
 export default function SkillSetsKo() {

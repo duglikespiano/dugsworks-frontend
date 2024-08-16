@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import CharacteristicTextKo from './CharacteristicTextKo';
-import styles from './CharacteristicBoxKo.module.scss';
+import CharacteristicTextKo from './CharacteristicText';
+import styles from './CharacteristicBox.module.scss';
 import { CharacteristicBoxPropsType } from '../../../../../variables/types';
 
 export default function CharacteristicBoxKo(props: CharacteristicBoxPropsType) {

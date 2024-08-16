@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './HistoryBoxKo.module.scss';
+import styles from './HistoryBox.module.scss';
 import { HistoryPropsType } from '../../../../../variables/types';
 
 export default function HistoryBoxKo(props: HistoryPropsType) {

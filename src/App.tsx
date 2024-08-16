@@ -16,7 +16,7 @@ import GuestbookEn from './components/en/Guestbook/Guestbook';
 import RootKo from './components/ko/Root';
 import ErrorKo from './components/ko/Error/Error';
 import HomeKo from './components/ko/Home/Home';
-import AboutKo from './components/ko/About/AboutKo';
+import AboutKo from './components/ko/About/About';
 import ProjectsKo from './components/ko/Projects/Projects';
 import ContactKo from './components/ko/Contact/Contact';
 import GuestbookKo from './components/ko/Guestbook/Guestbook';

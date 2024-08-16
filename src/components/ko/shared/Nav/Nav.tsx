@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import styles from './NavKo.module.scss';
+import styles from './Nav.module.scss';
 import { menus } from '../../../../variables/variables';
 
 export default function NavKo() {
