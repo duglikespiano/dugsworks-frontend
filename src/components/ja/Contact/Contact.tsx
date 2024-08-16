@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import ContactFormBoxJa from './ContactFormBox/ContactFormBox';
-import styles from './ContactJa.module.scss';
+import styles from './Contact.module.scss';
 
 export default function ContactJa() {
 	return (

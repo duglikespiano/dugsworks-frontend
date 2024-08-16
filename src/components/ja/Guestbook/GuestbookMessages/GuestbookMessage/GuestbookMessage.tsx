@@ -5,7 +5,7 @@ import ProcessingModalJa from '../../../shared/ProcessingModal/ProcessingModal';
 import GuestbookMessagePasswordModalJa from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
 import GuestbookMessageFetchResultModalJa from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
 
-import styles from './GuestbookMessageJa.module.scss';
+import styles from './GuestbookMessage.module.scss';
 
 export default function GuestbookMessageJa({ message }: messagesSlicePropsType) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);

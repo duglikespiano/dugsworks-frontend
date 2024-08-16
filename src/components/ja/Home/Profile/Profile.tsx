@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import ProfileImageJa from './ProfileImage';
 import ProfileTextJa from './ProfileText';
-import styles from './ProfileJa.module.scss';
+import styles from './Profile.module.scss';
 
 export default function ProfileJa() {
 	return (

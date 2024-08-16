@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import SkillSetsJa from './SkillSets/SkillSets';
 import HistoryJa from './History/History';
-import styles from './AboutJa.module.scss';
+import styles from './About.module.scss';
 
 export default function AboutEn() {
 	return (

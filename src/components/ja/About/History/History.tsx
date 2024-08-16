@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './HistoryJa.module.scss';
+import styles from './History.module.scss';
 import HistoryBoxJa from './HistoryBox/HistoryBox';
 import {
 	afterHistory,

@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import NavJa from './Nav/Nav';
 import LanguageSelectorJa from './LanguageSelector/LanguageSelector';
-import styles from './HeaderJa.module.scss';
+import styles from './Header.module.scss';
 
 export default function HeaderJa() {
 	return (

@@ -3,7 +3,7 @@ import ProjectsKeywordsEn from './ProjectsKeywords/ProjectsKeywords';
 import ProjectsListEn from './ProjectsList/ProjectsList';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../variables/sliceStore';
-import styles from './ProjectsJa.module.scss';
+import styles from './Projects.module.scss';
 
 export default function ProjectsJa() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);

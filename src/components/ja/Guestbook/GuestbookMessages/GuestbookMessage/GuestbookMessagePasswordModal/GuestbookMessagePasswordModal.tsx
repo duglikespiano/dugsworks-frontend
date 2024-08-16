@@ -2,7 +2,7 @@ import { useEffect, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { messagesActions } from '../../../../../../variables/sliceStore';
 
-import styles from './GuestbookMessagePasswordModalJa.module.scss';
+import styles from './GuestbookMessagePasswordModal.module.scss';
 
 interface props {
 	isPasswordModalRequestedHandler: () => void;

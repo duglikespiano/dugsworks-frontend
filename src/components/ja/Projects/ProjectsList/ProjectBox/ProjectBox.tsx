@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../../../../variables/sliceStore';
 import { projectsListType, projectsKeywordsType } from '../../../../../variables/sliceStore';
-import styles from './ProjectBoxJa.module.scss';
+import styles from './ProjectBox.module.scss';
 
 export default function ProjectBoxJa(props: projectsListType) {
 	const projectsKeywords = useSelector((state: RootState) => state.projectsKeywords);

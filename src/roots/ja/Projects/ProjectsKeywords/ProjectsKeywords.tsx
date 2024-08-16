@@ -7,7 +7,7 @@ import {
 	selectedProjectKeywordsIncludeProjectsActions,
 	projectInfoType,
 } from '../../../../variables/sliceStore';
-import styles from './ProjectsKeywordsJa.module.scss';
+import styles from './ProjectsKeywords.module.scss';
 
 export default function ProjectsKeywordsJa() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BiMessageError } from 'react-icons/bi';
-import styles from './GuestbookInputFormModalJa.module.scss';
+import styles from './GuestbookInputFormModal.module.scss';
 
 interface props {
 	isFormFilledProperlyHandler: () => void;

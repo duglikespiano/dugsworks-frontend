@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './ProfileImageJa.module.scss';
+import styles from './ProfileImage.module.scss';
 import profileImage from '../../../../images/profile-image.jpg';
 
 export default function ProfileImageJa() {

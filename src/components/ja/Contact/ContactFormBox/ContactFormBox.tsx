@@ -3,7 +3,7 @@ import ContactFormSubmitModalJa from './ContactFormSubmitModal/ContactFormSubmit
 import ContactFormContentsRequireComponentJa from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import ProcessingModalJa from '../../shared/ProcessingModal/ProcessingModal';
 import GuestbookInputFormModalJa from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
-import styles from './ContactFormBoxJa.module.scss';
+import styles from './ContactFormBox.module.scss';
 
 export default function ContactFormBoxJa() {
 	const [enteredName, setEnteredName] = useState('');
