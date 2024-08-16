@@ -21,13 +21,13 @@ import ProjectsKo from './components/ko/ProjectsKo/ProjectsKo';
 import ContactKo from './components/ko/ContactKo/ContactKo';
 import GuestbookKo from './components/ko/GuestbookKo/GuestbookKo';
 
-import RootJa from './components/ja/RootJa';
-import ErrorJa from './components/ja/ErrorJa/ErrorJa';
-import HomeJa from './components/ja/HomeJa/HomeJa';
-import AboutJa from './components/ja/AboutJa/AboutJa';
-import ProjectsJa from './components/ja/ProjectsJa/ProjectsJa';
-import ContactJa from './components/ja/ContactJa/ContactJa';
-import GuestbookJa from './components/ja/GuestbookJa/GuestbookJa';
+import RootJa from './components/ja/Root';
+import ErrorJa from './components/ja/Error/Error';
+import HomeJa from './components/ja/Home/Home';
+import AboutJa from './components/ja/About/About';
+import ProjectsJa from './components/ja/Projects/Projects';
+import ContactJa from './components/ja/Contact/Contact';
+import GuestbookJa from './components/ja/Guestbook/Guestbook';
 
 const router = createBrowserRouter([
 	{
