@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../../variables/sliceStore';
 import { projectsListType, projectsKeywordsType } from '../../../../../variables/sliceStore';
-import styles from './ProjectBoxEn.module.scss';
+import styles from './ProjectBox.module.scss';
 import { Link } from 'react-router-dom';
 
 export default function ProjectBoxEn(props: projectsListType) {

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import styles from './FooterEn.module.scss';
+import styles from './Footer.module.scss';
 import { menus } from '../../../variables/variables';
 
 export default function FooterEn() {

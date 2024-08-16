@@ -1,6 +1,6 @@
 import { useEffect, Fragment } from 'react';
 import { BiHourglass } from 'react-icons/bi';
-import styles from './ProcessingModalEn.module.scss';
+import styles from './ProcessingModal.module.scss';
 
 export default function ProcessingModalEn() {
 	useEffect(() => {

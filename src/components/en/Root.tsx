@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import HeaderEn from './shared/Header';
 import FooterEn from './shared/Footer';
-import styles from './RootEn.module.scss';
+import styles from './Root.module.scss';
 
 export default function MainEn() {
 	return (

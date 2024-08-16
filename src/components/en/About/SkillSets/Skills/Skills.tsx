@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './SkillsEn.module.scss';
+import styles from './Skills.module.scss';
 import { SkillSetsPropsType } from '../../../../../variables/types';
 
 export default function SkillsEn(props: SkillSetsPropsType) {

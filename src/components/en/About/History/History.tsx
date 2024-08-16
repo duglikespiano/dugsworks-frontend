@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import HistoryBox from './HistoryBox/HistoryBox';
-import styles from './HistoryEn.module.scss';
+import styles from './History.module.scss';
 import {
 	afterHistory,
 	bootCampHistory,

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './CharacteristicEn.module.scss';
+import styles from './Characteristic.module.scss';
 import CharacteristicBoxEn from './CharacteristicBox/CharacteristicBox';
 import turtleImageURL from '../../../../images/turtle-image.jpg';
 import theGoldenGateBridgeImageURL from '../../../../images/the-golden-gate-bridge-image.jpg';
