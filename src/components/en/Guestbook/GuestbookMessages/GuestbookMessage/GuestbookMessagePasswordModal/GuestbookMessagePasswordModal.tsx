@@ -2,7 +2,7 @@ import { useEffect, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { messagesActions } from '../../../../../../variables/sliceStore';
 
-import styles from './GuestbookMessagePasswordModal.module.scss';
+import './GuestbookMessagePasswordModal.scss';
 
 interface props {
 	isPasswordModalRequestedHandler: () => void;
@@ -12,7 +12,7 @@ interface props {
 	messageId: number;
 }
 
-export default function GuestbookMessagePasswordModalEn({
+export default function GuestbookMessagePasswordModal({
 	isPasswordModalRequestedHandler,
 	isProcessingHandler,
 	isResultArrivedHandler,
@@ -75,7 +75,7 @@ export default function GuestbookMessagePasswordModalEn({
 	return (
 		<Fragment>
 			<div
-				className={styles['guestbook-mesasge-password-request-modal']}
+				className="guestbook-mesasge-password-request-modal"
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {
@@ -83,23 +83,20 @@ export default function GuestbookMessagePasswordModalEn({
 					}
 				}}
 			>
-				<div className={styles['guestbook-mesasge-password-request-modal-content-box']}>
-					<div className={styles['guestbook-mesasge-password-request-modal-password-request-text']}>Please input password</div>
-					<div className={styles['guestbook-mesasge-password-request-modal-password-request-input-box']}>
+				<div className="guestbook-mesasge-password-request-modal-content-box">
+					<div className="guestbook-mesasge-password-request-modal-password-request-text">Please input password</div>
+					<div className="guestbook-mesasge-password-request-modal-password-request-input-box">
 						<input
-							className={styles['guestbook-mesasge-password-request-modal-password-request-input']}
+							className="guestbook-mesasge-password-request-modal-password-request-input"
 							placeholder="Your password"
 							ref={passwordInputRef}
 						></input>
 					</div>
-					<div className={styles['guestbook-mesasge-password-request-modal-icons-box']}>
-						<div className={styles['guestbook-mesasge-password-request-modal-icon-confirm']} onClick={fetchMessageDeleteAPI}>
+					<div className="guestbook-mesasge-password-request-modal-icons-box">
+						<div className="guestbook-mesasge-password-request-modal-icon-confirm" onClick={fetchMessageDeleteAPI}>
 							Confirm
 						</div>
-						<div
-							className={styles['guestbook-mesasge-password-request-modal-icon-cancel']}
-							onClick={isPasswordModalRequestedHandler}
-						>
+						<div className="guestbook-mesasge-password-request-modal-icon-cancel" onClick={isPasswordModalRequestedHandler}>
 							Cancel
 						</div>
 					</div>

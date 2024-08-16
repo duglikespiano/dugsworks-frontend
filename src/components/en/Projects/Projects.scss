@@ -1,0 +1,46 @@
+@import '../../../variables.scss';
+
+#projects-box {
+	width: 60rem;
+	margin: auto;
+
+	.skills-filter-title {
+		color: $font-color-emphasize-dark;
+		font-size: $font-size-emphasize;
+		margin-bottom: calc($menu-title-gap/2);
+	}
+
+	.projects-skills-filter-title {
+		font-size: $font-size-main;
+		font-weight: 900;
+		color: $font-color-main-dark;
+		margin-bottom: calc($submenu-margin/2);
+		margin-left: $submenu-margin;
+	}
+
+	.projects-skills-filter-description {
+		@extend .projects-skills-filter-title;
+		font-size: $font-size-sub;
+		font-weight: 900;
+		color: $font-color-sub1-dark;
+	}
+
+	.projects-filtered-description {
+		@extend .projects-skills-filter-description;
+		color: $background-color-sub2-dark;
+	}
+
+	.projects-filtered-description-emphasize-text {
+		color: $background-color-sub4-dark;
+	}
+
+	.horizontalrule {
+		margin-bottom: $menu-contents-gap;
+	}
+
+	.projects-title {
+		color: $font-color-emphasize-dark;
+		font-size: $font-size-emphasize;
+		margin-bottom: $menu-title-gap;
+	}
+}

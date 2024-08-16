@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import GuestbookMessageEn from './GuestbookMessage/GuestbookMessage';
 import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../variables/sliceStore';
 
-export default function GuestbookMessagesEn() {
+export default function GuestbookMessages() {
 	const [isReadyToFetch, setIsReadyToFetch] = useState(true);
 
 	const messagesList = useSelector((state: RootState) => state.messagesList);

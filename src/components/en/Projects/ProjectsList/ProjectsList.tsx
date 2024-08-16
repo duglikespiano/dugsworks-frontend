@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../../variables/sliceStore';
 import ProjectBoxEn from './ProjectBox/ProjectBox';
 
-export default function ProjectsListEn() {
+export default function ProjectsList() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const selectedProjectKeywordsIncludeProjects = useSelector((state: RootState) => state.selectedProjectKeywordsIncludeProjects);
 

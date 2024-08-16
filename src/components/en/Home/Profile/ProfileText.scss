@@ -1,0 +1,53 @@
+@import '../../../../variables.scss';
+$icons-width: 2.5rem;
+
+#home-profile-texts-icons-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1rem;
+
+	.home-profile-texts-box {
+		text-align: center;
+		text-wrap: nowrap;
+	}
+
+	.home-profile-hi {
+		font-size: 2rem;
+		font-weight: 400;
+		padding-bottom: 2rem;
+		color: $font-color-sub1-dark;
+	}
+
+	.home-profile-name {
+		font-size: 4rem;
+		font-weight: 900;
+		color: $font-color-emphasize-dark;
+	}
+
+	.home-profile-title {
+		font-size: 3rem;
+		font-weight: 500;
+		padding-bottom: 2rem;
+		color: $font-color-sub2-dark;
+	}
+
+	.home-profile-aim {
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-align: right;
+		padding-bottom: 2rem;
+	}
+
+	.home-iconbox {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.home-iconbox-icon {
+		width: $icons-width;
+		height: $icons-width;
+		color: $font-color-emphasize-dark;
+		cursor: pointer;
+	}
+}

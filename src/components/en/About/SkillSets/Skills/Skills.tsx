@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
-import styles from './Skills.module.scss';
+import './Skills.scss';
 import { SkillSetsPropsType } from '../../../../../variables/types';
 
-export default function SkillsEn(props: SkillSetsPropsType) {
+export default function Skills(props: SkillSetsPropsType) {
 	return (
 		<Fragment>
-			<div className={styles['skillsets-box-en']}>
-				<div className={styles['skillsets-title-en']}>{props.title}</div>
-				<ul className={styles['skillsets-texts-box-en']}>
+			<div id="skillsets-box">
+				<div className="skillsets-title">{props.title}</div>
+				<ul className="skillsets-texts-box">
 					{props.skills.map((item: string, i: number) => (
-						<li className={styles['skillsets-texts-en']} key={i}>
+						<li className="skillsets-texts" key={i}>
 							{item}
 						</li>
 					))}

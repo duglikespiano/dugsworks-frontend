@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
-import ProfileEn from './Profile/Profile';
-import CharacteristicEn from './Characteristics/Characteristic';
+import Profile from './Profile/Profile';
+import Characteristic from './Characteristics/Characteristic';
 
-export default function HomeEn() {
+export default function Home() {
 	return (
 		<Fragment>
-			<ProfileEn />
-			<CharacteristicEn />
+			<Profile />
+			<Characteristic />
 		</Fragment>
 	);
 }

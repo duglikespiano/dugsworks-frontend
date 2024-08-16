@@ -1,0 +1,39 @@
+@import '../../../variables.scss';
+
+#footer-links-box {
+	display: flex;
+	height: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	gap: 2rem;
+	margin-top: $menu-main-gap;
+	padding-bottom: 3rem;
+
+	.footer-link {
+		font-size: 1rem;
+		text-wrap: nowrap;
+	}
+
+	.footer-link:link,
+	.footer-link:visited {
+		color: $font-color-main-dark;
+		text-decoration: none;
+	}
+
+	.footer-link:hover,
+	.footer-link:active {
+		color: $font-color-emphasize-dark;
+		cursor: pointer;
+	}
+
+	.footer-link-active {
+		color: $font-color-emphasize-dark;
+		text-wrap: nowrap;
+	}
+
+	.footer-link-active:link,
+	.footer-link-active:active {
+		text-decoration: none;
+	}
+}

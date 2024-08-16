@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
-import styles from './ContactFormSubmitModal.module.scss';
+import './ContactFormSubmitModal.scss';
 
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;
 	isProcessdProperly: boolean;
 }
 
-export default function ContactFormSubmitModalEn({ isFormSubmittedHandler, isProcessdProperly }: props) {
+export default function ContactFormSubmitModal({ isFormSubmittedHandler, isProcessdProperly }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed;
@@ -23,7 +23,7 @@ export default function ContactFormSubmitModalEn({ isFormSubmittedHandler, isPro
 
 	return (
 		<div
-			className={styles['contact-form-submit-modal']}
+			id="contact-form-submit-modal"
 			onClick={(event) => {
 				event.stopPropagation();
 				if (event.target === event.currentTarget) {
@@ -31,21 +31,21 @@ export default function ContactFormSubmitModalEn({ isFormSubmittedHandler, isPro
 				}
 			}}
 		>
-			<div className={styles['contact-form-submit-modal-content-box']}>
-				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					{isProcessdProperly && <BiMessageCheck className={styles['contact-form-submit-modal-checkicon']} />}
-					{!isProcessdProperly && <BiMessageError className={styles['contact-form-submit-modal-checkicon']} />}
+			<div className="contact-form-submit-modal-content-box">
+				<div className="contact-form-submit-modal-checkicon-box">
+					{isProcessdProperly && <BiMessageCheck className="contact-form-submit-modal-checkicon" />}
+					{!isProcessdProperly && <BiMessageError className="contact-form-submit-modal-checkicon" />}
 				</div>
-				<div className={styles['contact-form-submit-modal-resulttext']}>
+				<div className="contact-form-submit-modal-resulttext">
 					{isProcessdProperly && 'Your message'}
 					{!isProcessdProperly && 'Error Occurred'}
 					<br />
 					{isProcessdProperly && 'has been delivered'}
 					{!isProcessdProperly && 'Please contact to Dug'}
 				</div>
-				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
+				<div className="contact-form-submit-modal-confirm-icon-box">
 					<button
-						className={styles['contact-form-submit-modal-confirm-icon']}
+						className="contact-form-submit-modal-confirm-icon"
 						onClick={() => {
 							isFormSubmittedHandler(false);
 						}}

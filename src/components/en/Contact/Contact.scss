@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+#contact-box {
+	width: 40rem;
+	margin: auto;
+
+	.contact-box-title {
+		font-size: $font-size-emphasize;
+		color: $font-color-emphasize-dark;
+		margin-bottom: 1.5rem;
+	}
+}

@@ -1,16 +1,16 @@
 import { Fragment } from 'react';
 import GuestbookInputFormEn from './GuestbookInputForm/GuestbookInputForm';
 import GuestbookMessagesEn from './GuestbookMessages/GuestbookMessages';
-import styles from './Guestbook.module.scss';
+import './Guestbook.scss';
 
-export default function GuestbookEn() {
+export default function Guestbook() {
 	return (
 		<Fragment>
-			<div className={styles['guestbook-box']}>
-				<div className={styles['guestbook-box-title']}>Guestbook</div>
-				<div className={styles['guestbook-inputform-box-description']}>Fill the form below to leave your message</div>
+			<div className="guestbook-box">
+				<div className="guestbook-box-title">Guestbook</div>
+				<div className="guestbook-inputform-box-description">Fill the form below to leave your message</div>
 				<GuestbookInputFormEn />
-				<hr className={styles['horizontalrule']} />
+				<hr className="horizontalrule" />
 				<GuestbookMessagesEn />
 			</div>
 		</Fragment>

@@ -1,5 +1,5 @@
-import styles from './ContactFormContentsRequireComponent.module.scss';
+import './ContactFormContentsRequireComponent.scss';
 
-export default function ContactFormContentsRequireComponentEn() {
-	return <div className={styles['contact-form-contents-require-text']}>Please fill the content</div>;
+export default function ContactFormContentsRequireComponent() {
+	return <div id="contact-form-contents-require-text">Please fill the content</div>;
 }

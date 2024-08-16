@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import GuestbookInputFormModalEn from './GuestbookInputFormModal/GuestbookInputFormModal';
 import ContactFormContentsRequireComponentEn from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../variables/sliceStore';
-import styles from './GuestbookInputForm.module.scss';
+import './GuestbookInputForm.scss';
 
-export default function GuestbookInputFormEn() {
+export default function GuestbookInputForm() {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
 
 	class Message {
@@ -161,12 +161,12 @@ export default function GuestbookInputFormEn() {
 	return (
 		<Fragment>
 			{!isFormFilledProperly && <GuestbookInputFormModalEn isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
-			<form className={styles['guestbook-input-form']} onSubmit={submitHandler}>
-				<div className={styles['guestbook-form-name-password-box']}>
-					<div className={styles['guestbook-form-name-box']}>
-						<div className={styles['guestbook-form-elements-title']}>Name</div>
+			<form className="guestbook-input-form" onSubmit={submitHandler}>
+				<div className="guestbook-form-name-password-box">
+					<div className="guestbook-form-name-box">
+						<div className="guestbook-form-elements-title">Name</div>
 						<input
-							className={styles['guestbook-form-textinput']}
+							className="guestbook-form-textinput"
 							type={'text'}
 							id="name"
 							maxLength={30}
@@ -181,10 +181,10 @@ export default function GuestbookInputFormEn() {
 						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
 					</div>
 
-					<div className={styles['guestbook-form-password-box']}>
-						<div className={styles['guestbook-form-elements-title']}>Password</div>
+					<div className="guestbook-form-password-box">
+						<div className="guestbook-form-elements-title">Password</div>
 						<input
-							className={styles['guestbook-form-textinput']}
+							className="guestbook-form-textinput"
 							type={'password'}
 							id="password"
 							maxLength={30}
@@ -200,10 +200,10 @@ export default function GuestbookInputFormEn() {
 					</div>
 				</div>
 
-				<div className={styles['guestbook-form-elements-box']}>
-					<div className={styles['guestbook-form-elements-title']}>Message</div>
+				<div className="guestbook-form-elements-box">
+					<div className="guestbook-form-elements-title">Message</div>
 					<textarea
-						className={styles['guestbook-form-textarea']}
+						className="guestbook-form-textarea"
 						id="message"
 						maxLength={500}
 						placeholder={'Your Message'}
@@ -217,8 +217,8 @@ export default function GuestbookInputFormEn() {
 					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
 				</div>
 
-				<div className={styles['guestbook-form-submit-button-box']}>
-					<button className={styles['guestbook-form-submit-button']}>Submit</button>
+				<div className="guestbook-form-submit-button-box">
+					<button className="guestbook-form-submit-button">Submit</button>
 				</div>
 			</form>
 		</Fragment>

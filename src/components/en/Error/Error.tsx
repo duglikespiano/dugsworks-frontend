@@ -1,17 +1,17 @@
 import { Fragment } from 'react';
 import { FaRegFaceSurprise } from 'react-icons/fa6';
-import styles from './Error.module.scss';
+import './Error.scss';
 
-export default function ErrorEn() {
+export default function Error() {
 	return (
 		<Fragment>
-			<div className={styles['error-page']}>
-				<div className={styles['error-page-icon-box']}>
-					<FaRegFaceSurprise className={styles['error-page-icon']} />
+			<div id="error-page">
+				<div className="error-page-icon-box">
+					<FaRegFaceSurprise className="error-page-icon" />
 				</div>
-				<div className={styles['error-page-text-oops']}>Oops!</div>
-				<div className={styles['error-page-text']}>It seems like somethin's wrong!</div>
-				<div className={styles['error-page-text']}>Please contact to Dug!</div>
+				<div className="error-page-text-oops">Oops!</div>
+				<div className="error-page-text">It seems like somethin's wrong!</div>
+				<div className="error-page-text">Please contact to Dug!</div>
 			</div>
 		</Fragment>
 	);

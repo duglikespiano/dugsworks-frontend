@@ -5,9 +5,9 @@ import ProcessingModalEn from '../../../shared/ProcessingModal/ProcessingModal';
 import GuestbookMessagePasswordModalEn from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
 import GuestbookMessageFetchResultModalEn from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
 
-import styles from './GuestbookMessage.module.scss';
+import './GuestbookMessage.scss';
 
-export default function GuestbookMessageEn({ message }: messagesSlicePropsType) {
+export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [isResultArrived, setIsResultArrived] = useState(false);
@@ -47,15 +47,15 @@ export default function GuestbookMessageEn({ message }: messagesSlicePropsType) 
 					isResultArrivedHandler={isResultArrivedHandler}
 				/>
 			)}
-			<div className={styles['guestbook-message-box']}>
-				<div className={styles['guestbook-message-delete-icon']} onClick={isPasswordModalRequestedHandler}>
+			<div className="guestbook-message-box">
+				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>
 					<RiDeleteBin6Line />{' '}
 				</div>
-				<div className={styles['guestbook-message-writer-date-box']}>
-					<div className={styles['guestbook-message-writer']}>{message.name}</div>
-					<div className={styles['guestbook-message-date']}>{message.created_at}</div>
+				<div className="guestbook-message-writer-date-box">
+					<div className="guestbook-message-writer">{message.name}</div>
+					<div className="guestbook-message-date">{message.created_at}</div>
 				</div>
-				<div className={styles['guestbook-message-text']}>{message.message}</div>
+				<div className="guestbook-message-text">{message.message}</div>
 			</div>
 		</Fragment>
 	);

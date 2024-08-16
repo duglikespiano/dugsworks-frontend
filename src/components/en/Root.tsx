@@ -1,16 +1,16 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
-import HeaderEn from './shared/Header';
-import FooterEn from './shared/Footer';
-import styles from './Root.module.scss';
+import Header from './shared/Header';
+import Footer from './shared/Footer';
+import './Root.scss';
 
-export default function MainEn() {
+export default function Main() {
 	return (
 		<Fragment>
-			<div className={styles['font-en']}>
-				<HeaderEn />
+			<div id="font-en">
+				<Header />
 				<Outlet />
-				<FooterEn />
+				<Footer />
 			</div>
 		</Fragment>
 	);

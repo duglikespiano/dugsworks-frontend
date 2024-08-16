@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import ContactFormBox from './ContactFormBox/ContactFormBox';
-import styles from './Contact.module.scss';
+import './Contact.scss';
 
-export default function ContactEn() {
+export default function Contact() {
 	return (
 		<Fragment>
-			<div className={styles['contact-box-en']}>
-				<div className={styles['contact-box-title-en']}>Contact</div>
+			<div id="contact-box">
+				<div className="contact-box-title">Contact</div>
 				<ContactFormBox />
 			</div>
 		</Fragment>

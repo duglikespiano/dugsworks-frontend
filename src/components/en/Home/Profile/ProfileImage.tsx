@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
-import styles from './ProfileImage.module.scss';
+import './ProfileImage.scss';
 import profileImage from '../../../../images/profile-image.jpg';
 
-export default function ProfileImageEn() {
+export default function ProfileImage() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-image-cropper-en']}>
-				<img src={profileImage} alt="profile-img" className={styles['home-profile-image-en']} />
+			<div id="home-profile-image-cropper">
+				<img src={profileImage} alt="profile-img" className="home-profile-image" />
 			</div>
 		</Fragment>
 	);

@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import ProfileImageEn from './ProfileImage';
 import ProfileTextEn from './ProfileText';
-import styles from './Profile.module.scss';
+import './Profile.scss';
 
-export default function ProfileEn() {
+export default function Profile() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-en']}>
+			<div id="home-profile">
 				<ProfileImageEn />
 				<ProfileTextEn />
 			</div>

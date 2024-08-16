@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import styles from './Characteristic.module.scss';
+import './Characteristic.scss';
 import CharacteristicBoxEn from './CharacteristicBox/CharacteristicBox';
 import turtleImageURL from '../../../../images/turtle-image.jpg';
 import theGoldenGateBridgeImageURL from '../../../../images/the-golden-gate-bridge-image.jpg';
@@ -36,10 +36,10 @@ const cloversInfo = {
 	boxSide: 'left',
 };
 
-export default function CharacteristicEn() {
+export default function Characteristic() {
 	return (
 		<Fragment>
-			<div className={styles['characteristics-boxes-en']}>
+			<div id="characteristics-boxes">
 				<CharacteristicBoxEn info={turtleInfo} />
 				<CharacteristicBoxEn info={theGoldenGateBridgeInfo} />
 				<CharacteristicBoxEn info={cloversInfo} />

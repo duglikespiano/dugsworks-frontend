@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { BiMessageError } from 'react-icons/bi';
-import styles from './GuestbookInputFormModal.module.scss';
+import './GuestbookInputFormModal.scss';
 
 interface props {
 	isFormFilledProperlyHandler: () => void;
 }
 
-export default function GuestbookInputFormModalEn({ isFormFilledProperlyHandler }: props) {
+export default function GuestbookInputFormModal({ isFormFilledProperlyHandler }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -22,7 +22,7 @@ export default function GuestbookInputFormModalEn({ isFormFilledProperlyHandler 
 
 	return (
 		<div
-			className={styles['contact-form-submit-modal']}
+			id="contact-form-submit-modal"
 			onClick={(event) => {
 				event.stopPropagation();
 				if (event.target === event.currentTarget) {
@@ -30,18 +30,18 @@ export default function GuestbookInputFormModalEn({ isFormFilledProperlyHandler 
 				}
 			}}
 		>
-			<div className={styles['contact-form-submit-modal-content-box']}>
-				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					<BiMessageError className={styles['contact-form-submit-modal-checkicon']} />
+			<div className="contact-form-submit-modal-content-box">
+				<div className="contact-form-submit-modal-checkicon-box">
+					<BiMessageError className="contact-form-submit-modal-checkicon" />
 				</div>
-				<div className={styles['contact-form-submit-modal-resulttext']}>
+				<div className="contact-form-submit-modal-resulttext">
 					All of elements
 					<br />
 					must be filled properly
 				</div>
-				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
+				<div className="contact-form-submit-modal-confirm-icon-box">
 					<button
-						className={styles['contact-form-submit-modal-confirm-icon']}
+						className="contact-form-submit-modal-confirm-icon"
 						onClick={() => {
 							isFormFilledProperlyHandler();
 						}}

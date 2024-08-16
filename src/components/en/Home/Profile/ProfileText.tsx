@@ -1,25 +1,25 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './ProfileText.module.scss';
+import './ProfileText.scss';
 import { PiInstagramLogo, PiGithubLogo } from 'react-icons/pi';
 
-export default function ProfileTextEn() {
+export default function ProfileText() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-texts-icons-box-en']}>
-				<div className={styles['home-profile-texts-box-en']}>
-					<h1 className={styles['home-profile-hi-en']}>Hello! I am </h1>
-					<h2 className={styles['home-profile-name-en']}>Suho Park</h2>
-					<h3 className={styles['home-profile-title-en']}>A junior web developer</h3>
-					<h3 className={styles['home-profile-aim-en']}> - slowly but steadily🐢</h3>
+			<div id="home-profile-texts-icons-box">
+				<div className="home-profile-texts-box">
+					<h1 className="home-profile-hi">Hello! I am </h1>
+					<h2 className="home-profile-name">Suho Park</h2>
+					<h3 className="home-profile-title">A junior web developer</h3>
+					<h3 className="home-profile-aim"> - slowly but steadily🐢</h3>
 				</div>
 
-				<div className={styles['home-iconbox-en']}>
+				<div className="home-iconbox">
 					<Link to="https://www.instagram.com/piano_dug" target="_blank">
-						<PiInstagramLogo className={styles['home-iconbox-icon-en']} />
+						<PiInstagramLogo className="home-iconbox-icon" />
 					</Link>
 					<Link to="https://github.com/duglikespiano" target="_blank">
-						<PiGithubLogo className={styles['home-iconbox-icon-en']} />{' '}
+						<PiGithubLogo className="home-iconbox-icon" />{' '}
 					</Link>
 				</div>
 			</div>

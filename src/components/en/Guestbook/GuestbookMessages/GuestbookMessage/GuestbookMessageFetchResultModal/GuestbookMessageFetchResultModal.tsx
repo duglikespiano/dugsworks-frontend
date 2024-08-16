@@ -1,12 +1,12 @@
 import { useEffect, Fragment } from 'react';
 import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
-import styles from './GuestbookMessageFetchResultModal.module.scss';
+import './GuestbookMessageFetchResultModal.scss';
 interface props {
 	isFetchedProperly: boolean;
 	isResultArrivedHandler: () => void;
 }
 
-export default function GuestbookMessageFetchResultModalEn({ isFetchedProperly, isResultArrivedHandler }: props) {
+export default function GuestbookMessageFetchResultModal({ isFetchedProperly, isResultArrivedHandler }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed;
@@ -23,7 +23,7 @@ export default function GuestbookMessageFetchResultModalEn({ isFetchedProperly, 
 	return (
 		<Fragment>
 			<div
-				className={styles['guestbook-message-delete-fetch-result-modal']}
+				className="guestbook-message-delete-fetch-result-modal"
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {
@@ -31,21 +31,21 @@ export default function GuestbookMessageFetchResultModalEn({ isFetchedProperly, 
 					}
 				}}
 			>
-				<div className={styles['guestbook-message-delete-fetch-result-modal-content-box']}>
-					<div className={styles['guestbook-message-delete-fetch-result-modal-checkicon-box']}>
-						{isFetchedProperly && <BiMessageCheck className={styles['guestbook-message-delete-fetch-result-modal-checkicon']} />}
-						{!isFetchedProperly && <BiMessageError className={styles['guestbook-message-delete-fetch-result-modal-checkicon']} />}
+				<div className="guestbook-message-delete-fetch-result-modal-content-box">
+					<div className="guestbook-message-delete-fetch-result-modal-checkicon-box">
+						{isFetchedProperly && <BiMessageCheck className="guestbook-message-delete-fetch-result-modal-checkicon" />}
+						{!isFetchedProperly && <BiMessageError className="guestbook-message-delete-fetch-result-modal-checkicon" />}
 					</div>
-					<div className={styles['guestbook-message-delete-fetch-result-modal-resulttext']}>
+					<div className="guestbook-message-delete-fetch-result-modal-resulttext">
 						{isFetchedProperly && 'Your message'}
 						{!isFetchedProperly && 'Error Occurred'}
 						<br />
 						{isFetchedProperly && 'has been deleted'}
 						{!isFetchedProperly && 'Please check password'}
 					</div>
-					<div className={styles['guestbook-message-delete-fetch-result-modal-confirm-icon-box']}>
+					<div className="guestbook-message-delete-fetch-result-modal-confirm-icon-box">
 						<button
-							className={styles['guestbook-message-delete-fetch-result-modal-confirm-icon']}
+							className="guestbook-message-delete-fetch-result-modal-confirm-icon"
 							onClick={() => {
 								isResultArrivedHandler();
 							}}
