@@ -2,8 +2,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './sliceStore';
 
-import RootAll from './RootAll';
-import RootError from './RootError';
+import RootAll from './components/roots/RootAll';
+import RootError from './components/roots/RootError';
 
 import RootEn from './components/en/Root';
 import ErrorEn from './components/en/Error/Error';
