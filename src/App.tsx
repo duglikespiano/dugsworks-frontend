@@ -13,13 +13,13 @@ import ProjectsEn from './components/en/Projects/Projects';
 import ContactEn from './components/en/Contact/Contact';
 import GuestbookEn from './components/en/Guestbook/Guestbook';
 
-import RootKo from './components/ko/RootKo';
-import ErrorKo from './components/ko/ErrorKo/ErrorKo';
-import HomeKo from './components/ko/HomeKo/HomeKo';
-import AboutKo from './components/ko/AboutKo/AboutKo';
-import ProjectsKo from './components/ko/ProjectsKo/ProjectsKo';
-import ContactKo from './components/ko/ContactKo/ContactKo';
-import GuestbookKo from './components/ko/GuestbookKo/GuestbookKo';
+import RootKo from './components/ko/Root';
+import ErrorKo from './components/ko/Error/Error';
+import HomeKo from './components/ko/Home/Home';
+import AboutKo from './components/ko/About/AboutKo';
+import ProjectsKo from './components/ko/Projects/Projects';
+import ContactKo from './components/ko/Contact/Contact';
+import GuestbookKo from './components/ko/Guestbook/Guestbook';
 
 import RootJa from './components/ja/Root';
 import ErrorJa from './components/ja/Error/Error';
