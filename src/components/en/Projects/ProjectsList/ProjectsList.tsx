@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../sliceStore';
-import ProjectBoxEn from './ProjectBoxEn/ProjectBoxEn';
+import ProjectBoxEn from './ProjectBox/ProjectBox';
 
 export default function ProjectsListEn() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);

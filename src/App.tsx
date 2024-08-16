@@ -5,11 +5,11 @@ import store from './sliceStore';
 import RootAll from './RootAll';
 import RootError from './RootError';
 
-import RootEn from './components/en/RootEn';
+import RootEn from './components/en/Root';
 import ErrorEn from './components/en/Error/Error';
-import HomeEn from './components/en/Home/HomeEn';
+import HomeEn from './components/en/Home/Home';
 import AboutEn from './components/en/About/About';
-import ProjectsEn from './components/en/Projects/ProjectsEn';
+import ProjectsEn from './components/en/Projects/Projects';
 import ContactEn from './components/en/Contact/Contact';
 import GuestbookEn from './components/en/Guestbook/Guestbook';
 

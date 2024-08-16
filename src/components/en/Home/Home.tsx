@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import ProfileEn from './ProfileEn/ProfileEn';
-import CharacteristicEn from './CharacteristicsEn/CharacteristicEn';
+import ProfileEn from './Profile/Profile';
+import CharacteristicEn from './Characteristics/Characteristic';
 
 export default function HomeEn() {
 	return (

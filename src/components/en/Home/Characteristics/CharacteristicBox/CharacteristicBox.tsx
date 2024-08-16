@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import CharacteristicTextEn from './CharacteristicTextEn';
+import CharacteristicTextEn from './CharacteristicText';
 import styles from './CharacteristicBoxEn.module.scss';
 import { CharacteristicBoxPropsType } from '../../../../types/types';
 

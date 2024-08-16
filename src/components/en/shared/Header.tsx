@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import NavEn from './NavEn/NavEn';
-import LanguageSelectorEn from './LanguageSelectorEn/LanguageSelectorEn';
+import NavEn from './Nav/Nav';
+import LanguageSelectorEn from './LanguageSelector/LanguageSelector';
 import styles from './HeaderEn.module.scss';
 
 export default function HeaderEn() {

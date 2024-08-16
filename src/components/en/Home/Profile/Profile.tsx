@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import ProfileImageEn from './ProfileImageEn';
-import ProfileTextEn from './ProfileTextEn';
+import ProfileImageEn from './ProfileImage';
+import ProfileTextEn from './ProfileText';
 import styles from './ProfileEn.module.scss';
 
 export default function ProfileEn() {

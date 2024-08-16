@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import GuestbookMessageEn from './GuestbookMessage/GuestbookMessageEn';
+import GuestbookMessageEn from './GuestbookMessage/GuestbookMessage';
 import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../sliceStore';
 
 export default function GuestbookMessagesEn() {

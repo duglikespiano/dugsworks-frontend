@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import ProjectsKeywordsEn from './ProjectsKeywordsEn/ProjectsKeywordsEn';
-import ProjectsListEn from './ProjectsListEn/ProjectsListEn';
+import ProjectsKeywordsEn from './ProjectsKeywords/ProjectsKeywords';
+import ProjectsListEn from './ProjectsList/ProjectsList';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../sliceStore';
 import styles from './ProjectsEn.module.scss';
