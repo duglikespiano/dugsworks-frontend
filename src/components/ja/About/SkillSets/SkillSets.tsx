@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import SkillsJa from './Skills/Skills';
 import styles from './SkillSetsJa.module.scss';
-import { frontEndSkillSets, backEndSkillSets, cloudSkillSets, miscSkillSets } from '../../../../variables';
+import { frontEndSkillSets, backEndSkillSets, cloudSkillSets, miscSkillSets } from '../../../../variables/variables';
 
 export default function SkillSetsJa() {
 	return (

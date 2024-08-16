@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styles from './SkillsKo.module.scss';
-import { SkillSetsPropsType } from '../../../../types/types';
+import { SkillSetsPropsType } from '../../../../../variables/types';
 
 export default function SkillsKo(props: SkillSetsPropsType) {
 	return (

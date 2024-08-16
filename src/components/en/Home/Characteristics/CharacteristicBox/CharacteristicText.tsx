@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styles from './CharacteristicTextEn.module.scss';
-import { CharacteristicTextPropsType } from '../../../../types/types';
+import { CharacteristicTextPropsType } from '../../../../../variables/types';
 
 export default function CharacteristicTextEn(props: CharacteristicTextPropsType) {
 	return (

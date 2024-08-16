@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../../sliceStore';
+import { RootState } from '../../../../variables/sliceStore';
 import ProjectBoxKo from './ProjectBox/ProjectBox';
 
 export default function ProjectsListKo() {

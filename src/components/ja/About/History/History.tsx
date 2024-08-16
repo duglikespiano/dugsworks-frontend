@@ -1,7 +1,13 @@
 import { Fragment } from 'react';
 import styles from './HistoryJa.module.scss';
 import HistoryBoxJa from './HistoryBox/HistoryBox';
-import { afterHistory, bootCampHistory, secondCompanyHistory, firstCompanyHistory, schoolHistory } from '../../../../variables';
+import {
+	afterHistory,
+	bootCampHistory,
+	secondCompanyHistory,
+	firstCompanyHistory,
+	schoolHistory,
+} from '../../../../variables/variables';
 
 export default function HistoryEn() {
 	return (

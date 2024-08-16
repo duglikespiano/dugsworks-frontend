@@ -2,7 +2,7 @@ import { useState, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import GuestbookInputFormModalKo from './GuestbookInputFormModal/GuestbookInputFormModal';
 import ContactFormContentsRequireComponentKo from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
-import { messagesActions } from '../../../../sliceStore';
+import { messagesActions } from '../../../../variables/sliceStore';
 import styles from './GuestbookInputFormKo.module.scss';
 
 export default function GuestbookInputFormKo() {

@@ -1,7 +1,13 @@
 import { Fragment } from 'react';
 import styles from './HistoryKo.module.scss';
 import HistoryBoxKo from './HistoryBox/HistoryBox';
-import { afterHistory, bootCampHistory, secondCompanyHistory, firstCompanyHistory, schoolHistory } from '../../../../variables';
+import {
+	afterHistory,
+	bootCampHistory,
+	secondCompanyHistory,
+	firstCompanyHistory,
+	schoolHistory,
+} from '../../../../variables/variables';
 
 export default function HistoryKo() {
 	return (

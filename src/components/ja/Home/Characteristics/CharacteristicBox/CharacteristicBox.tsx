@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import CharacteristicTextJa from './CharacteristicText';
 import styles from './CharacteristicBoxJa.module.scss';
-import { CharacteristicBoxPropsType } from '../../../../types/types';
+import { CharacteristicBoxPropsType } from '../../../../../variables/types';
 
 export default function CharacteristicBoxJa(props: CharacteristicBoxPropsType) {
 	return (

@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import GuestbookMessageKo from './GuestbookMessage/GuestbookMessage';
-import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../sliceStore';
+import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../variables/sliceStore';
 
 export default function GuestbookMessagesKo() {
 	const [isReadyToFetch, setIsReadyToFetch] = useState(true);

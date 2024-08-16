@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styles from './CharacteristicTextJa.module.scss';
-import { CharacteristicTextPropsType } from '../../../../types/types';
+import { CharacteristicTextPropsType } from '../../../../../variables/types';
 
 export default function CharacteristicTextJa(props: CharacteristicTextPropsType) {
 	return (

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { languages } from '../../../../variables';
+import { languages } from '../../../../variables/variables';
 import styles from './LanguageSelectorKo.module.scss';
 
 export default function LanguageSelectorKo() {

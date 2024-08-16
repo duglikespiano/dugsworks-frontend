@@ -1,4 +1,4 @@
-import { HistoryType } from './components/types/types';
+import { HistoryType } from './types';
 
 export const menus: string[][] = [
 	['About', '소개', '紹介'],
