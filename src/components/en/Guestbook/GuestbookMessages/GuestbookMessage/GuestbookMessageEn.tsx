@@ -2,8 +2,8 @@ import { useState, Fragment } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { messagesSlicePropsType } from '../../../../../sliceStore';
 import ProcessingModalEn from '../../../shared/ProcessingModalEn/ProcessingModalEn';
-import GuestbookMessagePasswordModalEn from './GuestbookMessagePasswordModalEn/GuestbookMessagePasswordModalEn';
-import GuestbookMessageFetchResultModalEn from './GuestbookMessageFetchResultModalEn/GuestbookMessageFetchResultModalEn';
+import GuestbookMessagePasswordModalEn from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
+import GuestbookMessageFetchResultModalEn from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
 
 import styles from './GuestbookMessageEn.module.scss';
 

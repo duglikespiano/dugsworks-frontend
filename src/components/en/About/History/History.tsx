@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
+import HistoryBox from './HistoryBox/HistoryBox';
 import styles from './HistoryEn.module.scss';
-import HistoryBoxEn from './HistoryBoxEn/HistoryBoxEn';
 import { afterHistory, bootCampHistory, secondCompanyHistory, firstCompanyHistory, schoolHistory } from '../../../../variables';
 
 export default function HistoryEn() {
@@ -8,15 +8,15 @@ export default function HistoryEn() {
 		<Fragment>
 			<div className={styles['history-en']}>
 				<div className={styles['history-title-en']}>Brief History</div>
-				<HistoryBoxEn history={afterHistory} />
+				<HistoryBox history={afterHistory} />
 				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxEn history={bootCampHistory} />
+				<HistoryBox history={bootCampHistory} />
 				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxEn history={secondCompanyHistory} />
+				<HistoryBox history={secondCompanyHistory} />
 				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxEn history={firstCompanyHistory} />
+				<HistoryBox history={firstCompanyHistory} />
 				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxEn history={schoolHistory} />
+				<HistoryBox history={schoolHistory} />
 			</div>
 		</Fragment>
 	);

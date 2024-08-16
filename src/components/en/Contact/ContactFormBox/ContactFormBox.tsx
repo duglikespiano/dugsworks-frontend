@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import ContactFormSubmitModalEn from './ContactFormSubmitModalEn/ContactFormSubmitModalEn';
-import ContactFormContentsRequireComponentEn from './ContactFormContentsRequireComponentEn/ContactFormContentsRequireComponentEn';
+import ContactFormSubmitModalEn from './ContactFormSubmitModal/ContactFormSubmitModal';
+import ContactFormContentsRequireComponentEn from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import ProcessingModalEn from '../../shared/ProcessingModalEn/ProcessingModalEn';
-import GuestbookInputFormModalEn from '../../GuestbookEn/GuestbookInputFormEn/GuestbookInputFormModalEn/GuestbookInputFormModalEn';
+import GuestbookInputFormModalEn from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
 import styles from './ContactFormBoxEn.module.scss';
 
 export default function ContactFormBoxEn() {

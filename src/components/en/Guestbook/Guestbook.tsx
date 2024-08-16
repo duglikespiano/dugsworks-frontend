@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import GuestbookInputFormEn from './GuestbookInputFormEn/GuestbookInputFormEn';
-import GuestbookMessagesEn from './GuestbookMessagesEn/GuestbookMessagesEn';
+import GuestbookInputFormEn from './GuestbookInputForm/GuestbookInputForm';
+import GuestbookMessagesEn from './GuestbookMessages/GuestbookMessages';
 import styles from './GuestbookEn.module.scss';
 
 export default function GuestbookEn() {

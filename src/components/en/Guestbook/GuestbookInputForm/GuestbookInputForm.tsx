@@ -1,7 +1,7 @@
 import { useState, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-import GuestbookInputFormModalEn from './GuestbookInputFormModalEn/GuestbookInputFormModalEn';
-import ContactFormContentsRequireComponentEn from '../../ContactEn/ContactFormBoxEn/ContactFormContentsRequireComponentEn/ContactFormContentsRequireComponentEn';
+import GuestbookInputFormModalEn from './GuestbookInputFormModal/GuestbookInputFormModal';
+import ContactFormContentsRequireComponentEn from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../sliceStore';
 import styles from './GuestbookInputFormEn.module.scss';
 

@@ -6,12 +6,12 @@ import RootAll from './RootAll';
 import RootError from './RootError';
 
 import RootEn from './components/en/RootEn';
-import ErrorEn from './components/en/ErrorEn/ErrorEn';
-import HomeEn from './components/en/HomeEn/HomeEn';
-import AboutEn from './components/en/AboutEn/AboutEn';
-import ProjectsEn from './components/en/ProjectsEn/ProjectsEn';
-import ContactEn from './components/en/ContactEn/ContactEn';
-import GuestbookEn from './components/en/GuestbookEn/GuestbookEn';
+import ErrorEn from './components/en/Error/Error';
+import HomeEn from './components/en/Home/HomeEn';
+import AboutEn from './components/en/About/About';
+import ProjectsEn from './components/en/Projects/ProjectsEn';
+import ContactEn from './components/en/Contact/Contact';
+import GuestbookEn from './components/en/Guestbook/Guestbook';
 
 import RootKo from './components/ko/RootKo';
 import ErrorKo from './components/ko/ErrorKo/ErrorKo';

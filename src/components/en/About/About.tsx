@@ -1,14 +1,14 @@
 import { Fragment } from 'react';
-import SkillSetsEn from './SkillSetsEn/SkillSetsEn';
-import HistoryEn from './HistoryEn/HistoryEn';
+import SkillSets from './SkillSets/SkillSets';
+import History from './History/History';
 import styles from './AboutEn.module.scss';
 
 export default function AboutEn() {
 	return (
 		<Fragment>
 			<div className={styles['about-box-en']}>
-				<SkillSetsEn />
-				<HistoryEn />
+				<SkillSets />
+				<History />
 			</div>
 		</Fragment>
 	);
