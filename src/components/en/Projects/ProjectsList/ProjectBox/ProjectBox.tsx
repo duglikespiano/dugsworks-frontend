@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { RootState } from '../../../../../variables/sliceStore';
 import { projectsListType, projectsKeywordsType } from '../../../../../variables/sliceStore';
-import './ProjectBox.scss';
-import { Link } from 'react-router-dom';
+import '../../../../../scss/Projects/ProjectsList/ProjectBox/ProjectBox.scss';
 
 export default function ProjectBox(props: projectsListType) {
 	const projectsKeywords = useSelector((state: RootState) => state.projectsKeywords);

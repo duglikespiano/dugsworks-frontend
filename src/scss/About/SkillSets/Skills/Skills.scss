@@ -1,0 +1,23 @@
+@use '../../../common/variables.scss' as *;
+
+#skillsets-box {
+	width: 25rem;
+	margin-bottom: $submenu-margin;
+	margin-left: $submenu-margin;
+
+	.skillsets-title {
+		font-size: $font-size-main;
+		color: $font-color-emphasize-dark;
+		margin-bottom: $submenu-title-gap;
+	}
+
+	.skillsets-texts-box {
+		margin-left: $submenu-margin;
+	}
+
+	.skillsets-texts {
+		font-size: $font-size-content;
+		color: $font-color-sub2-dark;
+		margin-left: $submenu-margin;
+	}
+}

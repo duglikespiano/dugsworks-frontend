@@ -1,11 +1,10 @@
 import { useState, Fragment } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { messagesSlicePropsType } from '../../../../../variables/sliceStore';
-import ProcessingModalEn from '../../../shared/ProcessingModal/ProcessingModal';
-import GuestbookMessagePasswordModalEn from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
-import GuestbookMessageFetchResultModalEn from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
-
-import './GuestbookMessage.scss';
+import ProcessingModal from '../../../common/ProcessingModal/ProcessingModal';
+import GuestbookMessagePasswordModal from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
+import GuestbookMessageFetchResultModal from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
+import '../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessage.scss';
 
 export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);
@@ -32,7 +31,7 @@ export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 	return (
 		<Fragment>
 			{isPasswordModalRequested && (
-				<GuestbookMessagePasswordModalEn
+				<GuestbookMessagePasswordModal
 					isPasswordModalRequestedHandler={isPasswordModalRequestedHandler}
 					isProcessingHandler={(isProcessing) => isProcessingHandler(isProcessing)}
 					isResultArrivedHandler={isResultArrivedHandler}
@@ -40,12 +39,9 @@ export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 					messageId={message.id}
 				/>
 			)}
-			{isProcessing && <ProcessingModalEn />}
+			{isProcessing && <ProcessingModal />}
 			{isResultArrived && (
-				<GuestbookMessageFetchResultModalEn
-					isFetchedProperly={isFetchedProperly}
-					isResultArrivedHandler={isResultArrivedHandler}
-				/>
+				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
 			)}
 			<div className="guestbook-message-box">
 				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>

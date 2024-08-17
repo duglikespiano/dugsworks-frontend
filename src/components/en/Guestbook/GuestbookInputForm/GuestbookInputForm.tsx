@@ -1,9 +1,9 @@
 import { useState, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-import GuestbookInputFormModalEn from './GuestbookInputFormModal/GuestbookInputFormModal';
+import GuestbookInputFormModal from './GuestbookInputFormModal/GuestbookInputFormModal';
 import ContactFormContentsRequireComponentEn from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../variables/sliceStore';
-import './GuestbookInputForm.scss';
+import '../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputForm.scss';
 
 export default function GuestbookInputForm() {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
@@ -160,7 +160,7 @@ export default function GuestbookInputForm() {
 
 	return (
 		<Fragment>
-			{!isFormFilledProperly && <GuestbookInputFormModalEn isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
+			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
 			<form className="guestbook-input-form" onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">

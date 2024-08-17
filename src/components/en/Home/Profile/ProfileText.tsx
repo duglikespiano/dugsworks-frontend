@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './ProfileText.scss';
+import '../../../../scss/Home/Profile/ProfileText.scss';
 import { PiInstagramLogo, PiGithubLogo } from 'react-icons/pi';
 
 export default function ProfileText() {

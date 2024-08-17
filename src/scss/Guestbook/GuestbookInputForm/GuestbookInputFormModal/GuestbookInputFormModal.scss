@@ -1,0 +1,29 @@
+@use '../../../common/variables.scss' as *;
+
+.contact-form-submit-modal {
+	@extend .shared-modal-background;
+}
+
+.contact-form-submit-modal-content-box {
+	@extend .shared-modal-box;
+}
+
+.contact-form-submit-modal-checkicon-box {
+	@extend .shared-modal-icon-box;
+}
+
+.contact-form-submit-modal-checkicon {
+	@extend .shared-modal-icon;
+}
+
+.contact-form-submit-modal-resulttext {
+	@extend .shared-modal-text;
+}
+
+.contact-form-submit-modal-confirm-icon-box {
+	@extend .shared-modal-confirm-icon-box;
+}
+
+.contact-form-submit-modal-confirm-icon {
+	@extend .shared-modal-confirm-icon;
+}

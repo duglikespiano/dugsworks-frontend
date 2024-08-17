@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import CharacteristicTextEn from './CharacteristicText';
-import './CharacteristicBox.scss';
 import { CharacteristicBoxPropsType } from '../../../../../variables/types';
+import '../../../../../scss/Home/Characteristics/CharacteristicBox/CharacteristicBox.scss';
 
 export default function CharacteristicBox(props: CharacteristicBoxPropsType) {
 	return (

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { FaRegFaceSurprise } from 'react-icons/fa6';
-import './Error.scss';
+import '../../../scss/Error/Error.scss';
 
 export default function Error() {
 	return (

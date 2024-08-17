@@ -1,6 +1,6 @@
 import { useEffect, Fragment } from 'react';
 import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
-import './GuestbookMessageFetchResultModal.scss';
+import '../../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal.scss';
 interface props {
 	isFetchedProperly: boolean;
 	isResultArrivedHandler: () => void;

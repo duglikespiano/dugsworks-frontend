@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import ContactFormSubmitModal from './ContactFormSubmitModal/ContactFormSubmitModal';
 import ContactFormContentsRequireComponent from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
-import ProcessingModal from '../../shared/ProcessingModal/ProcessingModal';
+import ProcessingModal from '../../common/ProcessingModal/ProcessingModal';
 import GuestbookInputFormModal from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
-import './ContactFormBox.scss';
+import '../../../../scss/Contact/ContactFormBox/ContactFormBox.scss';
 
 export default function ContactFormBox() {
 	const [enteredName, setEnteredName] = useState('');

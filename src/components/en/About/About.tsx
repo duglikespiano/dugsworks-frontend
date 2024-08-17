@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import SkillSets from './SkillSets/SkillSets';
 import History from './History/History';
-import './About.scss';
+import '../../../scss/About/About.scss';
 
 export default function About() {
 	return (

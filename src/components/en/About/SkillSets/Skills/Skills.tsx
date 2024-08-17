@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import './Skills.scss';
 import { SkillSetsPropsType } from '../../../../../variables/types';
+import '../../../../../scss/About/SkillSets/Skills/Skills.scss';
 
 export default function Skills(props: SkillSetsPropsType) {
 	return (

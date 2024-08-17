@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BiMessageError } from 'react-icons/bi';
-import './GuestbookInputFormModal.scss';
+import '../../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal.scss';
 
 interface props {
 	isFormFilledProperlyHandler: () => void;

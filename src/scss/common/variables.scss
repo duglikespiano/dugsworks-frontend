@@ -1,0 +1,98 @@
+$maxwidth-extra-large: 1600px;
+$maxwidth-large: 1024px;
+$maxwidth-medium: 768px;
+$maxwidth-small: 375px;
+
+$background-color-main-dark: #122235; //main
+$background-color-emphasize-dark: #00296f; // emphasize
+$background-color-sub1-dark: #112d4e; // sub1
+$background-color-sub2-dark: #788cb4; // sub2
+$background-color-sub3-dark: #315293; // sub3
+$background-color-sub4-dark: #7e357a; // sub4
+
+$font-color-main-dark: #bed3f8; // main
+$font-color-emphasize-dark: #ffffff; // emphasize
+$font-color-sub1-dark: #dae0ee; // sub1
+$font-color-sub2-dark: #b2b7bd; // sub2
+$font-color-alert-dark: #e4401b; // alert
+$font-color-confirm-dark: #7fe41b; // alert
+
+$font-size-emphasize: 3rem;
+$font-size-main: 2.5rem;
+$font-size-content: 2rem;
+$font-size-sub: 1.5rem;
+
+$pages-width: 80vw;
+
+$menu-main-gap: 3rem;
+$menu-contents-gap: 2rem;
+$menu-title-gap: 1.5rem;
+
+$submenu-margin: 2rem;
+$submenu2-margin: 3rem;
+$submenu-title-gap: 1rem;
+
+$content-box-border: 0.3rem solid white;
+$content-box-border-radius: 2rem;
+$content-box-padding: 2rem;
+
+.shared-modal-background {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+.shared-modal-box {
+	background-color: $font-color-main-dark;
+	width: 35rem;
+	height: 35rem;
+	padding: 15px;
+	border: $content-box-border;
+	border-color: $background-color-sub1-dark;
+	border-radius: $content-box-border-radius;
+}
+
+.shared-modal-icon-box {
+	width: 10rem;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.shared-modal-icon {
+	font-size: 10rem;
+	color: $background-color-sub1-dark;
+}
+
+.shared-modal-text {
+	font-size: $font-size-emphasize;
+	color: $background-color-sub1-dark;
+	text-align: center;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.shared-modal-confirm-icon-box {
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	margin-top: 5rem;
+}
+
+.shared-modal-confirm-icon {
+	width: 100%;
+	background-color: $font-color-emphasize-dark;
+	font-family: inherit;
+	font-size: 2.5rem;
+	text-align: center;
+	border: $content-box-border;
+	border-color: $background-color-sub1-dark;
+	border-radius: calc($content-box-border-radius/2);
+	cursor: pointer;
+}

@@ -1,0 +1,31 @@
+@use '../../../scss/common/variables.scss' as *;
+
+#project-keywords-box {
+	display: flex;
+	flex-wrap: wrap;
+	border: $content-box-border;
+	border-radius: $content-box-border-radius;
+	padding: 2rem;
+	margin-bottom: $menu-contents-gap;
+
+	.project-keyword-button {
+		background-color: $background-color-sub3-dark;
+		color: $font-color-sub1-dark;
+		font-size: $font-size-content;
+		border: 0.25rem solid white;
+		border-radius: 1rem;
+		padding: 0.25rem;
+		margin-right: 1rem;
+		margin-bottom: 0.5rem;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.project-keyword-button-clicked {
+		@extend .project-keyword-button;
+		background-color: $background-color-sub4-dark;
+	}
+}

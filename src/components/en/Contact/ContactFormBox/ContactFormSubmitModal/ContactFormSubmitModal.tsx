@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BiMessageCheck, BiMessageError } from 'react-icons/bi';
-import './ContactFormSubmitModal.scss';
+import '../../../../../scss/Contact/ContactFormBox/ContactFormSubmitModal/ContactFormSubmitModal.scss';
 
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;

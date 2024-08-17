@@ -1,0 +1,7 @@
+@use '../../../scss/common/variables.scss' as *;
+
+#home-profile {
+	display: flex;
+	justify-content: center;
+	margin-bottom: $menu-main-gap;
+}

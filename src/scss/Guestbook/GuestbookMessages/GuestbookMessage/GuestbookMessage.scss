@@ -1,0 +1,44 @@
+@use '../../../common/variables.scss' as *;
+
+.guestbook-message-box {
+	position: relative;
+	word-break: keep-all;
+	word-wrap: break-word;
+	border: $content-box-border;
+	border-radius: $content-box-border-radius;
+	padding: $content-box-padding;
+	margin-bottom: calc($menu-contents-gap/2);
+}
+
+.guestbook-message-delete-icon {
+	position: absolute;
+	left: 92.5%;
+	top: 15%;
+	font-size: calc($font-size-main/1.5);
+	cursor: pointer;
+}
+
+.guestbook-message-writer-date-box {
+	display: flex;
+	align-items: center;
+}
+
+.guestbook-message-writer {
+	font-size: calc($font-size-main/1.5);
+	color: $font-color-emphasize-dark;
+	margin-bottom: calc($submenu-margin/5);
+}
+
+.guestbook-message-date {
+	font-size: calc($font-size-content/2);
+	color: $font-color-sub2-dark;
+	font-weight: 500;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.guestbook-message-text {
+	font-size: calc($font-size-content);
+	color: $font-color-main-dark;
+	font-weight: 500;
+}
