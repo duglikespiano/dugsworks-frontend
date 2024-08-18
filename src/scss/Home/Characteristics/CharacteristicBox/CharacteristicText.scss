@@ -1,4 +1,4 @@
-@import '../../../common/variables.scss';
+@use '../../../variables/variables.scss' as *;
 
 #characteristic-texts-box {
 	margin-left: 1rem;

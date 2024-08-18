@@ -1,4 +1,4 @@
-@use '../../../common/variables.scss' as *;
+@use '../../../variables/variables.scss' as *;
 
 .contact-form-submit-modal {
 	@extend .shared-modal-background;

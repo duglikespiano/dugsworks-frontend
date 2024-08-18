@@ -1,4 +1,4 @@
-@import '../../../../variables.scss';
+@use '../../../variables/variables.scss' as *;
 
 #language-selector-box {
 	text-wrap: nowrap;
