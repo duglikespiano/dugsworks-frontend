@@ -1,24 +1,24 @@
 @use '../common/variables.scss' as *;
 
-.guestbook-box {
+#guestbook-box {
 	width: 50rem;
 	margin: auto;
-}
 
-.guestbook-box-title {
-	font-size: $font-size-emphasize;
-	color: $font-color-emphasize-dark;
-	margin-bottom: calc(1.5rem / 2);
-}
+	.guestbook-box-title {
+		font-size: $font-size-emphasize;
+		color: $font-color-emphasize-dark;
+		margin-bottom: calc(1.5rem / 2);
+	}
 
-.horizontalrule {
-	margin-bottom: $menu-contents-gap;
-}
+	.horizontalrule {
+		margin-bottom: $menu-contents-gap;
+	}
 
-.guestbook-inputform-box-description {
-	font-size: $font-size-sub;
-	font-weight: 900;
-	color: $font-color-sub1-dark;
-	margin-bottom: calc($submenu-margin/2);
-	margin-left: $submenu-margin;
+	.guestbook-inputform-box-description {
+		font-size: $font-size-sub;
+		font-weight: 900;
+		color: $font-color-sub1-dark;
+		margin-bottom: calc($submenu-margin/2);
+		margin-left: $submenu-margin;
+	}
 }

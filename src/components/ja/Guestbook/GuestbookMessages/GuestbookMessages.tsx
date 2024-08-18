@@ -1,9 +1,9 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import GuestbookMessageJa from './GuestbookMessage/GuestbookMessage';
+import GuestbookMessage from './GuestbookMessage/GuestbookMessage';
 import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../variables/sliceStore';
 
-export default function GuestbookMessagesJa() {
+export default function GuestbookMessages() {
 	const [isReadyToFetch, setIsReadyToFetch] = useState(true);
 
 	const messagesList = useSelector((state: RootState) => state.messagesList);
@@ -89,7 +89,7 @@ export default function GuestbookMessagesJa() {
 	return (
 		<Fragment>
 			{messagesList.map((item: messagesSliceType, i: number) => (
-				<GuestbookMessageJa message={item} key={i} />
+				<GuestbookMessage message={item} key={i} />
 			))}
 		</Fragment>
 	);

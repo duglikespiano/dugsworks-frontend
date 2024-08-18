@@ -8,7 +8,7 @@ export default function Header() {
 	return (
 		<Fragment>
 			<header id="header">
-				<Link className="page-title" to={'/en'}>
+				<Link className="page-title" to={'/ja'}>
 					Dug's Works
 				</Link>
 				<Nav />

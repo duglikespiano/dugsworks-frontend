@@ -1,7 +1,7 @@
 import { useState, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import GuestbookInputFormModal from './GuestbookInputFormModal/GuestbookInputFormModal';
-import ContactFormContentsRequireComponentEn from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
+import ContactFormContentsRequireComponent from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../variables/sliceStore';
 import '../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputForm.scss';
 
@@ -161,7 +161,7 @@ export default function GuestbookInputForm() {
 	return (
 		<Fragment>
 			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
-			<form className="guestbook-input-form" onSubmit={submitHandler}>
+			<form id="guestbook-input-form" onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">
 						<div className="guestbook-form-elements-title">Name</div>
@@ -178,7 +178,7 @@ export default function GuestbookInputForm() {
 							value={enteredName}
 							ref={nameInputRef}
 						/>
-						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 					</div>
 
 					<div className="guestbook-form-password-box">
@@ -196,7 +196,7 @@ export default function GuestbookInputForm() {
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
-						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 					</div>
 				</div>
 
@@ -214,7 +214,7 @@ export default function GuestbookInputForm() {
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
-					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentEn />}
+					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 				</div>
 
 				<div className="guestbook-form-submit-button-box">

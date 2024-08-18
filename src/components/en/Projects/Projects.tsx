@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import ProjectsKeywordsEn from './ProjectsKeywords/ProjectsKeywords';
-import ProjectsListEn from './ProjectsList/ProjectsList';
+import ProjectsKeywords from './ProjectsKeywords/ProjectsKeywords';
+import ProjectsList from './ProjectsList/ProjectsList';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../variables/sliceStore';
 import '../../../scss/Projects/Projects.scss';
@@ -20,10 +20,10 @@ export default function Projects() {
 					</span>{' '}
 					Project(s) selected
 				</div>
-				<ProjectsKeywordsEn />
+				<ProjectsKeywords />
 				<hr className="horizontalrule" />
 				<div className="projects-title">Projects</div>
-				<ProjectsListEn />
+				<ProjectsList />
 			</div>
 		</Fragment>
 	);

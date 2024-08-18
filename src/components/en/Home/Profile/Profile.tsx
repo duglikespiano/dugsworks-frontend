@@ -1,14 +1,14 @@
 import { Fragment } from 'react';
-import ProfileImageEn from './ProfileImage';
-import ProfileTextEn from './ProfileText';
+import ProfileImage from './ProfileImage';
+import ProfileText from './ProfileText';
 import '../../../../scss/Home/Profile/Profile.scss';
 
 export default function Profile() {
 	return (
 		<Fragment>
 			<div id="home-profile">
-				<ProfileImageEn />
-				<ProfileTextEn />
+				<ProfileImage />
+				<ProfileText />
 			</div>
 		</Fragment>
 	);

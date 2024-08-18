@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
-import styles from './History.module.scss';
-import HistoryBoxJa from './HistoryBox/HistoryBox';
+import HistoryBox from './HistoryBox/HistoryBox';
 import {
 	afterHistory,
 	bootCampHistory,
@@ -8,21 +7,22 @@ import {
 	firstCompanyHistory,
 	schoolHistory,
 } from '../../../../variables/variables';
+import '../../../../scss/About/History/History.scss';
 
-export default function HistoryEn() {
+export default function History() {
 	return (
 		<Fragment>
-			<div className={styles['history-ja']}>
-				<div className={styles['history-title-ja']}>略歴</div>
-				<HistoryBoxJa history={afterHistory} />
-				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxJa history={bootCampHistory} />
-				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxJa history={secondCompanyHistory} />
-				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxJa history={firstCompanyHistory} />
-				<div className={styles['history-boxes-gap-line']}></div>
-				<HistoryBoxJa history={schoolHistory} />
+			<div id="history">
+				<div className="history-title">略歴</div>
+				<HistoryBox history={afterHistory} />
+				<div className="history-boxes-gap-line"></div>
+				<HistoryBox history={bootCampHistory} />
+				<div className="history-boxes-gap-line"></div>
+				<HistoryBox history={secondCompanyHistory} />
+				<div className="history-boxes-gap-line"></div>
+				<HistoryBox history={firstCompanyHistory} />
+				<div className="history-boxes-gap-line"></div>
+				<HistoryBox history={schoolHistory} />
 			</div>
 		</Fragment>
 	);

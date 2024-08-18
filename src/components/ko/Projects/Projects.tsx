@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import ProjectsKeywordsEn from './ProjectsKeywords/ProjectsKeywords';
-import ProjectsListEn from './ProjectsList/ProjectsList';
+import ProjectsKeywords from './ProjectsKeywords/ProjectsKeywords';
+import ProjectsList from './ProjectsList/ProjectsList';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../variables/sliceStore';
 import styles from './Projects.module.scss';
@@ -20,10 +20,10 @@ export default function ProjectsKo() {
 					</span>{' '}
 					개 선택
 				</div>
-				<ProjectsKeywordsEn />
+				<ProjectsKeywords />
 				<hr className={styles['horizontalrule']} />
 				<div className={styles['projects-title']}>프로젝트</div>
-				<ProjectsListEn />
+				<ProjectsList />
 			</div>
 		</Fragment>
 	);

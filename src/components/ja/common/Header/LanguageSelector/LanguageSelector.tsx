@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { languages } from '../../../../variables/variables';
-import styles from './LanguageSelector.module.scss';
+import { languages } from '../../../../../variables/variables';
+import '../../../../../scss/common/Header/LanguageSelector/LanguageSelector.scss';
 
-export default function LanguageSelectorJa() {
+export default function LanguageSelector() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -24,9 +24,9 @@ export default function LanguageSelectorJa() {
 
 	return (
 		<Fragment>
-			<div className={styles['language-selector-box']}>
+			<div id="language-selector-box">
 				<span
-					className={styles['language-selector']}
+					className="language-selector"
 					onClick={() => {
 						navigateByLanguage(languages[1].language);
 					}}
@@ -35,7 +35,7 @@ export default function LanguageSelectorJa() {
 				</span>
 				/
 				<span
-					className={styles['language-selector']}
+					className="language-selector"
 					onClick={() => {
 						navigateByLanguage(languages[0].language);
 					}}

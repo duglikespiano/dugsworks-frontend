@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../variables/sliceStore';
-import ProjectBoxJa from './ProjectBox/ProjectBox';
+import ProjectBox from './ProjectBox/ProjectBox';
 
-export default function ProjectsListJa() {
+export default function ProjectsList() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const selectedProjectKeywordsIncludeProjects = useSelector((state: RootState) => state.selectedProjectKeywordsIncludeProjects);
 
@@ -12,14 +12,14 @@ export default function ProjectsListJa() {
 			{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.length === 0 && (
 				<Fragment>
 					{projectsList.map((item, i) => (
-						<ProjectBoxJa projectInfo={item} key={i} />
+						<ProjectBox projectInfo={item} key={i} />
 					))}
 				</Fragment>
 			)}
 			{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.length !== 0 && (
 				<Fragment>
 					{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.map((item, i) => (
-						<ProjectBoxJa projectInfo={item} key={i} />
+						<ProjectBox projectInfo={item} key={i} />
 					))}
 				</Fragment>
 			)}

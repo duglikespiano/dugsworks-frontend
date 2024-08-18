@@ -1,16 +1,16 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
-import HeaderJa from './shared/Header';
-import FooterJa from './shared/Footer';
-import styles from './Root.module.scss';
+import Header from './common/Header/Header';
+import Footer from './common/Footer/Footer';
+import '../../scss/Root/Root.scss';
 
-export default function MainJa() {
+export default function Main() {
 	return (
 		<Fragment>
-			<div className={styles['font-ja']}>
-				<HeaderJa />
+			<div id="font-ja">
+				<Header />
 				<Outlet />
-				<FooterJa />
+				<Footer />
 			</div>
 		</Fragment>
 	);

@@ -1,18 +1,18 @@
 import { Fragment } from 'react';
-import SkillsJa from './Skills/Skills';
-import styles from './SkillSets.module.scss';
+import Skills from './Skills/Skills';
 import { frontEndSkillSets, backEndSkillSets, cloudSkillSets, miscSkillSets } from '../../../../variables/variables';
+import '../../../../scss/About/SkillSets/SkillSets.scss';
 
-export default function SkillSetsJa() {
+export default function SkillSets() {
 	return (
 		<Fragment>
-			<div className={styles['skillsets-box-ja']}>
-				<div className={styles['skillsets-box-title-ja']}>活用可能技術</div>
-				<div className={styles['skillsets-box-content-ja']}>
-					<SkillsJa title={'フロントエンド'} skills={frontEndSkillSets} />
-					<SkillsJa title={'バックエンド'} skills={backEndSkillSets} />
-					<SkillsJa title={'クラウド'} skills={cloudSkillSets} />
-					<SkillsJa title={'その他'} skills={miscSkillSets} />
+			<div id="skillsets-box">
+				<div className="skillsets-box-title">活用可能技術</div>
+				<div className="skillsets-box-content">
+					<Skills title={'フロントエンド'} skills={frontEndSkillSets} />
+					<Skills title={'バックエンド'} skills={backEndSkillSets} />
+					<Skills title={'クラウド'} skills={cloudSkillSets} />
+					<Skills title={'その他'} skills={miscSkillSets} />
 				</div>
 			</div>
 			<hr />

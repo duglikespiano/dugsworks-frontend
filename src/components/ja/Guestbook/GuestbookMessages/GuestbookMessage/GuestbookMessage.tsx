@@ -1,13 +1,12 @@
 import { useState, Fragment } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { messagesSlicePropsType } from '../../../../../variables/sliceStore';
-import ProcessingModalJa from '../../../shared/ProcessingModal/ProcessingModal';
-import GuestbookMessagePasswordModalJa from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
-import GuestbookMessageFetchResultModalJa from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
+import ProcessingModal from '../../../common/ProcessingModal/ProcessingModal';
+import GuestbookMessagePasswordModal from './GuestbookMessagePasswordModal/GuestbookMessagePasswordModal';
+import GuestbookMessageFetchResultModal from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
+import '../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessage.scss';
 
-import styles from './GuestbookMessage.module.scss';
-
-export default function GuestbookMessageJa({ message }: messagesSlicePropsType) {
+export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [isResultArrived, setIsResultArrived] = useState(false);
@@ -32,7 +31,7 @@ export default function GuestbookMessageJa({ message }: messagesSlicePropsType) 
 	return (
 		<Fragment>
 			{isPasswordModalRequested && (
-				<GuestbookMessagePasswordModalJa
+				<GuestbookMessagePasswordModal
 					isPasswordModalRequestedHandler={isPasswordModalRequestedHandler}
 					isProcessingHandler={(isProcessing) => isProcessingHandler(isProcessing)}
 					isResultArrivedHandler={isResultArrivedHandler}
@@ -40,22 +39,19 @@ export default function GuestbookMessageJa({ message }: messagesSlicePropsType) 
 					messageId={message.id}
 				/>
 			)}
-			{isProcessing && <ProcessingModalJa />}
+			{isProcessing && <ProcessingModal />}
 			{isResultArrived && (
-				<GuestbookMessageFetchResultModalJa
-					isFetchedProperly={isFetchedProperly}
-					isResultArrivedHandler={isResultArrivedHandler}
-				/>
+				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
 			)}
-			<div className={styles['guestbook-message-box']}>
-				<div className={styles['guestbook-message-delete-icon']} onClick={isPasswordModalRequestedHandler}>
+			<div id="guestbook-message-box">
+				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>
 					<RiDeleteBin6Line />{' '}
 				</div>
-				<div className={styles['guestbook-message-writer-date-box']}>
-					<div className={styles['guestbook-message-writer']}>{message.name}</div>
-					<div className={styles['guestbook-message-date']}>{message.created_at}</div>
+				<div className="guestbook-message-writer-date-box">
+					<div className="guestbook-message-writer">{message.name}</div>
+					<div className="guestbook-message-date">{message.created_at}</div>
 				</div>
-				<div className={styles['guestbook-message-text']}>{message.message}</div>
+				<div className="guestbook-message-text">{message.message}</div>
 			</div>
 		</Fragment>
 	);

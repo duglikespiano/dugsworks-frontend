@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
-import ProfileJa from './Profile/Profile';
-import CharacteristicJa from './Characteristics/Characteristic';
+import Profile from './Profile/Profile';
+import Characteristic from './Characteristics/Characteristic';
 
-export default function HomeJa() {
+export default function Home() {
 	return (
 		<Fragment>
-			<ProfileJa />
-			<CharacteristicJa />
+			<Profile />
+			<Characteristic />
 		</Fragment>
 	);
 }

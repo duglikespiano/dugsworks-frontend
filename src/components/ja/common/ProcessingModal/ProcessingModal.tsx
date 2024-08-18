@@ -1,8 +1,8 @@
 import { useEffect, Fragment } from 'react';
 import { BiHourglass } from 'react-icons/bi';
-import styles from './ProcessingModal.module.scss';
+import '../../../../scss/common/ProcessingModal/ProcessingModal.scss';
 
-export default function ProcessingModalJa() {
+export default function ProcessingModal() {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -18,12 +18,12 @@ export default function ProcessingModalJa() {
 
 	return (
 		<Fragment>
-			<div className={styles['processing-modal-background']}>
-				<div className={styles['processing-modal-content-box']}>
-					<div className={styles['processing-modal-hourglassicon-box']}>
-						<BiHourglass className={styles['processing-modal-hourglassicon']} />
+			<div id="processing-modal-background">
+				<div className="processing-modal-content-box">
+					<div className="processing-modal-hourglassicon-box">
+						<BiHourglass className="processing-modal-hourglassicon" />
 					</div>
-					<div className={styles['processing-modal-text']}>進行中</div>
+					<div className="processing-modal-text">進行中</div>
 				</div>
 			</div>
 		</Fragment>

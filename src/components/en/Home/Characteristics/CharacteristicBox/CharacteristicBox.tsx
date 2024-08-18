@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import CharacteristicTextEn from './CharacteristicText';
+import CharacteristicText from './CharacteristicText';
 import { CharacteristicBoxPropsType } from '../../../../../variables/types';
 import '../../../../../scss/Home/Characteristics/CharacteristicBox/CharacteristicBox.scss';
 
@@ -10,7 +10,7 @@ export default function CharacteristicBox(props: CharacteristicBoxPropsType) {
 				<div className="characteristic-image-cropper">
 					<img src={props.info.imageUrl} alt={props.info.imageAlt} className="characteristic-picture" />
 				</div>
-				<CharacteristicTextEn keyword={props.info.keyword} title={props.info.title} contents={props.info.contents} />
+				<CharacteristicText keyword={props.info.keyword} title={props.info.title} contents={props.info.contents} />
 			</div>
 		</Fragment>
 	);
