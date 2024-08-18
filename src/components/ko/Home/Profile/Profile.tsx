@@ -1,14 +1,14 @@
 import { Fragment } from 'react';
-import ProfileImageKo from './ProfileImage';
-import ProfileTextKo from './ProfileText';
-import styles from './Profile.module.scss';
+import ProfileImage from './ProfileImage';
+import ProfileText from './ProfileText';
+import '../../../../scss/Home/Profile/Profile.scss';
 
-export default function ProfileJa() {
+export default function Profile() {
 	return (
 		<Fragment>
-			<div className={styles['home-profile-ko']}>
-				<ProfileImageKo />
-				<ProfileTextKo />
+			<div id="home-profile">
+				<ProfileImage />
+				<ProfileText />
 			</div>
 		</Fragment>
 	);

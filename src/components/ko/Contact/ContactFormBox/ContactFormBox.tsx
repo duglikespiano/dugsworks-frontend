@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
-import ContactFormSubmitModalKo from './ContactFormSubmitModal/ContactFormSubmitModal';
-import ContactFormContentsRequireComponentKo from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
-import ProcessingModalKo from '../../shared/ProcessingModal/ProcessingModal';
-import GuestbookInputFormModalKo from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
-import styles from './ContactFormBox.module.scss';
+import ContactFormSubmitModal from './ContactFormSubmitModal/ContactFormSubmitModal';
+import ContactFormContentsRequireComponent from './ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
+import ProcessingModal from '../../common/ProcessingModal/ProcessingModal';
+import GuestbookInputFormModal from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
+import '../../../../scss/Contact/ContactFormBox/ContactFormBox.scss';
 
-export default function ContactFormBoxKo() {
+export default function ContactFormBox() {
 	const [enteredName, setEnteredName] = useState('');
 	const [enteredEmail, setEnteredEmail] = useState('');
 	const [enteredMessage, setEnteredMessage] = useState('');
@@ -139,21 +139,21 @@ export default function ContactFormBoxKo() {
 	};
 
 	return (
-		<form className={styles['contact-form']} onSubmit={submitHandler}>
-			{isProcessing && <ProcessingModalKo />}
+		<form id="contact-form" onSubmit={submitHandler}>
+			{isProcessing && <ProcessingModal />}
 			{isFormSubmitted && (
-				<ContactFormSubmitModalKo
+				<ContactFormSubmitModal
 					isFormSubmittedHandler={(boolean) => {
 						setIsFormSubmitted(boolean);
 					}}
 					isProcessdProperly={isProcessdProperly}
 				/>
 			)}
-			{!isFormReady && <GuestbookInputFormModalKo isFormFilledProperlyHandler={isFormReadyHandler} />}
-			<div className={styles['contact-form-elements-box']}>
-				<div className={styles['contact-form-elements-title']}>성함</div>
+			{!isFormReady && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormReadyHandler} />}
+			<div className="contact-form-elements-box">
+				<div className="contact-form-elements-title">성함</div>
 				<input
-					className={styles['contact-form-textinput']}
+					className="contact-form-textinput"
 					type={'text'}
 					id="name"
 					maxLength={40}
@@ -165,13 +165,13 @@ export default function ContactFormBoxKo() {
 					value={enteredName}
 					ref={nameInputRef}
 				/>
-				{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+				{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 			</div>
 
-			<div className={styles['contact-form-elements-box']}>
-				<div className={styles['contact-form-elements-title']}>이메일</div>
+			<div className="contact-form-elements-box">
+				<div className="contact-form-elements-title">이메일</div>
 				<input
-					className={styles['contact-form-textinput']}
+					className="contact-form-textinput"
 					type={'email'}
 					id="email"
 					maxLength={40}
@@ -183,13 +183,13 @@ export default function ContactFormBoxKo() {
 					value={enteredEmail}
 					ref={emailInputRef}
 				/>
-				{emailTouched && emailInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+				{emailTouched && emailInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 			</div>
 
-			<div className={styles['contact-form-elements-box']}>
-				<div className={styles['contact-form-elements-title']}>메세지</div>
+			<div className="contact-form-elements-box">
+				<div className="contact-form-elements-title">메세지</div>
 				<textarea
-					className={styles['contact-form-textarea']}
+					className="contact-form-textarea"
 					id="message"
 					maxLength={3000}
 					placeholder="메세지를 입력해주세요"
@@ -200,11 +200,11 @@ export default function ContactFormBoxKo() {
 					value={enteredMessage}
 					ref={messageInputRef}
 				/>
-				{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+				{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 			</div>
 
-			<div className={styles['contact-form-submit-button-box']}>
-				<button className={styles['contact-form-submit-button']}>제출하기</button>
+			<div className="contact-form-submit-button-box">
+				<button className="contact-form-submit-button">제출하기</button>
 			</div>
 		</form>
 	);

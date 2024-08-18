@@ -1,14 +1,14 @@
 import { Fragment } from 'react';
-import SkillSetsKo from './SkillSets/SkillSets';
-import HistoryKo from './History/History';
-import styles from './About.module.scss';
+import SkillSets from './SkillSets/SkillSets';
+import History from './History/History';
+import '../../../scss/About/About.scss';
 
-export default function AboutEn() {
+export default function About() {
 	return (
 		<Fragment>
-			<div className={styles['about-box-ko']}>
-				<SkillSetsKo />
-				<HistoryKo />
+			<div id="about-box">
+				<SkillSets />
+				<History />
 			</div>
 		</Fragment>
 	);

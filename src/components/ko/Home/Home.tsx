@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
-import ProfileKo from './Profile/Profile';
-import CharacteristicKo from '../../ko/Home/Characteristics/Characteristic';
+import Profile from './Profile/Profile';
+import Characteristic from './Characteristics/Characteristic';
 
-export default function HomeKo() {
+export default function Home() {
 	return (
 		<Fragment>
-			<ProfileKo />
-			<CharacteristicKo />
+			<Profile />
+			<Characteristic />
 		</Fragment>
 	);
 }

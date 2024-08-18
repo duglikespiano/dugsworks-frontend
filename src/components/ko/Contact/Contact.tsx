@@ -1,13 +1,13 @@
 import { Fragment } from 'react';
-import ContactFormBoxKo from './ContactFormBox/ContactFormBox';
-import styles from './Contact.module.scss';
+import ContactFormBox from './ContactFormBox/ContactFormBox';
+import '../../../scss/Contact/Contact.scss';
 
-export default function ContactKo() {
+export default function Contact() {
 	return (
 		<Fragment>
-			<div className={styles['contact-box-ko']}>
-				<div className={styles['contact-box-title-ko']}>문의처</div>
-				<ContactFormBoxKo />
+			<div id="contact-box">
+				<div className="contact-box-title">문의처</div>
+				<ContactFormBox />
 			</div>
 		</Fragment>
 	);

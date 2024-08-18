@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import styles from './Characteristic.module.scss';
-import CharacteristicBoxKo from './CharacteristicBox/CharacteristicBox';
+import CharacteristicBox from './CharacteristicBox/CharacteristicBox';
+import '../../../../scss/Home/Characteristics/Characteristics.scss';
 import turtleImageURL from '../../../../images/turtle-image.jpg';
 import theGoldenGateBridgeImageURL from '../../../../images/the-golden-gate-bridge-image.jpg';
 import cloversImageURL from '../../../../images/clovers-image.jpg';
@@ -32,13 +32,13 @@ const cloversInfo = {
 	boxSide: 'left',
 };
 
-export default function CharacteristicJa() {
+export default function Characteristic() {
 	return (
 		<Fragment>
-			<div className={styles['characteristics-boxes-ko']}>
-				<CharacteristicBoxKo info={turtleInfo} />
-				<CharacteristicBoxKo info={theGoldenGateBridgeInfo} />
-				<CharacteristicBoxKo info={cloversInfo} />
+			<div id="characteristics-boxes">
+				<CharacteristicBox info={turtleInfo} />
+				<CharacteristicBox info={theGoldenGateBridgeInfo} />
+				<CharacteristicBox info={cloversInfo} />
 				<div style={{ clear: 'both' }} />
 			</div>
 		</Fragment>

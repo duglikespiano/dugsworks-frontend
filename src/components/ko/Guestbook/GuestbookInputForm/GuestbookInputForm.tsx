@@ -1,11 +1,11 @@
 import { useState, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-import GuestbookInputFormModalKo from './GuestbookInputFormModal/GuestbookInputFormModal';
-import ContactFormContentsRequireComponentKo from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
+import GuestbookInputFormModal from './GuestbookInputFormModal/GuestbookInputFormModal';
+import ContactFormContentsRequireComponent from '../../Contact/ContactFormBox/ContactFormContentsRequireComponent/ContactFormContentsRequireComponent';
 import { messagesActions } from '../../../../variables/sliceStore';
-import styles from './GuestbookInputForm.module.scss';
+import '../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputForm.scss';
 
-export default function GuestbookInputFormKo() {
+export default function GuestbookInputForm() {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
 
 	class Message {
@@ -160,13 +160,13 @@ export default function GuestbookInputFormKo() {
 
 	return (
 		<Fragment>
-			{!isFormFilledProperly && <GuestbookInputFormModalKo isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
-			<form className={styles['guestbook-input-form']} onSubmit={submitHandler}>
-				<div className={styles['guestbook-form-name-password-box']}>
-					<div className={styles['guestbook-form-name-box']}>
-						<div className={styles['guestbook-form-elements-title']}>성함</div>
+			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
+			<form id="guestbook-input-form" onSubmit={submitHandler}>
+				<div className="guestbook-form-name-password-box">
+					<div className="guestbook-form-name-box">
+						<div className="guestbook-form-elements-title">성함</div>
 						<input
-							className={styles['guestbook-form-textinput']}
+							className="guestbook-form-textinput"
 							type={'text'}
 							id="name"
 							maxLength={30}
@@ -178,13 +178,13 @@ export default function GuestbookInputFormKo() {
 							value={enteredName}
 							ref={nameInputRef}
 						/>
-						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 					</div>
 
-					<div className={styles['guestbook-form-password-box']}>
-						<div className={styles['guestbook-form-elements-title']}>비밀번호</div>
+					<div className="guestbook-form-password-box">
+						<div className="guestbook-form-elements-title">비밀번호</div>
 						<input
-							className={styles['guestbook-form-textinput']}
+							className="guestbook-form-textinput"
 							type={'password'}
 							id="password"
 							maxLength={30}
@@ -196,14 +196,14 @@ export default function GuestbookInputFormKo() {
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
-						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 					</div>
 				</div>
 
-				<div className={styles['guestbook-form-elements-box']}>
-					<div className={styles['guestbook-form-elements-title']}>메세지</div>
+				<div className="guestbook-form-elements-box">
+					<div className="guestbook-form-elements-title">메세지</div>
 					<textarea
-						className={styles['guestbook-form-textarea']}
+						className="guestbook-form-textarea"
 						id="message"
 						maxLength={500}
 						placeholder={'메세지를 입력해주세요'}
@@ -214,11 +214,11 @@ export default function GuestbookInputFormKo() {
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
-					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponentKo />}
+					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
 				</div>
 
-				<div className={styles['guestbook-form-submit-button-box']}>
-					<button className={styles['guestbook-form-submit-button']}>제출하기</button>
+				<div className="guestbook-form-submit-button-box">
+					<button className="guestbook-form-submit-button">제출하기</button>
 				</div>
 			</form>
 		</Fragment>

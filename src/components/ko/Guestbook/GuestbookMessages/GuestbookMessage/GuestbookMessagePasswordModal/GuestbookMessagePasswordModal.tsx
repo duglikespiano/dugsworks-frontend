@@ -1,8 +1,7 @@
 import { useEffect, useRef, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { messagesActions } from '../../../../../../variables/sliceStore';
-
-import styles from './GuestbookMessagePasswordModal.module.scss';
+import '../../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessagePasswordModal/GuestbookMessagePasswordModal.scss';
 
 interface props {
 	isPasswordModalRequestedHandler: () => void;
@@ -12,7 +11,7 @@ interface props {
 	messageId: number;
 }
 
-export default function GuestbookMessagePasswordModalKo({
+export default function GuestbookMessagePasswordModal({
 	isPasswordModalRequestedHandler,
 	isProcessingHandler,
 	isResultArrivedHandler,
@@ -75,7 +74,7 @@ export default function GuestbookMessagePasswordModalKo({
 	return (
 		<Fragment>
 			<div
-				className={styles['guestbook-mesasge-password-request-modal']}
+				id="guestbook-mesasge-password-request-modal"
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {
@@ -83,23 +82,20 @@ export default function GuestbookMessagePasswordModalKo({
 					}
 				}}
 			>
-				<div className={styles['guestbook-mesasge-password-request-modal-content-box']}>
-					<div className={styles['guestbook-mesasge-password-request-modal-password-request-text']}>비밀번호를 입력해주세요</div>
-					<div className={styles['guestbook-mesasge-password-request-modal-password-request-input-box']}>
+				<div className="guestbook-mesasge-password-request-modal-content-box">
+					<div className="guestbook-mesasge-password-request-modal-password-request-text">비밀번호를 입력해주세요</div>
+					<div className="guestbook-mesasge-password-request-modal-password-request-input-box">
 						<input
-							className={styles['guestbook-mesasge-password-request-modal-password-request-input']}
+							className="guestbook-mesasge-password-request-modal-password-request-input"
 							placeholder="비밀번호를 입력해주세요"
 							ref={passwordInputRef}
 						></input>
 					</div>
-					<div className={styles['guestbook-mesasge-password-request-modal-icons-box']}>
-						<div className={styles['guestbook-mesasge-password-request-modal-icon-confirm']} onClick={fetchMessageDeleteAPI}>
+					<div className="guestbook-mesasge-password-request-modal-icons-box">
+						<div className="guestbook-mesasge-password-request-modal-icon-confirm" onClick={fetchMessageDeleteAPI}>
 							확인
 						</div>
-						<div
-							className={styles['guestbook-mesasge-password-request-modal-icon-cancel']}
-							onClick={isPasswordModalRequestedHandler}
-						>
+						<div className="guestbook-mesasge-password-request-modal-icon-cancel" onClick={isPasswordModalRequestedHandler}>
 							취소
 						</div>
 					</div>

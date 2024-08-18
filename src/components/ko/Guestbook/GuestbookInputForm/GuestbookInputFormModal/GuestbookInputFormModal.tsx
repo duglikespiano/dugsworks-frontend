@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { BiMessageError } from 'react-icons/bi';
-import styles from './GuestbookInputFormModal.module.scss';
+import '../../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal.scss';
 
 interface props {
 	isFormFilledProperlyHandler: () => void;
 }
 
-export default function GuestbookInputFormModalKo({ isFormFilledProperlyHandler }: props) {
+export default function GuestbookInputFormModal({ isFormFilledProperlyHandler }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -22,7 +22,7 @@ export default function GuestbookInputFormModalKo({ isFormFilledProperlyHandler 
 
 	return (
 		<div
-			className={styles['contact-form-submit-modal']}
+			id="contact-form-submit-modal"
 			onClick={(event) => {
 				event.stopPropagation();
 				if (event.target === event.currentTarget) {
@@ -30,18 +30,18 @@ export default function GuestbookInputFormModalKo({ isFormFilledProperlyHandler 
 				}
 			}}
 		>
-			<div className={styles['contact-form-submit-modal-content-box']}>
-				<div className={styles['contact-form-submit-modal-checkicon-box']}>
-					<BiMessageError className={styles['contact-form-submit-modal-checkicon']} />
+			<div className="contact-form-submit-modal-content-box">
+				<div className="contact-form-submit-modal-checkicon-box">
+					<BiMessageError className="contact-form-submit-modal-checkicon" />
 				</div>
-				<div className={styles['contact-form-submit-modal-resulttext']}>
+				<div className="contact-form-submit-modal-resulttext">
 					모든 구성요소들이
 					<br />
 					작성되어야 합니다
 				</div>
-				<div className={styles['contact-form-submit-modal-confirm-icon-box']}>
+				<div className="contact-form-submit-modal-confirm-icon-box">
 					<button
-						className={styles['contact-form-submit-modal-confirm-icon']}
+						className="contact-form-submit-modal-confirm-icon"
 						onClick={() => {
 							isFormFilledProperlyHandler();
 						}}

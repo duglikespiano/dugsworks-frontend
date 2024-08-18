@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
-import styles from './CharacteristicText.module.scss';
 import { CharacteristicTextPropsType } from '../../../../../variables/types';
+import '../../../../../scss/Home/Characteristics/CharacteristicBox/CharacteristicText.scss';
 
-export default function CharacteristicTextKo(props: CharacteristicTextPropsType) {
+export default function CharacteristicText(props: CharacteristicTextPropsType) {
 	return (
 		<Fragment>
-			<div className={styles['characteristic-texts-box-ko']}>
-				<div className={styles['characteristic-text-keyword-ko']}>{props.keyword}</div>
-				<div className={styles['characteristic-text-title-ko']}>{props.title}</div>
+			<div id="characteristic-texts-box">
+				<div className="characteristic-text-keyword">{props.keyword}</div>
+				<div className="characteristic-text-title">{props.title}</div>
 				{props.contents.map((content: string, i: number) => (
-					<div className={styles['characteristic-text-content-ko']} key={i}>
+					<div className="characteristic-text-content" key={i}>
 						{content}
 					</div>
 				))}

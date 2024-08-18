@@ -7,9 +7,9 @@ import {
 	selectedProjectKeywordsIncludeProjectsActions,
 	projectInfoType,
 } from '../../../../variables/sliceStore';
-import styles from './ProjectsKeywords.module.scss';
+import '../../../../scss/Projects/ProjectsKeywords/ProjectsKeywords.scss';
 
-export default function ProjectsKeywordsKo() {
+export default function ProjectsKeywords() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const projectsKeywords = useSelector((state: RootState) => state.projectsKeywords);
 	const dispatch = useDispatch();
@@ -28,11 +28,11 @@ export default function ProjectsKeywordsKo() {
 
 	return (
 		<Fragment>
-			<div className={styles['project-keywords-box']}>
+			<div id="project-keywords-box">
 				{projectsKeywords.map((item, i) => (
 					<div
 						key={i}
-						className={item.selected ? styles['project-keyword-button-clicked'] : styles['project-keyword-button']}
+						className={item.selected ? 'project-keyword-button-clicked' : 'project-keyword-button'}
 						onClick={() => {
 							projectStatusHandler(i);
 							selectedProjectsKeywordsHandler(projectsKeywords[i].keyword);
