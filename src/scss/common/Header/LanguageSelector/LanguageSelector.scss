@@ -6,14 +6,11 @@
 	margin-left: 1rem;
 
 	.language-selector {
-		text-decoration: none;
 		color: $font-color-main-dark;
 		cursor: pointer;
 	}
 
-	.language-selector:hover,
-	.language-selector:active {
+	.language-selector:hover {
 		color: $font-color-emphasize-dark;
-		cursor: pointer;
 	}
 }

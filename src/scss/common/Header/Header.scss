@@ -11,13 +11,11 @@
 	.page-title {
 		font-size: 3rem;
 		text-wrap: nowrap;
-		text-decoration: none;
 		flex-grow: 1;
 	}
 
 	.page-title:visited,
 	.page-title:active {
-		text-decoration: none;
 		color: $font-color-main-dark;
 	}
 }
