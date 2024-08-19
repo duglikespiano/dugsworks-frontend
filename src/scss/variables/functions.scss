@@ -39,3 +39,7 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+
+@mixin basicTransition {
+	transition: all 0.3s;
+}

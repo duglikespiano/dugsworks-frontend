@@ -1,4 +1,5 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #nav-links {
 	display: flex;
@@ -9,6 +10,7 @@
 	.link {
 		font-size: 2rem;
 		text-wrap: nowrap;
+		@include basicTransition;
 		&:hover {
 			color: $font-color-emphasize-dark;
 		}

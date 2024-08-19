@@ -1,4 +1,5 @@
 @use '../../variables/variables.scss' as *;
+@use '../../variables/functions.scss' as *;
 
 #footer-links {
 	display: flex;
@@ -14,6 +15,7 @@
 		font-size: 1rem;
 		text-wrap: nowrap;
 		color: $font-color-main-dark;
+		@include basicTransition;
 		&:hover {
 			color: $font-color-emphasize-dark;
 		}
