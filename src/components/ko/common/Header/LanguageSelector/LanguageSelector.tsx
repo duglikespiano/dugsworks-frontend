@@ -25,23 +25,23 @@ export default function LanguageSelector() {
 	return (
 		<Fragment>
 			<div id="language-selector-box">
-				<span
+				<button
 					className="language-selector"
 					onClick={() => {
 						navigateByLanguage(languages[0].language);
 					}}
 				>
 					{languages[0].language}
-				</span>
+				</button>
 				/
-				<span
+				<button
 					className="language-selector"
 					onClick={() => {
 						navigateByLanguage(languages[2].language);
 					}}
 				>
 					{languages[2].language}
-				</span>
+				</button>
 			</div>
 		</Fragment>
 	);

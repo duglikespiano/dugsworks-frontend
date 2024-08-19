@@ -8,10 +8,10 @@ export default function Footer() {
 
 	return (
 		<Fragment>
-			<ul id="footer-links-box">
+			<ul id="footer-links">
 				{menus.map((item: string[], i: number) => (
 					<Link
-						className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'footer-link-active' : 'footer-link'}
+						className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'link active' : 'link'}
 						to={item[0].toLowerCase()}
 						key={i}
 					>

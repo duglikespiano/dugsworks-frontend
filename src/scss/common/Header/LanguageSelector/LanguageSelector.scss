@@ -7,10 +7,14 @@
 
 	.language-selector {
 		color: $font-color-main-dark;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		background-color: transparent;
+		border: none;
 		cursor: pointer;
-	}
-
-	.language-selector:hover {
-		color: $font-color-emphasize-dark;
+		&:hover {
+			color: $font-color-emphasize-dark;
+		}
 	}
 }

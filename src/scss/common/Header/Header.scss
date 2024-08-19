@@ -8,14 +8,11 @@
 	padding-right: 3rem;
 	margin-bottom: $menu-main-gap;
 
-	.page-title {
-		font-size: 3rem;
-		text-wrap: nowrap;
+	h1.logo {
 		flex-grow: 1;
-	}
-
-	.page-title:visited,
-	.page-title:active {
-		color: $font-color-main-dark;
+		.page-title {
+			font-size: 3rem;
+			text-wrap: nowrap;
+		}
 	}
 }

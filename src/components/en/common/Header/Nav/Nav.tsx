@@ -10,13 +10,17 @@ export default function Nav() {
 		<Fragment>
 			<ul id="nav-links">
 				{menus.map((item: string[], i: number) => (
-					<Link
-						className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'nav-link-active' : 'nav-link'}
-						to={item[0].toLowerCase()}
-						key={i}
-					>
-						{item[0]}
-					</Link>
+					<li className="nav-link">
+						<h2 className="category">
+							<Link
+								className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'link active' : 'link'}
+								to={item[0].toLowerCase()}
+								key={i}
+							>
+								{item[0]}
+							</Link>
+						</h2>
+					</li>
 				))}
 			</ul>
 		</Fragment>

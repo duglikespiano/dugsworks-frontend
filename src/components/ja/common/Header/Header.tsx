@@ -8,9 +8,11 @@ export default function Header() {
 	return (
 		<Fragment>
 			<header id="header">
-				<Link className="page-title" to={'/ja'}>
-					Dug's Works
-				</Link>
+				<h1 className="logo">
+					<Link className="page-title" to={'/ja'}>
+						Dug's Works
+					</Link>
+				</h1>
 				<Nav />
 				<LanguageSelector />
 			</header>

@@ -1,6 +1,6 @@
 @use '../../variables/variables.scss' as *;
 
-#footer-links-box {
+#footer-links {
 	display: flex;
 	height: 1.5rem;
 	align-items: center;
@@ -10,18 +10,15 @@
 	padding-bottom: 3rem;
 	margin-top: $menu-main-gap;
 
-	.footer-link {
+	.link {
 		font-size: 1rem;
 		text-wrap: nowrap;
 		color: $font-color-main-dark;
-		cursor: pointer;
-	}
-
-	.footer-link:hover {
-		color: $font-color-emphasize-dark;
-	}
-
-	.footer-link-active {
-		color: $font-color-emphasize-dark;
+		&:hover {
+			color: $font-color-emphasize-dark;
+		}
+		&.active {
+			color: $font-color-emphasize-dark;
+		}
 	}
 }
