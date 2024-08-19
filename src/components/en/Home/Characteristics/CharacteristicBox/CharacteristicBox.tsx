@@ -7,8 +7,8 @@ export default function CharacteristicBox(props: CharacteristicBoxPropsType) {
 	return (
 		<Fragment>
 			<div id={`characteristic-box-${props.info.boxSide}`}>
-				<div className="characteristic-image-cropper">
-					<img src={props.info.imageUrl} alt={props.info.imageAlt} className="characteristic-picture" />
+				<div className="characteristic-image">
+					<img src={props.info.imageUrl} alt={props.info.imageAlt} />
 				</div>
 				<CharacteristicText keyword={props.info.keyword} title={props.info.title} contents={props.info.contents} />
 			</div>
