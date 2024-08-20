@@ -1,15 +1,15 @@
 import { Fragment, useState } from 'react';
 import '../../../../../scss/common/Header/Hamburger/Hamburger.scss';
 
-export default function Hamburger() {
-	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+export default function Hamburger(props: { isOpen: boolean }) {
+	const [isHamburgerOpen, setIsHamburgerOpen] = useState(props.isOpen);
 	const isHamburgerOpenHanlder = () => {
-		setIsHamburgerOpen(!isHamburgerOpen);
+		setIsHamburgerOpen(!props.isOpen);
 	};
 
 	return (
 		<Fragment>
-			<div id="hamburger" className={isHamburgerOpen ? 'active' : ''} onClick={isHamburgerOpenHanlder}>
+			<div id="hamburger" className={props.isOpen ? 'active' : ''}>
 				<div className="line"></div>
 				<div className="line"></div>
 				<div className="line"></div>

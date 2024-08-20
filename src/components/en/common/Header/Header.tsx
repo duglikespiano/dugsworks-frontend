@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import LanguageSelector from './LanguageSelector/LanguageSelector';
 import Hamburger from './Hamburger/Hamburger';
+import NavModal from '../NavModal/NavModal';
 import '../../../../scss/common/Header/Header.scss';
 
 export default function Header() {
@@ -16,7 +17,8 @@ export default function Header() {
 				</h1>
 				<Nav />
 				<LanguageSelector />
-				<Hamburger />
+				<Hamburger isOpen={false} />
+				<NavModal isOpen={false} />
 			</header>
 		</Fragment>
 	);
