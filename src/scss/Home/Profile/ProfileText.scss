@@ -1,4 +1,5 @@
 @use '../../../scss/variables/variables.scss' as *;
+@use '../../../scss/variables/functions.scss' as *;
 
 $icons-width: 2.5rem;
 
@@ -7,10 +8,16 @@ $icons-width: 2.5rem;
 	flex-direction: column;
 	justify-content: center;
 	margin-left: 1rem;
+	@include tab {
+		margin-left: 0;
+	}
 
 	.home-profile-texts-box {
 		text-align: center;
 		text-wrap: nowrap;
+		@include tab {
+			padding-top: $submenu-margin;
+		}
 	}
 
 	.home-profile-hi {
@@ -18,6 +25,10 @@ $icons-width: 2.5rem;
 		font-weight: 400;
 		padding-bottom: 2rem;
 		color: $font-color-sub1-dark;
+		@include pc-s {
+			font-size: 1.8rem;
+			padding-bottom: 1rem;
+		}
 	}
 
 	.home-profile-name {
@@ -25,6 +36,14 @@ $icons-width: 2.5rem;
 		font-weight: 900;
 		color: $font-color-emphasize-dark;
 		padding-bottom: 2rem;
+		@include pc-s {
+			font-size: 3.75rem;
+		}
+		@include tab-s {
+			font-size: 3rem;
+		}
+		@include sp {
+		}
 		&.en,
 		&.ja {
 			padding-bottom: 0;
@@ -41,6 +60,14 @@ $icons-width: 2.5rem;
 		font-size: 3rem;
 		font-weight: 500;
 		color: $font-color-sub2-dark;
+		@include pc-s {
+			font-size: 2.1rem;
+		}
+		@include tab-s {
+			font-size: 1.75rem;
+		}
+		@include sp {
+		}
 		&.en {
 			padding-bottom: 2rem;
 		}
@@ -51,6 +78,9 @@ $icons-width: 2.5rem;
 		font-weight: 400;
 		text-align: right;
 		padding-bottom: 2rem;
+		@include pc-s {
+			font-size: 1.25rem;
+		}
 	}
 
 	.home-iconbox {
