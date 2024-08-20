@@ -39,10 +39,9 @@ $icons-width: 2.5rem;
 		@include pc-s {
 			font-size: 3.75rem;
 		}
-		@include tab-s {
-			font-size: 3rem;
-		}
+
 		@include sp {
+			font-size: 3rem;
 		}
 		&.en,
 		&.ja {
@@ -63,10 +62,8 @@ $icons-width: 2.5rem;
 		@include pc-s {
 			font-size: 2.1rem;
 		}
-		@include tab-s {
-			font-size: 1.75rem;
-		}
 		@include sp {
+			font-size: 1.75rem;
 		}
 		&.en {
 			padding-bottom: 2rem;

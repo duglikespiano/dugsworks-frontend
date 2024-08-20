@@ -6,12 +6,12 @@
 	padding: 2rem;
 
 	.contact-form-elements-box {
-		margin-bottom: calc($submenu-title-gap * 1.5);
+		margin-bottom: calc(#{$submenu-title-gap * 1.5});
 	}
 
 	.contact-form-elements-title {
 		font-size: $font-size-main;
-		margin-bottom: calc($submenu-title-gap / 2);
+		margin-bottom: calc(#{$submenu-title-gap / 2});
 	}
 
 	.contact-form-textinput {
@@ -22,7 +22,7 @@
 		padding: 1rem;
 		box-sizing: border-box;
 		border: none;
-		border-radius: calc($content-box-border-radius/5);
+		border-radius: calc(#{$content-box-border-radius/5});
 		outline: none;
 	}
 
@@ -45,7 +45,7 @@
 		color: $background-color-emphasize-dark;
 		background-color: $font-color-main-dark;
 		border: none;
-		border-radius: calc($content-box-border-radius/5);
+		border-radius: calc(#{$content-box-border-radius/5});
 		cursor: pointer;
 	}
 }

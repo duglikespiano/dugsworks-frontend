@@ -93,6 +93,6 @@ $content-box-padding: 2rem;
 	text-align: center;
 	border: $content-box-border;
 	border-color: $background-color-sub1-dark;
-	border-radius: calc($content-box-border-radius/2);
+	border-radius: calc(#{$content-box-border-radius/2});
 	cursor: pointer;
 }

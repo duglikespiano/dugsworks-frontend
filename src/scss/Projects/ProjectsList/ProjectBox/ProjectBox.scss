@@ -4,13 +4,13 @@
 	border: $content-box-border;
 	border-radius: $content-box-border-radius;
 	padding: $content-box-padding;
-	margin-bottom: calc($menu-contents-gap/2);
+	margin-bottom: calc(#{$menu-contents-gap/2});
 
 	.project-title {
 		font-size: $font-size-main;
 		font-weight: 900;
 		color: $font-color-main-dark;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 	}
 
 	.project-description {
@@ -18,7 +18,7 @@
 		font-weight: 500;
 		color: $font-color-sub1-dark;
 		margin-left: $submenu-margin;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 	}
 
 	.project-info-url {
@@ -32,7 +32,7 @@
 
 	.project-info-navigate-button {
 		align-items: center;
-		font-size: calc($font-size-sub/2);
+		font-size: calc(#{$font-size-sub/2});
 		color: $font-color-sub2-dark;
 		background-color: $background-color-sub3-dark;
 		text-decoration: none;
@@ -51,7 +51,7 @@
 	.project-skills-box {
 		font-size: $font-size-sub;
 		margin-left: $submenu-margin;
-		margin-top: calc($submenu-margin/2);
+		margin-top: calc(#{$submenu-margin/2});
 	}
 
 	.project-skills-label-box {

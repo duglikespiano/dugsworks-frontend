@@ -27,6 +27,6 @@
 		font-size: $font-size-main;
 		color: $font-color-sub2-dark;
 		text-align: center;
-		margin-bottom: calc($menu-title-gap/2);
+		margin-bottom: calc(#{$menu-title-gap/2});
 	}
 }

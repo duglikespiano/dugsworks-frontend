@@ -1,24 +1,52 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #characteristic-texts-box {
-	margin-left: 1rem;
-	margin-right: 1rem;
-
+	@include tab {
+		margin-top: 0.5rem;
+		margin-bottom: $submenu2-margin;
+	}
 	.characteristic-text-keyword {
 		font-size: $font-size-emphasize;
 		font-weight: 900;
 		color: $font-color-emphasize-dark;
 		margin-bottom: 1.5rem;
+		@include pc {
+			font-size: calc(#{$font-size-emphasize * 0.9});
+			margin-bottom: 1rem;
+		}
+		@include tab {
+			margin-bottom: 0.5rem;
+		}
+		@include sp {
+			font-size: calc(#{$font-size-emphasize * 0.8});
+		}
 	}
 	.characteristic-text-title {
 		font-size: $font-size-main;
 		font-weight: 500;
 		margin-bottom: 1rem;
+		@include pc {
+			font-size: calc(#{$font-size-main * 0.8});
+			margin-bottom: 0.75rem;
+		}
+		@include tab {
+			margin-bottom: 0.5rem;
+		}
+		@include sp {
+			font-size: calc(#{$font-size-main * 0.7});
+		}
 	}
 
 	.characteristic-text-content {
 		font-size: $font-size-content;
 		font-weight: 400;
 		color: $font-color-sub2-dark;
+		@include pc {
+			font-size: calc(#{$font-size-content * 0.9});
+		}
+		@include sp {
+			font-size: calc(#{$font-size-content * 0.7});
+		}
 	}
 }

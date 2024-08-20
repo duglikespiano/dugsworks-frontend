@@ -9,7 +9,7 @@
 		font-size: $font-size-main;
 		font-weight: 900;
 		color: $font-color-emphasize-dark;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 	}
 
 	.history-box-name {
@@ -24,7 +24,7 @@
 		color: $font-color-main-dark;
 		font-weight: 400;
 		margin-left: $submenu-margin;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 	}
 
 	.history-box-duty {

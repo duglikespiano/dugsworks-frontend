@@ -18,7 +18,7 @@
 		font-size: $font-size-sub;
 		font-weight: 900;
 		color: $font-color-sub1-dark;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 		margin-left: $submenu-margin;
 	}
 }

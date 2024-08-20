@@ -13,11 +13,6 @@
 		@content;
 	}
 }
-@mixin tab-s {
-	@media only screen and (max-width: 375px) {
-		@content;
-	}
-}
 @mixin sp {
 	@media only screen and (max-width: 375px) {
 		@content;

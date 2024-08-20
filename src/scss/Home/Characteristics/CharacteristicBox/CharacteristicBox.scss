@@ -1,15 +1,27 @@
+@use '../../../../scss/variables/variables.scss' as *;
+@use '../../../../scss/variables/functions.scss' as *;
+
 $image-size-height: 30rem;
-$image-size-width: calc($image-size-height * 4 / 3);
 
 @mixin characteristic-box {
-	display: flex;
+	display: grid;
+	grid-template-columns: 50% auto;
+	column-gap: 1rem;
 	width: 80rem;
 	height: $image-size-height;
+	padding: 0 1rem;
+	margin: 0 auto;
 	margin-bottom: 1.5rem;
+	@include pc {
+		width: 100%;
+		height: auto;
+	}
+	@include tab {
+		display: block;
+	}
 
 	.characteristic-image {
-		width: $image-size-width;
-		height: $image-size-height;
+		aspect-ratio: 4/3;
 	}
 }
 
@@ -19,6 +31,8 @@ $image-size-width: calc($image-size-height * 4 / 3);
 
 #characteristic-box-right {
 	@include characteristic-box;
-	flex-direction: row-reverse;
 	text-align: right;
+	.characteristic-image {
+		order: 2;
+	}
 }

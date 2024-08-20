@@ -7,14 +7,14 @@
 	.skills-filter-title {
 		color: $font-color-emphasize-dark;
 		font-size: $font-size-emphasize;
-		margin-bottom: calc($menu-title-gap/2);
+		margin-bottom: calc(#{$menu-title-gap/2});
 	}
 
 	.projects-skills-filter-title {
 		font-size: $font-size-main;
 		font-weight: 900;
 		color: $font-color-main-dark;
-		margin-bottom: calc($submenu-margin/2);
+		margin-bottom: calc(#{$submenu-margin/2});
 		margin-left: $submenu-margin;
 	}
 
