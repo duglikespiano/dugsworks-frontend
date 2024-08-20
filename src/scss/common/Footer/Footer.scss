@@ -11,6 +11,10 @@
 	padding-bottom: 3rem;
 	margin-top: $menu-main-gap;
 
+	@include tab {
+		gap: 1rem;
+	}
+
 	.link {
 		font-size: 1rem;
 		text-wrap: nowrap;
