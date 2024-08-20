@@ -1,5 +1,10 @@
 @mixin pc {
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
+@mixin pc-s {
+	@media only screen and (max-width: 1280px) and (min-width: 1024px) {
 		@content;
 	}
 }

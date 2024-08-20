@@ -1,18 +1,20 @@
 @use '../../variables/variables.scss' as *;
+@use '../../variables/functions.scss' as *;
 
 #header {
 	height: 6rem;
 	display: flex;
 	align-items: center;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding: 0 1rem;
 	margin-bottom: $menu-main-gap;
-
 	h1.logo {
 		flex-grow: 1;
 		.page-title {
 			font-size: 3rem;
 			text-wrap: nowrap;
+			@include pc-s {
+				font-size: 2.5rem;
+			}
 		}
 	}
 }

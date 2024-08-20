@@ -4,7 +4,12 @@
 #language-selector-box {
 	text-wrap: nowrap;
 	font-size: 2rem;
-	margin-left: 1rem;
+	margin-left: 0.75rem;
+
+	@include pc-s {
+		font-size: 1.5rem;
+		margin-left: 0.5rem;
+	}
 
 	.language-selector {
 		background-color: transparent;
