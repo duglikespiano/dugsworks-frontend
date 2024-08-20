@@ -1,5 +1,5 @@
-@mixin sp {
-	@media only screen and (max-width: 768px) {
+@mixin pc {
+	@media only screen and (min-width: 1280px) {
 		@content;
 	}
 }
@@ -9,12 +9,12 @@
 	}
 }
 @mixin tab-s {
-	@media only screen and (max-width: 1050px) and (min-width: 769px) {
+	@media only screen and (max-width: 769px) and (min-width: 375px) {
 		@content;
 	}
 }
-@mixin pc {
-	@media only screen and (min-width: 769px) {
+@mixin sp {
+	@media only screen and (max-width: 375px) {
 		@content;
 	}
 }
