@@ -4,18 +4,21 @@ export const menus = {
 	en: [
 		{ title: 'About', url: 'about' },
 		{ title: 'Projects', url: 'projects' },
+		{ title: 'Records', url: 'records' },
 		{ title: 'Contact', url: 'contact' },
 		{ title: 'Guestbook', url: 'guestbook' },
 	],
 	ko: [
 		{ title: '소개', url: 'about' },
 		{ title: '프로젝트', url: 'projects' },
+		{ title: '기록', url: 'records' },
 		{ title: '문의처', url: 'contact' },
 		{ title: '방명록', url: 'guestbook' },
 	],
 	ja: [
 		{ title: '紹介', url: 'about' },
 		{ title: 'プロジェクト', url: 'projects' },
+		{ title: '記録', url: 'records' },
 		{ title: '問い合わせ', url: 'contact' },
 		{ title: '芳名録', url: 'guestbook' },
 	],
