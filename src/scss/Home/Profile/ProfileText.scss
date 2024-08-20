@@ -24,6 +24,11 @@ $icons-width: 2.5rem;
 		font-size: 4rem;
 		font-weight: 900;
 		color: $font-color-emphasize-dark;
+		padding-bottom: 2rem;
+		&.en,
+		&.ja {
+			padding-bottom: 0;
+		}
 	}
 
 	.home-profile-furigana {
@@ -35,8 +40,10 @@ $icons-width: 2.5rem;
 	.home-profile-title {
 		font-size: 3rem;
 		font-weight: 500;
-		padding-bottom: 2rem;
 		color: $font-color-sub2-dark;
+		&.en {
+			padding-bottom: 2rem;
+		}
 	}
 
 	.home-profile-aim {

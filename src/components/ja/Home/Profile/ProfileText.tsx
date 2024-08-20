@@ -8,11 +8,11 @@ export default function ProfileText() {
 		<Fragment>
 			<div id="home-profile-texts-icons-box">
 				<div className="home-profile-texts-box">
-					<h1 className="home-profile-hi">こんにちは! 私は </h1>
-					<h3 className="home-profile-title">ジュニア開発者</h3>
-					<h2 className="home-profile-name">朴 秀浩です</h2>
-					<h2 className="home-profile-furigana">(パク スホ)</h2>
-					<h3 className="home-profile-aim"> - 遅くても地道に🐢</h3>
+					<p className="home-profile-hi">こんにちは! 私は </p>
+					<p className="home-profile-title ja">ジュニア開発者</p>
+					<p className="home-profile-name ja">朴 秀浩です</p>
+					<p className="home-profile-furigana">(パク スホ)</p>
+					<p className="home-profile-aim"> - 遅くても地道に🐢</p>
 				</div>
 
 				<div className="home-iconbox">
