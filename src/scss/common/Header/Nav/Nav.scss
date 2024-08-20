@@ -9,6 +9,9 @@
 	@include pc {
 		gap: 0.75rem;
 	}
+	@include pc-s {
+		display: none;
+	}
 
 	.link {
 		font-size: 2rem;
