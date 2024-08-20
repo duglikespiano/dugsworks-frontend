@@ -1,11 +1,25 @@
 import { HistoryType } from './types';
 
-export const menus: string[][] = [
-	['About', '소개', '紹介'],
-	['Projects', '프로젝트', 'プロジェクト'],
-	['Contact', '문의처', '問い合わせ'],
-	['Guestbook', '방명록', '芳名録'],
-];
+export const menus = {
+	en: [
+		{ title: 'About', url: 'about' },
+		{ title: 'Projects', url: 'projects' },
+		{ title: 'Contact', url: 'contact' },
+		{ title: 'Guestbook', url: 'guestbook' },
+	],
+	ko: [
+		{ title: '소개', url: 'about' },
+		{ title: '프로젝트', url: 'projects' },
+		{ title: '문의처', url: 'contact' },
+		{ title: '방명록', url: 'guestbook' },
+	],
+	ja: [
+		{ title: '紹介', url: 'about' },
+		{ title: 'プロジェクト', url: 'projects' },
+		{ title: '問い合わせ', url: 'contact' },
+		{ title: '芳名録', url: 'guestbook' },
+	],
+};
 export const languages = [
 	{ language: 'Eng', to: '/en' },
 	{ language: '한글', to: '/ko' },

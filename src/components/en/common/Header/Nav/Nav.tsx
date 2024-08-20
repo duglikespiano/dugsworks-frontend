@@ -9,15 +9,11 @@ export default function Nav() {
 	return (
 		<Fragment>
 			<ul id="nav-links">
-				{menus.map((item: string[], i: number) => (
-					<li className="nav-link">
+				{menus.en.map((item, i) => (
+					<li className="nav-link" key={i}>
 						<h2 className="category">
-							<Link
-								className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'link active' : 'link'}
-								to={item[0].toLowerCase()}
-								key={i}
-							>
-								{item[0]}
+							<Link className={location.pathname.split('/')[2] === item.url ? 'link active' : 'link'} to={item.url}>
+								{item.title}
 							</Link>
 						</h2>
 					</li>

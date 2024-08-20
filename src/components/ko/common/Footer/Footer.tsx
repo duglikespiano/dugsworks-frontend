@@ -9,14 +9,14 @@ export default function Footer() {
 	return (
 		<Fragment>
 			<ul id="footer-links">
-				{menus.map((item: string[], i: number) => (
-					<Link
-						className={location.pathname.split('/')[2] === item[0].toLowerCase() ? 'link active' : 'link'}
-						to={item[0].toLowerCase()}
-						key={i}
-					>
-						{item[1]}
-					</Link>
+				{menus.ko.map((item, i) => (
+					<li className="footer-link" key={i}>
+						<h2 className="category">
+							<Link className={location.pathname.split('/')[2] === item.url ? 'link active' : 'link'} to={item.url}>
+								{item.title}
+							</Link>
+						</h2>
+					</li>
 				))}
 			</ul>
 		</Fragment>
