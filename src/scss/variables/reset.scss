@@ -5,6 +5,8 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -110,6 +112,8 @@ section {
 	display: block;
 }
 body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	line-height: 1;
 }
 ol,
