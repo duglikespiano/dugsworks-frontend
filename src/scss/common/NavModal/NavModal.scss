@@ -8,10 +8,10 @@
 	left: -100%;
 	background-color: rgba(34, 34, 34, 0.95);
 	opacity: 0;
-	transition: opacity 0.25s, left 0s 0.25s;
+	transition: opacity 0.3s, left 0s 0.3s;
 	&.active {
 		left: 0;
 		opacity: 1;
-		transition: opacity 0.25s;
+		transition: opacity 0.3s;
 	}
 }

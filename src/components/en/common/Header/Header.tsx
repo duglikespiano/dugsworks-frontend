@@ -5,6 +5,7 @@ import LanguageSelector from './LanguageSelector/LanguageSelector';
 import Hamburger from './Hamburger/Hamburger';
 import NavModal from './NavModal/NavModal';
 import '../../../../scss/common/Header/Header.scss';
+import DarkmodeToggle from './DarkmodeToggle/DarkmodeToggle';
 
 export default function Header() {
 	const [isHamburgerActive, setIsHamburgerActive] = useState(false);
@@ -28,6 +29,7 @@ export default function Header() {
 				</h1>
 				<Nav />
 				<LanguageSelector />
+				<DarkmodeToggle />
 				<Hamburger
 					isHamburgerActive={isHamburgerActive}
 					isNavModalActive={isNavModalActive}
