@@ -1,7 +1,8 @@
 import { useEffect, Fragment } from 'react';
 import NavInModal from './NavInModal/NavInModal';
 import LanguageSelectorInModal from './LanguageSelectorInModal/LanguageSelectorInModal';
-import '../../../../../scss/common/NavModal/NavModal.scss';
+import DarkmodeToggleInModal from './DarkmodeToggleInModal/DarkmodeToggleInModal';
+import '../../../../../scss/common/Header/NavModal/NavModal.scss';
 
 export default function NavModal(props: {
 	isHamburgerActive: boolean;
@@ -27,7 +28,10 @@ export default function NavModal(props: {
 		<Fragment>
 			<div id="nav-modal" className={props.isNavModalActive ? 'active' : ''}>
 				<NavInModal navModalHandler={props.navModalHandler} hamburgerHandler={props.hamburgerHandler} />
-				<LanguageSelectorInModal />
+				<div className="language-selector-darkmode-toggle-in-modal-box">
+					<LanguageSelectorInModal />
+					<DarkmodeToggleInModal />
+				</div>
 			</div>
 		</Fragment>
 	);

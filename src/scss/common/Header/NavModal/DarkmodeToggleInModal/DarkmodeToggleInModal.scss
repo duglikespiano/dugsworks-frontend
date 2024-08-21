@@ -1,0 +1,26 @@
+@use '../../../../../scss/variables/variables.scss' as *;
+@use '../../../../../scss/variables/functions.scss' as *;
+
+#darkmode-toggle-in-modal {
+	display: flex;
+	position: relative;
+	align-items: center;
+	.darkmode-toggle-in-modal-icon {
+		width: 2.5rem;
+		height: 2.5rem;
+		fill: yellow;
+		stroke: yellow;
+		opacity: 0;
+		z-index: -1;
+		transition: opacity 0.3s;
+		cursor: pointer;
+		&.active {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			opacity: 1;
+			z-index: 1;
+			transform: translateY(-50%);
+		}
+	}
+}

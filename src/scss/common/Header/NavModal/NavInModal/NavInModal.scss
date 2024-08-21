@@ -2,8 +2,11 @@
 @use '../../../../../scss/variables/functions.scss' as *;
 
 #nav-in-modal-links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
 	.link {
-		font-size: 2rem;
+		font-size: 3rem;
 		text-wrap: nowrap;
 		@include basicTransition;
 		&:hover {
