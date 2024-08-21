@@ -7,7 +7,7 @@ import '../../scss/Root/Root.scss';
 export default function MainJp() {
 	return (
 		<Fragment>
-			<div id="font-ko">
+			<div id="main" className="font-ko">
 				<Header />
 				<Outlet />
 				<Footer />

@@ -7,7 +7,7 @@ import '../../scss/Root/Root.scss';
 export default function Main() {
 	return (
 		<Fragment>
-			<div id="font-ja">
+			<div id="main" className="font-ja">
 				<Header />
 				<Outlet />
 				<Footer />

@@ -1,8 +1,3 @@
-$maxwidth-extra-large: 1600px;
-$maxwidth-large: 1024px;
-$maxwidth-medium: 768px;
-$maxwidth-small: 375px;
-
 $background-color-main-dark: #122235; //main
 $background-color-emphasize-dark: #00296f; // emphasize
 $background-color-sub1-dark: #112d4e; // sub1
@@ -10,10 +5,26 @@ $background-color-sub2-dark: #788cb4; // sub2
 $background-color-sub3-dark: #315293; // sub3
 $background-color-sub4-dark: #7e357a; // sub4
 
+////////////////////////////////////////
+$background-color-main-light: #fbf9f1; //main
+$background-color-emphasize-light: #00296f; // emphasize
+$background-color-sub1-light: #112d4e; // sub1
+$background-color-sub2-light: #788cb4; // sub2
+$background-color-sub3-light: #315293; // sub3
+$background-color-sub4-light: #7e357a; // sub4
+
+$font-color-main-light: #131e4b; // main
+$font-color-emphasize-light: #ffffff; // emphasize
+$font-color-sub1-light: #f4f5f8; // sub1
+$font-color-sub2-light: #dae0ee; // sub1
+$font-color-sub3-light: #b2b7bd; // sub2
+////////////////////////////////////////
+
 $font-color-main-dark: #bed3f8; // main
 $font-color-emphasize-dark: #ffffff; // emphasize
-$font-color-sub1-dark: #dae0ee; // sub1
-$font-color-sub2-dark: #b2b7bd; // sub2
+$font-color-sub1-dark: #f4f5f8; // sub1
+$font-color-sub2-dark: #dae0ee; // sub1
+$font-color-sub3-dark: #b2b7bd; // sub2
 $font-color-alert-dark: #e4401b; // alert
 $font-color-confirm-dark: #7fe41b; // alert
 
@@ -22,7 +33,7 @@ $font-size-main: 2.5rem;
 $font-size-content: 2rem;
 $font-size-sub: 1.5rem;
 
-$pages-width: 80vw;
+$content-width: 1280px;
 $header-height: 6rem;
 
 $menu-main-gap: 3rem;

@@ -2,17 +2,23 @@
 @use '../../variables/functions.scss' as *;
 
 #header {
+	max-width: $content-width;
 	height: $header-height;
 	display: flex;
 	align-items: center;
-	background-color: $background-color-main-dark;
 	padding: 0 1rem;
+	margin: 0 auto;
 	margin-bottom: $menu-main-gap;
+
 	@include pc-s {
 		position: fixed;
 		width: 100%;
 		top: 0;
 		left: 0;
+		background-color: $background-color-main-dark;
+		&.dark {
+			background-color: $font-color-sub1-dark;
+		}
 	}
 	h1.logo {
 		flex-grow: 1;

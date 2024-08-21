@@ -22,7 +22,6 @@
 		font-size: 1rem;
 		text-wrap: nowrap;
 		color: $font-color-main-dark;
-		@include basicTransition;
 		&:hover {
 			color: $font-color-emphasize-dark;
 		}
