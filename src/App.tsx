@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './variables/sliceStore';
+import { DarkmodeProvider } from './contexts/DarkmodeContext';
 
 import RootAll from './components/roots/RootAll';
 import RootError from './components/roots/RootError';
@@ -75,8 +76,10 @@ const router = createBrowserRouter([
 
 export default function App() {
 	return (
-		<Provider store={store}>
-			<RouterProvider router={router} />
-		</Provider>
+		<DarkmodeProvider>
+			<Provider store={store}>
+				<RouterProvider router={router} />
+			</Provider>
+		</DarkmodeProvider>
 	);
 }
