@@ -1,0 +1,17 @@
+@use '../../../../../scss/variables/variables.scss' as *;
+@use '../../../../../scss/variables/functions.scss' as *;
+
+#language-selector-in-modal {
+	text-wrap: nowrap;
+	font-size: 2rem;
+
+	.language-selector {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		@include basicTransition;
+		&:hover {
+			color: $font-color-emphasize-dark;
+		}
+	}
+}

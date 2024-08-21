@@ -1,0 +1,16 @@
+@use '../../../../../scss/variables/variables.scss' as *;
+@use '../../../../../scss/variables/functions.scss' as *;
+
+#nav-in-modal-links {
+	.link {
+		font-size: 2rem;
+		text-wrap: nowrap;
+		@include basicTransition;
+		&:hover {
+			color: $font-color-emphasize-dark;
+		}
+		&.active {
+			color: $font-color-emphasize-dark;
+		}
+	}
+}

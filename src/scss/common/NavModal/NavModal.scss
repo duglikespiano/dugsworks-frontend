@@ -4,7 +4,14 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: aquamarine;
+	top: $header-height;
+	left: -100%;
+	background-color: rgba(34, 34, 34, 0.95);
+	opacity: 0;
+	transition: opacity 0.25s, left 0s 0.25s;
+	&.active {
+		left: 0;
+		opacity: 1;
+		transition: opacity 0.25s;
+	}
 }

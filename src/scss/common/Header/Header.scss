@@ -2,7 +2,7 @@
 @use '../../variables/functions.scss' as *;
 
 #header {
-	height: 6rem;
+	height: $header-height;
 	display: flex;
 	align-items: center;
 	padding: 0 1rem;
