@@ -21,12 +21,24 @@
 	.link {
 		font-size: 1rem;
 		text-wrap: nowrap;
-		color: $font-color-main-dark;
+		@include basicTransition;
 		&:hover {
-			color: $font-color-emphasize-dark;
+			color: $font-color-emphasize-light;
 		}
 		&.active {
-			color: $font-color-emphasize-dark;
+			color: $font-color-emphasize-light;
+		}
+	}
+
+	&.dark {
+		.link {
+			color: $font-color-main-dark;
+			&:hover {
+				color: $font-color-emphasize-dark;
+			}
+			&.active {
+				color: $font-color-emphasize-dark;
+			}
 		}
 	}
 }

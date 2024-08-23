@@ -9,7 +9,8 @@
 	.characteristic-text-keyword {
 		font-size: $font-size-emphasize;
 		font-weight: 900;
-		color: $font-color-emphasize-dark;
+		color: $font-color-emphasize-light;
+		@include basicTransition;
 		margin-bottom: 1.5rem;
 		@include pc {
 			font-size: calc(#{$font-size-emphasize * 0.9});
@@ -41,12 +42,22 @@
 	.characteristic-text-content {
 		font-size: $font-size-content;
 		font-weight: 400;
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
+		@include basicTransition;
 		@include pc {
 			font-size: calc(#{$font-size-content * 0.9});
 		}
 		@include sp {
 			font-size: calc(#{$font-size-content * 0.7});
+		}
+	}
+
+	&.dark {
+		.characteristic-text-keyword {
+			color: $font-color-emphasize-dark;
+		}
+		.characteristic-text-content {
+			color: $font-color-sub2-dark;
 		}
 	}
 }

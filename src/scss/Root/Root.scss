@@ -2,12 +2,12 @@
 @use '../variables/functions.scss' as *;
 
 #main {
-	background-color: $background-color-main-dark;
-	color: $font-color-main-dark;
+	background-color: $background-color-main-light;
+	color: $font-color-main-light;
 	@include basicTransition;
 	&.dark {
-		background-color: $font-color-sub1-dark;
-		color: $background-color-sub1-dark;
+		background-color: $background-color-main-dark;
+		color: $font-color-main-dark;
 	}
 }
 

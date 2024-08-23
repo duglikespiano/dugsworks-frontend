@@ -8,6 +8,7 @@
 	.language-selector {
 		background-color: transparent;
 		border: none;
+		@include basicTransition;
 		cursor: pointer;
 		&:hover {
 			color: $font-color-emphasize-dark;

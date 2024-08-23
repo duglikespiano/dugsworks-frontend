@@ -17,9 +17,18 @@
 	.language-selector {
 		background-color: transparent;
 		border: none;
+		@include basicTransition;
 		cursor: pointer;
 		&:hover {
-			color: $font-color-emphasize-dark;
+			color: $font-color-emphasize-light;
+		}
+	}
+
+	&.dark {
+		.language-selector {
+			&:hover {
+				color: $font-color-emphasize-dark;
+			}
 		}
 	}
 }

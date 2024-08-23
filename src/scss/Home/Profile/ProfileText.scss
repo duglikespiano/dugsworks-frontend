@@ -24,7 +24,7 @@ $icons-width: 2.5rem;
 		font-size: 2rem;
 		font-weight: 400;
 		padding-bottom: 2rem;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub1-light;
 		@include pc-s {
 			font-size: 1.8rem;
 			padding-bottom: 1rem;
@@ -34,7 +34,6 @@ $icons-width: 2.5rem;
 	.home-profile-name {
 		font-size: 4rem;
 		font-weight: 900;
-		color: $font-color-emphasize-dark;
 		padding-bottom: 2rem;
 		@include pc-s {
 			font-size: 3.75rem;
@@ -58,7 +57,7 @@ $icons-width: 2.5rem;
 	.home-profile-title {
 		font-size: 3rem;
 		font-weight: 500;
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
 		@include pc-s {
 			font-size: 2.1rem;
 		}
@@ -88,7 +87,24 @@ $icons-width: 2.5rem;
 	.home-iconbox-icon {
 		width: $icons-width;
 		height: $icons-width;
-		color: $font-color-emphasize-dark;
 		cursor: pointer;
+	}
+
+	&.dark {
+		.home-profile-hi {
+			color: $font-color-sub1-dark;
+		}
+
+		.home-profile-name {
+			color: $font-color-emphasize-dark;
+		}
+
+		.home-profile-title {
+			color: $font-color-sub2-dark;
+		}
+
+		.home-iconbox-icon {
+			color: $font-color-emphasize-dark;
+		}
 	}
 }

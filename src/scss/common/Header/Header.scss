@@ -15,10 +15,7 @@
 		width: 100%;
 		top: 0;
 		left: 0;
-		background-color: $background-color-main-dark;
-		&.dark {
-			background-color: $font-color-sub1-dark;
-		}
+		background-color: inherit;
 	}
 	h1.logo {
 		flex-grow: 1;

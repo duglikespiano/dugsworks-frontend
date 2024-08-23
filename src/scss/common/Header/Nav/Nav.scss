@@ -16,16 +16,34 @@
 	.link {
 		font-size: 2rem;
 		text-wrap: nowrap;
-
+		@include basicTransition;
 		@include pc {
 			font-size: 1.75rem;
 		}
 
 		&:hover {
-			color: $font-color-emphasize-dark;
+			color: $font-color-emphasize-light;
 		}
 		&.active {
-			color: $font-color-emphasize-dark;
+			color: $font-color-emphasize-light;
+		}
+	}
+
+	&.dark {
+		.link {
+			font-size: 2rem;
+			text-wrap: nowrap;
+
+			@include pc {
+				font-size: 1.75rem;
+			}
+
+			&:hover {
+				color: $font-color-emphasize-dark;
+			}
+			&.active {
+				color: $font-color-emphasize-dark;
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
-import { Fragment } from 'react';
+import { useContext, Fragment } from 'react';
+import { DarkmodeContext } from '../../../../../contexts/DarkmodeContext';
 import '../../../../../scss/common/Header/Hamburger/Hamburger.scss';
 
 export default function Hamburger(props: {
@@ -7,11 +8,13 @@ export default function Hamburger(props: {
 	hamburgerHandler: () => void;
 	navModalHandler: () => void;
 }) {
+	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	let dark = isDarkmode ? 'dark' : '';
 	return (
 		<Fragment>
 			<div
 				id="hamburger"
-				className={props.isHamburgerActive ? 'active' : ''}
+				className={props.isHamburgerActive ? `active ${dark}` : `${dark}`}
 				onClick={() => {
 					props.hamburgerHandler();
 					props.navModalHandler();
