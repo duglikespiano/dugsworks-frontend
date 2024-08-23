@@ -1,41 +1,49 @@
-$background-color-main-dark: #122235; //main
-$background-color-emphasize-dark: #00296f; // emphasize
-$background-color-sub1-dark: #112d4e; // sub1
-$background-color-sub2-dark: #788cb4; // sub2
-$background-color-sub3-dark: #315293; // sub3
-$background-color-sub4-dark: #7e357a; // sub4
+// Start of lightmode
+$background-color-main-light: #fbf9f1;
+$background-color-emphasize-light: #ffffff;
+$background-color-sub1-light: #f4f5f8;
+$background-color-sub2-light: #dae0ee;
+$background-color-sub3-light: #b2b7bd;
 
-////////////////////////////////////////
-$background-color-main-light: #fbf9f1; //main
-$background-color-emphasize-light: #00296f; // emphasize
-$background-color-sub1-light: #112d4e; // sub1
-$background-color-sub2-light: #788cb4; // sub2
-$background-color-sub3-light: #315293; // sub3
-$background-color-sub4-light: #7e357a; // sub4
-
-$font-color-main-light: #131e4b; // main
-$font-color-emphasize-light: #ffffff; // emphasize
-$font-color-sub1-light: #f4f5f8; // sub1
-$font-color-sub2-light: #dae0ee; // sub1
-$font-color-sub3-light: #b2b7bd; // sub2
-////////////////////////////////////////
-
-$font-color-main-dark: #bed3f8; // main
-$font-color-emphasize-dark: #ffffff; // emphasize
-$font-color-sub1-dark: #f4f5f8; // sub1
-$font-color-sub2-dark: #dae0ee; // sub1
-$font-color-sub3-dark: #b2b7bd; // sub2
-$font-color-alert-dark: #e4401b; // alert
-$font-color-confirm-dark: #7fe41b; // alert
+$font-color-main-light: #131e4b;
+$font-color-emphasize-light: #00296f;
+$font-color-sub1-light: #112d4e;
+$font-color-sub2-light: #315293;
+$font-color-sub3-light: #7e357a;
 
 $darkmode-toggle-icon-color-light: #ffd000;
-$darkmode-toggle-icon-color-dark: yellow;
+// End of lightmode
+//
+//
+// Start of darkmode
+$background-color-main-dark: #122235;
+$background-color-emphasize-dark: #00296f;
+$background-color-sub1-dark: #112d4e;
+$background-color-sub2-dark: #788cb4;
+$background-color-sub3-dark: #315293;
+$background-color-sub4-dark: #7e357a;
 
+$font-color-main-dark: #bed3f8;
+$font-color-emphasize-dark: #ffffff;
+$font-color-sub1-dark: #f4f5f8;
+$font-color-sub2-dark: #dae0ee;
+$font-color-sub3-dark: #b2b7bd;
+$font-color-alert-dark: #e4401b;
+$font-color-confirm-dark: #7fe41b;
+
+$darkmode-toggle-icon-color-dark: yellow;
+// End of darkmode
+//
+//
+// Start of font size
 $font-size-emphasize: 3rem;
 $font-size-main: 2.5rem;
 $font-size-content: 2rem;
 $font-size-sub: 1.5rem;
-
+// End of font size
+//
+//
+// Start of layout
 $content-width: 1280px;
 $header-height: 6rem;
 
@@ -46,11 +54,17 @@ $menu-title-gap: 1.5rem;
 $submenu-margin: 2rem;
 $submenu2-margin: 3rem;
 $submenu-title-gap: 1rem;
-
+// End of layout
+//
+//
+// Start of box style
 $content-box-border: 0.3rem solid white;
 $content-box-border-radius: 2rem;
 $content-box-padding: 2rem;
-
+// End of box style
+//
+//
+// Start of modal
 .shared-modal-background {
 	position: fixed;
 	display: flex;
@@ -111,3 +125,4 @@ $content-box-padding: 2rem;
 	border-radius: calc(#{$content-box-border-radius/2});
 	cursor: pointer;
 }
+// End of modal
