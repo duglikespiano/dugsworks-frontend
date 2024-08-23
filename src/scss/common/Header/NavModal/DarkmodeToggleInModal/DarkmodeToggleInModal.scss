@@ -8,12 +8,16 @@
 	.darkmode-toggle-in-modal-icon {
 		width: 2rem;
 		height: 2rem;
-		fill: yellow;
-		stroke: yellow;
+		fill: $darkmode-toggle-icon-color-dark;
+		stroke: $darkmode-toggle-icon-color-dark;
 		opacity: 0;
 		z-index: -1;
 		transition: opacity 0.3s;
 		cursor: pointer;
+		&.moon {
+			fill: $darkmode-toggle-icon-color-light;
+			stroke: $darkmode-toggle-icon-color-light;
+		}
 		&.active {
 			position: absolute;
 			top: 50%;
