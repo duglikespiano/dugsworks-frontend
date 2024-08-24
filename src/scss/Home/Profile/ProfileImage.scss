@@ -9,6 +9,7 @@ $image-size: 25rem;
 	min-width: $image-size;
 	max-height: $image-size;
 	overflow: hidden;
+	border: 0.1rem solid $font-color-main-light;
 	border-radius: 50%;
 
 	@include pc-s {
