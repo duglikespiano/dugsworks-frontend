@@ -10,8 +10,8 @@
 	.darkmode-toggle-icon {
 		width: 2rem;
 		height: 2rem;
-		fill: $darkmode-toggle-icon-color-dark;
-		stroke: $darkmode-toggle-icon-color-dark;
+		fill: $darkmode-toggle-icon-color-light;
+		stroke: $darkmode-toggle-icon-color-light;
 		opacity: 0;
 		z-index: -1;
 		transition: opacity 0.3s;
@@ -21,8 +21,8 @@
 			height: 1.75rem;
 		}
 		&.moon {
-			fill: $darkmode-toggle-icon-color-light;
-			stroke: $darkmode-toggle-icon-color-light;
+			fill: $darkmode-toggle-icon-color-dark;
+			stroke: $darkmode-toggle-icon-color-dark;
 		}
 		&.active {
 			position: absolute;
