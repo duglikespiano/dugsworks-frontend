@@ -5,7 +5,7 @@ import { DarkmodeContext } from '../../../../contexts/DarkmodeContext';
 import '../../../../scss/Home/Profile/Profile.scss';
 
 export default function Profile() {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 	return (
 		<Fragment>
 			<div id="home-profile" className={isDarkmode ? 'dark' : ''}>

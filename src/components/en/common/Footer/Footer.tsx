@@ -6,7 +6,7 @@ import '../../../../scss/common/Footer/Footer.scss';
 
 export default function Footer() {
 	const location = useLocation();
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 
 	return (
 		<Fragment>

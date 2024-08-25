@@ -5,7 +5,7 @@ import { DarkmodeContext } from '../../../../../contexts/DarkmodeContext';
 import '../../../../../scss/Home/Characteristics/CharacteristicBox/CharacteristicBox.scss';
 
 export default function CharacteristicBox(props: CharacteristicBoxPropsType) {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 	return (
 		<Fragment>
 			<div id={`characteristic-box-${props.info.boxSide}`} className={isDarkmode ? 'dark' : ''}>

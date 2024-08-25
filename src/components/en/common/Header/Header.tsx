@@ -9,7 +9,7 @@ import { DarkmodeContext } from '../../../../contexts/DarkmodeContext';
 import '../../../../scss/common/Header/Header.scss';
 
 export default function Header() {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 	const [isHamburgerActive, setIsHamburgerActive] = useState(false);
 	const [isNavModalActive, setIsNavModalActive] = useState(false);
 	const hamburgerHandler = (isHamburgerActive: boolean) => setIsHamburgerActive(!isHamburgerActive);

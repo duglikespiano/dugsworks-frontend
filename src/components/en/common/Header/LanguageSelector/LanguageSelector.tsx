@@ -5,7 +5,7 @@ import { DarkmodeContext } from '../../../../../contexts/DarkmodeContext';
 import '../../../../../scss/common/Header/LanguageSelector/LanguageSelector.scss';
 
 export default function LanguageSelector() {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 
 	const navigate = useNavigate();
 	const location = useLocation();

@@ -8,7 +8,7 @@ export default function Hamburger(props: {
 	hamburgerHandler: () => void;
 	navModalHandler: () => void;
 }) {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 	let dark = isDarkmode ? 'dark' : '';
 	return (
 		<Fragment>

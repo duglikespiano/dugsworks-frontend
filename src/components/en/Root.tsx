@@ -6,7 +6,7 @@ import { DarkmodeContext } from '../../contexts/DarkmodeContext';
 import '../../scss/Root/Root.scss';
 
 export default function Main() {
-	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
+	const { isDarkmode } = useContext(DarkmodeContext);
 
 	return (
 		<Fragment>
