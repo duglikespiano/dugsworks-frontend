@@ -34,6 +34,7 @@ $icons-width: 2.5rem;
 	.home-profile-name {
 		font-size: 4rem;
 		font-weight: 900;
+		color: $font-color-emphasize-light;
 		padding-bottom: 2rem;
 		@include pc-s {
 			font-size: 3.75rem;
