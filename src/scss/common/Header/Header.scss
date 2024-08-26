@@ -2,6 +2,7 @@
 @use '../../variables/functions.scss' as *;
 
 #header {
+	width: 100%;
 	max-width: $content-width;
 	height: $header-height;
 	display: flex;
