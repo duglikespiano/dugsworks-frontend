@@ -2,6 +2,10 @@
 @use '../variables/functions.scss' as *;
 
 #main {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
 	background-color: $background-color-main-light;
 	color: $font-color-main-light;
 	@include basicTransition;
