@@ -7,17 +7,16 @@ export interface CharacteristicTextPropsType {
 	keyword: string;
 	title: string;
 	contents: string[];
+	isDarkmode: boolean;
 }
 
 export interface CharacteristicBoxPropsType {
-	info: {
-		imageUrl: string;
-		imageAlt: string;
-		keyword: string;
-		title: string;
-		contents: string[];
-		boxSide: string;
-	};
+	imageUrl: string;
+	imageAlt: string;
+	keyword: string;
+	title: string;
+	contents: string[];
+	boxSide: string;
 }
 
 export interface HistoryPropsType {

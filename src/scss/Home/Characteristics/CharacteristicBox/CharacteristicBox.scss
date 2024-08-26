@@ -25,14 +25,18 @@ $image-size-height: 30rem;
 	}
 }
 
-#characteristic-box-left {
-	@include characteristic-box;
+#characteristic-box {
+	&.left {
+		@include characteristic-box;
+	}
 }
 
-#characteristic-box-right {
-	@include characteristic-box;
-	text-align: right;
-	.characteristic-image {
-		order: 2;
+#characteristic-box {
+	&.right {
+		@include characteristic-box;
+		text-align: right;
+		.characteristic-image {
+			order: 2;
+		}
 	}
 }

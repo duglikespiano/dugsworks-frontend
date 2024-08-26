@@ -35,13 +35,13 @@ const cloversInfo = {
 	boxSide: 'left',
 };
 
-export default function Characteristics() {
+export default function Characteristics(props: { isDarkmode: boolean }) {
 	return (
 		<Fragment>
 			<div id="characteristics-boxes">
-				<CharacteristicBox info={turtleInfo} />
-				<CharacteristicBox info={theGoldenGateBridgeInfo} />
-				<CharacteristicBox info={cloversInfo} />
+				<CharacteristicBox info={turtleInfo} isDarkmode={props.isDarkmode} />
+				<CharacteristicBox info={theGoldenGateBridgeInfo} isDarkmode={props.isDarkmode} />
+				<CharacteristicBox info={cloversInfo} isDarkmode={props.isDarkmode} />
 				<div style={{ clear: 'both' }} />
 			</div>
 		</Fragment>

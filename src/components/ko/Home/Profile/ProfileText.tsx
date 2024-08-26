@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import '../../../../scss/Home/Profile/ProfileText.scss';
 import { PiInstagramLogo, PiGithubLogo } from 'react-icons/pi';
 
-export default function ProfileText() {
+export default function ProfileText(props: { isDarkmode: boolean }) {
 	return (
 		<Fragment>
-			<div id="home-profile-texts-icons-box">
+			<div id="home-profile-texts-icons-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="home-profile-texts-box">
 					<p className="home-profile-hi">안녕하세요! 저는 </p>
 					<p className="home-profile-title ko">주니어 개발자</p>

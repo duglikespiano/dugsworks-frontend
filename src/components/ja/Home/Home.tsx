@@ -1,12 +1,14 @@
-import { Fragment } from 'react';
+import { useContext, Fragment } from 'react';
 import Profile from './Profile/Profile';
 import Characteristic from './Characteristics/Characteristic';
+import { DarkmodeContext } from '../../../contexts/DarkmodeContext';
 
 export default function Home() {
+	const { isDarkmode } = useContext(DarkmodeContext);
 	return (
 		<Fragment>
-			<Profile />
-			<Characteristic />
+			<Profile isDarkmode={isDarkmode} />
+			<Characteristic isDarkmode={isDarkmode} />
 		</Fragment>
 	);
 }
