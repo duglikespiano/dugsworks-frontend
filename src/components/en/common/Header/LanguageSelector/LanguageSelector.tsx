@@ -1,12 +1,9 @@
-import { useContext, Fragment } from 'react';
+import { Fragment } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { languages } from '../../../../../variables/variables';
-import { DarkmodeContext } from '../../../../../contexts/DarkmodeContext';
 import '../../../../../scss/common/Header/LanguageSelector/LanguageSelector.scss';
 
-export default function LanguageSelector() {
-	const { isDarkmode } = useContext(DarkmodeContext);
-
+export default function LanguageSelector(props: { isDarkmode: boolean }) {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -27,7 +24,7 @@ export default function LanguageSelector() {
 
 	return (
 		<Fragment>
-			<div id="language-selector-box" className={isDarkmode ? 'dark' : ''}>
+			<div id="language-selector-box" className={props.isDarkmode ? 'dark' : ''}>
 				<button
 					className="language-selector"
 					onClick={() => {

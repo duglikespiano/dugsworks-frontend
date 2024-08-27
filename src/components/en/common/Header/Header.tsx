@@ -29,8 +29,8 @@ export default function Header() {
 						Dug's Works
 					</Link>
 				</h1>
-				<Nav />
-				<LanguageSelector />
+				<Nav isDarkmode={isDarkmode} />
+				<LanguageSelector isDarkmode={isDarkmode} />
 				<DarkmodeToggle />
 				<Hamburger
 					isHamburgerActive={isHamburgerActive}
