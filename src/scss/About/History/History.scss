@@ -4,7 +4,6 @@
 	margin-top: $menu-main-gap;
 
 	.history-title {
-		color: $font-color-emphasize-dark;
 		font-size: $font-size-emphasize;
 		margin-bottom: $menu-title-gap;
 	}
@@ -12,8 +11,8 @@
 	.history-boxes-gap-line {
 		width: 0.01px;
 		height: $menu-contents-gap;
-		background-color: white;
-		border: 0.2rem solid white;
+		background-color: $contetn-box-border-color-light;
+		border: 0.2rem solid $contetn-box-border-color-light;
 		margin: auto;
 	}
 }

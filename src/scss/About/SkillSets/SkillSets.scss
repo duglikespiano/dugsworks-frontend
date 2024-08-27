@@ -8,13 +8,12 @@
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 		padding: $content-box-padding;
-		border: 0.3rem solid white;
+		border: 0.3rem solid $font-color-sub2-light;
 		border-radius: 2rem;
 	}
 
 	.skillsets-box-title {
 		font-size: $font-size-emphasize;
-		color: $font-color-emphasize-dark;
 		padding-left: 1rem;
 		margin-bottom: 1.5rem;
 	}

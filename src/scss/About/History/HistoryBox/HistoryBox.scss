@@ -8,20 +8,20 @@
 	.history-box-period {
 		font-size: $font-size-main;
 		font-weight: 900;
-		color: $font-color-emphasize-dark;
+		color: $font-color-emphasize-light;
 		margin-bottom: calc(#{$submenu-margin/2});
 	}
 
 	.history-box-name {
 		font-size: $font-size-main;
 		font-weight: 500;
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
 		margin-left: $submenu-margin;
 	}
 
 	.history-box-department {
 		font-size: $font-size-sub;
-		color: $font-color-main-dark;
+		color: $font-color-main-light;
 		font-weight: 400;
 		margin-left: $submenu-margin;
 		margin-bottom: calc(#{$submenu-margin/2});
@@ -30,7 +30,7 @@
 	.history-box-duty {
 		font-size: $font-size-sub;
 		font-weight: 400;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub1-light;
 		margin-left: $submenu-margin;
 	}
 }

@@ -59,7 +59,8 @@ $submenu-title-gap: 1rem;
 //
 //
 // Start of box style
-$content-box-border: 0.3rem solid white;
+$contetn-box-border-color-light: $font-color-sub2-light;
+$content-box-border: 0.3rem solid $contetn-box-border-color-light;
 $content-box-border-radius: 2rem;
 $content-box-padding: 2rem;
 // End of box style
