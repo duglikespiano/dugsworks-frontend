@@ -9,6 +9,9 @@
 	background-color: $background-color-main-light;
 	color: $font-color-main-light;
 	@include basicTransition;
+	@include pc-s {
+		padding-top: calc($header-height + $menu-main-gap / 2);
+	}
 	&.dark {
 		background-color: $background-color-main-dark;
 		color: $font-color-main-dark;

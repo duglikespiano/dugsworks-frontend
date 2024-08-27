@@ -6,10 +6,6 @@
 	justify-content: center;
 	margin-bottom: $menu-main-gap;
 
-	@include pc-s {
-		margin-top: $header-height;
-	}
-
 	@include tab {
 		flex-direction: column;
 		align-items: center;
