@@ -1,7 +1,8 @@
 @use '../../scss/variables/variables.scss' as *;
 
 #projects-box {
-	width: 60rem;
+	width: 100%;
+	max-width: $content-box-width;
 	margin: auto;
 
 	.skills-filter-title {

@@ -1,7 +1,8 @@
 @use '../variables/variables.scss' as *;
 
 #error-page {
-	width: 60rem;
+	width: 100%;
+	max-width: $content-box-width;
 	margin: auto;
 
 	.error-page-icon-box {

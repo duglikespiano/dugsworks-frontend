@@ -1,4 +1,7 @@
+@use '../variables/variables.scss' as *;
+
 #about-box {
-	width: 60rem;
+	width: 100%;
+	max-width: $content-box-width;
 	margin: auto;
 }
