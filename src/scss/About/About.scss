@@ -1,7 +1,14 @@
 @use '../variables/variables.scss' as *;
+@use '../variables/functions.scss' as *;
 
 #about-box {
 	width: 100%;
 	max-width: $content-box-width;
 	margin: auto;
+	@include pc-s {
+		padding: 0 2rem;
+	}
+	@include tab {
+		padding: 0 1.5rem;
+	}
 }
