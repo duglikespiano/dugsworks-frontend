@@ -7,7 +7,7 @@
 	max-width: $content-width;
 	height: $header-height;
 	align-items: center;
-	background-color: $background-color-main-light;
+	// background-color: $background-color-main-light;
 	padding: 0 1rem;
 	margin: 0 auto;
 	margin-bottom: $menu-main-gap;
@@ -33,7 +33,7 @@
 		}
 	}
 	&.dark {
-		background-color: $background-color-main-dark;
+		// background-color: $background-color-main-dark;
 		@include pc-s {
 			background-color: $background-color-main-dark;
 		}
