@@ -1,15 +1,29 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #history-box {
 	padding: $content-box-padding;
 	border: $content-box-border;
 	border-radius: $content-box-border-radius;
 
+	@include pc-s {
+		padding: calc($content-box-padding * 0.8);
+	}
+
+	@include sp {
+		padding: calc($content-box-padding * 0.5);
+	}
+
 	.history-box-period {
 		font-size: $font-size-main;
 		font-weight: 900;
 		color: $font-color-emphasize-light;
 		margin-bottom: calc(#{$submenu-margin/2});
+		@include sp {
+			font-size: calc($font-size-main * 0.65);
+			padding-right: 1rem;
+			margin-bottom: calc(#{$submenu-margin/2});
+		}
 	}
 
 	.history-box-name {
@@ -17,6 +31,12 @@
 		font-weight: 500;
 		color: $font-color-sub2-light;
 		margin-left: $submenu-margin;
+		@include pc-s {
+			margin-left: 0;
+		}
+		@include sp {
+			font-size: calc($font-size-main * 0.6);
+		}
 	}
 
 	.history-box-department {
@@ -25,6 +45,13 @@
 		font-weight: 400;
 		margin-left: $submenu-margin;
 		margin-bottom: calc(#{$submenu-margin/2});
+		@include pc-s {
+			margin-left: 0;
+		}
+		@include sp {
+			font-size: calc($font-size-sub * 0.75);
+			margin-bottom: calc(#{$submenu-margin/3});
+		}
 	}
 
 	.history-box-duty {
@@ -32,5 +59,11 @@
 		font-weight: 400;
 		color: $font-color-sub1-light;
 		margin-left: $submenu-margin;
+		@include pc-s {
+			margin-left: 0;
+		}
+		@include sp {
+			font-size: calc($font-size-sub * 0.75);
+		}
 	}
 }
