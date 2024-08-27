@@ -1,20 +1,29 @@
 @use '../../variables/variables.scss' as *;
+@use '../../variables/functions.scss' as *;
 
 #skillsets-box {
 	margin-bottom: $menu-main-gap;
 
 	.skillsets-box-content {
-		display: flex;
-		justify-content: space-evenly;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		row-gap: $submenu-margin;
 		padding: $content-box-padding;
 		border: 0.3rem solid $font-color-sub2-light;
 		border-radius: 2rem;
+		@include sp {
+			display: block;
+			width: 100%;
+			padding: calc($content-box-padding * 0.5);
+		}
 	}
 
 	.skillsets-box-title {
 		font-size: $font-size-emphasize;
 		padding-left: 1rem;
 		margin-bottom: 1.5rem;
+		@include pc {
+			font-size: $font-size-main;
+		}
 	}
 }

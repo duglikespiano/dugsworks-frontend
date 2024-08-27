@@ -1,23 +1,33 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #skills {
-	width: 25rem;
-	margin-bottom: $submenu-margin;
 	margin-left: $submenu-margin;
+	@include tab {
+		margin-bottom: calc($submenu-margin * 0.75);
+	}
 
 	.skillsets-title {
 		font-size: $font-size-main;
 		color: $font-color-emphasize-light;
 		margin-bottom: $submenu-title-gap;
+		@include sp {
+			font-size: calc($font-size-main * 0.8);
+		}
 	}
 
 	.skillsets-texts-box {
-		margin-left: $submenu-margin;
+		padding-left: $submenu-margin;
+		@include pc {
+			font-size: 2.5rem;
+		}
 	}
 
 	.skillsets-texts {
 		font-size: $font-size-content;
 		color: $font-color-sub2-light;
-		margin-left: $submenu-margin;
+		@include sp {
+			font-size: calc($font-size-main * 0.65);
+		}
 	}
 }
