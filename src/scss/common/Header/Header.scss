@@ -2,32 +2,44 @@
 @use '../../variables/functions.scss' as *;
 
 #header {
+	display: flex;
 	width: 100%;
 	max-width: $content-width;
 	height: $header-height;
-	display: flex;
 	align-items: center;
+	background-color: $background-color-main-light;
 	padding: 0 1rem;
 	margin: 0 auto;
 	margin-bottom: $menu-main-gap;
-
 	@include pc-s {
 		position: fixed;
 		width: 100%;
 		top: 0;
 		left: 0;
-		background-color: inherit;
+		background-color: $background-color-main-light;
 	}
 	h1.logo {
 		flex-grow: 1;
 		.page-title {
 			font-size: 3rem;
 			text-wrap: nowrap;
+			color: $font-color-main-light;
 			@include pc {
 				font-size: 2.5rem;
 			}
 			@include pc-s {
 				font-size: 3rem;
+			}
+		}
+	}
+	&.dark {
+		background-color: $background-color-main-dark;
+		@include pc-s {
+			background-color: $background-color-main-dark;
+		}
+		h1.logo {
+			.page-title {
+				color: $font-color-main-dark;
 			}
 		}
 	}
