@@ -30,4 +30,14 @@
 			font-size: calc($font-size-main * 0.65);
 		}
 	}
+
+	&.dark {
+		.skillsets-title {
+			color: $font-color-emphasize-dark;
+		}
+
+		.skillsets-texts {
+			color: $font-color-sub2-dark;
+		}
+	}
 }
