@@ -66,4 +66,7 @@
 			font-size: calc($font-size-sub * 0.75);
 		}
 	}
+	&.dark {
+		border-color: $font-color-emphasize-dark;
+	}
 }

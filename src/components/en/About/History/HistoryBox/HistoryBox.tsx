@@ -5,7 +5,7 @@ import '../../../../../scss/About/History/HistoryBox/HistoryBox.scss';
 export default function HistoryBoxKo(props: HistoryPropsType) {
 	return (
 		<Fragment>
-			<div id="history-box">
+			<div id="history-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="history-box-period">{props.history[0].period}</div>
 				<div className="history-box-name">{props.history[0].name}</div>
 				<div className="history-box-department">{props.history[0].department}</div>

@@ -9,20 +9,20 @@ import {
 } from '../../../../variables/variables';
 import '../../../../scss/About/History/History.scss';
 
-export default function History() {
+export default function History(props: { isDarkmode: boolean }) {
 	return (
 		<Fragment>
 			<div id="history">
-				<div className="history-title">略歴</div>
-				<HistoryBox history={afterHistory} />
+				<div className="history-title">Brief History</div>
+				<HistoryBox history={afterHistory} isDarkmode={props.isDarkmode} />
 				<div className="history-boxes-gap-line"></div>
-				<HistoryBox history={bootCampHistory} />
+				<HistoryBox history={bootCampHistory} isDarkmode={props.isDarkmode} />
 				<div className="history-boxes-gap-line"></div>
-				<HistoryBox history={secondCompanyHistory} />
+				<HistoryBox history={secondCompanyHistory} isDarkmode={props.isDarkmode} />
 				<div className="history-boxes-gap-line"></div>
-				<HistoryBox history={firstCompanyHistory} />
+				<HistoryBox history={firstCompanyHistory} isDarkmode={props.isDarkmode} />
 				<div className="history-boxes-gap-line"></div>
-				<HistoryBox history={schoolHistory} />
+				<HistoryBox history={schoolHistory} isDarkmode={props.isDarkmode} />
 			</div>
 		</Fragment>
 	);

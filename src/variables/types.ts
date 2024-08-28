@@ -1,6 +1,7 @@
 export interface SkillSetsPropsType {
 	title: string;
 	skills: string[];
+	isDarkmode: boolean;
 }
 
 export interface CharacteristicTextPropsType {
@@ -21,6 +22,7 @@ export interface CharacteristicBoxPropsType {
 
 export interface HistoryPropsType {
 	history: HistoryType[];
+	isDarkmode: boolean;
 }
 
 export interface HistoryType {

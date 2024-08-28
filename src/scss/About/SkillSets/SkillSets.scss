@@ -26,4 +26,10 @@
 			font-size: $font-size-main;
 		}
 	}
+
+	&.dark {
+		.skillsets-box-content {
+			border-color: $font-color-emphasize-dark;
+		}
+	}
 }
