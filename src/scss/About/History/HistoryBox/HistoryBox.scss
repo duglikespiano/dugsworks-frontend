@@ -18,11 +18,10 @@
 		font-size: $font-size-main;
 		font-weight: 900;
 		color: $font-color-emphasize-light;
-		margin-bottom: calc(#{$submenu-margin/2});
+		margin-bottom: calc(#{$submenu-margin/4});
 		@include sp {
 			font-size: calc($font-size-main * 0.65);
 			padding-right: 1rem;
-			margin-bottom: calc(#{$submenu-margin/2});
 		}
 	}
 
@@ -68,5 +67,21 @@
 	}
 	&.dark {
 		border-color: $font-color-emphasize-dark;
+
+		.history-box-period {
+			color: $font-color-emphasize-dark;
+		}
+
+		.history-box-name {
+			color: $font-color-sub2-dark;
+		}
+
+		.history-box-department {
+			color: $font-color-main-dark;
+		}
+
+		.history-box-duty {
+			color: $font-color-sub1-dark;
+		}
 	}
 }
