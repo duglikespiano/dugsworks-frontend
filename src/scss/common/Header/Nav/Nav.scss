@@ -16,7 +16,6 @@
 	.link {
 		font-size: 2rem;
 		text-wrap: nowrap;
-		@include basicTransition;
 		@include pc {
 			font-size: 1.75rem;
 		}
