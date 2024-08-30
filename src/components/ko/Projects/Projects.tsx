@@ -1,16 +1,19 @@
-import { Fragment } from 'react';
+import { useContext, Fragment } from 'react';
 import ProjectsKeywords from './ProjectsKeywords/ProjectsKeywords';
 import ProjectsList from './ProjectsList/ProjectsList';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../variables/sliceStore';
+import { DarkmodeContext } from '../../../contexts/DarkmodeContext';
 import '../../../scss/Projects/Projects.scss';
 
 export default function Projects() {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const selectedProjectKeywordsIncludeProjects = useSelector((state: RootState) => state.selectedProjectKeywordsIncludeProjects);
+	const { isDarkmode } = useContext(DarkmodeContext);
+
 	return (
 		<Fragment>
-			<div id="projects-box">
+			<div id="projects-box" className={isDarkmode ? 'dark' : ''}>
 				<div className="skills-filter-title">기술 필터</div>
 				<div className="projects-skills-filter-description">기술을 클릭하면 프로젝트가 필터링됩니다</div>
 				<div className="projects-filtered-description">
@@ -20,10 +23,10 @@ export default function Projects() {
 					</span>{' '}
 					개 선택
 				</div>
-				<ProjectsKeywords />
+				<ProjectsKeywords isDarkmode={isDarkmode} />
 				<hr className="horizontalrule" />
 				<div className="projects-title">프로젝트</div>
-				<ProjectsList />
+				<ProjectsList isDarkmode={isDarkmode} />
 			</div>
 		</Fragment>
 	);

@@ -1,4 +1,5 @@
 @use '../../../../scss/variables/variables.scss' as *;
+@use '../../../../scss/variables/functions.scss' as *;
 
 #project-box {
 	border: $content-box-border;
@@ -6,75 +7,142 @@
 	padding: $content-box-padding;
 	margin-bottom: calc(#{$menu-contents-gap/2});
 
+	@include tab {
+		padding: calc(#{$content-box-padding/2});
+	}
+
 	.project-title {
 		font-size: $font-size-main;
 		font-weight: 900;
-		color: $font-color-main-dark;
+		color: $font-color-emphasize-light;
 		margin-bottom: calc(#{$submenu-margin/2});
+		word-wrap: break-word;
+		@include tab {
+			font-size: calc(#{$font-size-main * 0.75});
+		}
 	}
 
 	.project-description {
 		font-size: $font-size-content;
 		font-weight: 500;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub1-light;
 		margin-left: $submenu-margin;
 		margin-bottom: calc(#{$submenu-margin/2});
+		@include tab {
+			font-size: calc(#{$font-size-content * 0.75});
+			margin-left: calc(#{$submenu-margin * 0.5});
+			margin-bottom: calc(#{$submenu-margin / 5});
+		}
+		@include sp {
+			margin-left: 0;
+		}
 	}
 
 	.project-info-url {
 		display: flex;
 		font-size: $font-size-sub;
 		font-weight: 400;
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
 		margin-left: $submenu-margin;
+		@include tab {
+			font-size: calc(#{$font-size-sub * 0.75});
+			margin-left: calc(#{$submenu-margin * 0.5});
+		}
+		@include sp {
+			margin-left: 0;
+		}
 		margin-bottom: 0.25rem;
 	}
 
 	.project-info-navigate-button {
 		align-items: center;
 		font-size: calc(#{$font-size-sub/2});
-		color: $font-color-sub2-dark;
-		background-color: $background-color-sub3-dark;
+		background-color: $background-color-sub2-light;
+		color: $font-color-sub1-light;
 		text-decoration: none;
-		border: 0.1rem solid white;
+		border: $content-box-border;
+		border-width: 0.1rem;
 		border-radius: 0.5rem;
 		padding: 0.25rem;
-	}
-
-	.project-info-navigate-button :link,
-	.project-info-navigate-button :visited,
-	.project-info-navigate-button :active {
-		color: $font-color-sub2-dark;
-		text-decoration: none;
+		@include tab {
+			padding: 0.05rem;
+		}
 	}
 
 	.project-skills-box {
 		font-size: $font-size-sub;
 		margin-left: $submenu-margin;
 		margin-top: calc(#{$submenu-margin/2});
+		@include tab {
+			font-size: calc(#{$font-size-sub * 0.75});
+			margin-left: calc(#{$submenu-margin * 0.5});
+		}
+		@include sp {
+			margin-left: 0;
+		}
 	}
 
 	.project-skills-label-box {
 		display: flex;
 		flex-wrap: wrap;
+		column-gap: 1rem;
 		margin-top: 0.5rem;
+		@include tab {
+			column-gap: 0.5rem;
+		}
 	}
 
 	.project-skills-label {
-		background-color: $background-color-sub3-dark;
-		color: $font-color-sub1-dark;
-		border: 0.25rem solid white;
+		background-color: $background-color-sub2-light;
+		color: $font-color-sub1-light;
+		border: $content-box-border;
 		border-radius: 0.5rem;
 		padding: 0.25rem;
-		margin-right: 1rem;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		@include tab {
+			font-size: calc(#{$font-size-sub * 0.75});
+		}
 	}
 
 	.project-skills-label-active {
 		@extend .project-skills-label;
-		background-color: $background-color-sub4-dark;
+		color: $font-color-sub1-dark;
+		background-color: $background-color-sub4-light;
+	}
+
+	&.dark {
+		border-color: $font-color-emphasize-dark;
+
+		.project-title {
+			color: $font-color-sub4-dark;
+		}
+
+		.project-description {
+			color: $font-color-sub1-dark;
+		}
+
+		.project-info-url {
+			color: $font-color-sub2-dark;
+		}
+
+		.project-info-navigate-button {
+			background-color: $background-color-sub3-dark;
+			color: $font-color-sub1-dark;
+			border-color: $font-color-emphasize-dark;
+		}
+
+		.project-skills-label {
+			background-color: $background-color-sub3-dark;
+			color: $font-color-sub1-dark;
+			border: 0.25rem solid white;
+		}
+
+		.project-skills-label-active {
+			@extend .project-skills-label;
+			background-color: $background-color-sub4-dark;
+		}
 	}
 }

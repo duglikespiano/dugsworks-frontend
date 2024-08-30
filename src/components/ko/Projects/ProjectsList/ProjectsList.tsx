@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../../variables/sliceStore';
 import ProjectBox from './ProjectBox/ProjectBox';
 
-export default function ProjectsList() {
+export default function ProjectsList(props: { isDarkmode: boolean }) {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const selectedProjectKeywordsIncludeProjects = useSelector((state: RootState) => state.selectedProjectKeywordsIncludeProjects);
 
@@ -12,14 +12,14 @@ export default function ProjectsList() {
 			{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.length === 0 && (
 				<Fragment>
 					{projectsList.map((item, i) => (
-						<ProjectBox projectInfo={item} key={i} />
+						<ProjectBox projectInfo={item} isDarkmode={props.isDarkmode} key={i} />
 					))}
 				</Fragment>
 			)}
 			{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.length !== 0 && (
 				<Fragment>
 					{selectedProjectKeywordsIncludeProjects.selectedKeywordsIncludeProjects.map((item, i) => (
-						<ProjectBox projectInfo={item} key={i} />
+						<ProjectBox projectInfo={item} isDarkmode={props.isDarkmode} key={i} />
 					))}
 				</Fragment>
 			)}

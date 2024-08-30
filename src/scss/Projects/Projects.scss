@@ -1,20 +1,28 @@
 @use '../../scss/variables/variables.scss' as *;
+@use '../../scss/variables/functions.scss' as *;
 
 #projects-box {
 	width: 100%;
 	max-width: $content-box-width;
 	margin: auto;
 
+	@include pc-s {
+		max-width: none;
+		padding: 0 1rem;
+		margin: 0;
+	}
+
 	.skills-filter-title {
-		color: $font-color-emphasize-dark;
 		font-size: $font-size-emphasize;
 		margin-bottom: calc(#{$menu-title-gap/2});
+		@include pc {
+			font-size: $font-size-main;
+		}
 	}
 
 	.projects-skills-filter-title {
 		font-size: $font-size-main;
 		font-weight: 900;
-		color: $font-color-main-dark;
 		margin-bottom: calc(#{$submenu-margin/2});
 		margin-left: $submenu-margin;
 	}
@@ -23,12 +31,12 @@
 		@extend .projects-skills-filter-title;
 		font-size: $font-size-sub;
 		font-weight: 900;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub2-light;
 	}
 
 	.projects-filtered-description {
 		@extend .projects-skills-filter-description;
-		color: $background-color-sub2-dark;
+		color: $background-color-sub4-light;
 	}
 
 	.projects-filtered-description-emphasize-text {
@@ -40,8 +48,32 @@
 	}
 
 	.projects-title {
-		color: $font-color-emphasize-dark;
 		font-size: $font-size-emphasize;
 		margin-bottom: $menu-title-gap;
+		@include pc {
+			font-size: $font-size-main;
+		}
+	}
+
+	&.dark {
+		.skills-filter-title {
+			font-size: $font-size-emphasize;
+		}
+
+		.projects-skills-filter-title {
+			color: $font-color-main-dark;
+		}
+
+		.projects-skills-filter-description {
+			color: $font-color-sub1-dark;
+		}
+
+		.projects-filtered-description {
+			color: $background-color-sub5-dark;
+		}
+
+		.projects-filtered-description-emphasize-text {
+			color: $background-color-sub4-dark;
+		}
 	}
 }

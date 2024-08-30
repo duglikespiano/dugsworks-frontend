@@ -17,6 +17,7 @@ export interface projectsListType {
 		period: string[];
 		skills: string[];
 	};
+	isDarkmode: boolean;
 }
 
 export interface projectInfoType {

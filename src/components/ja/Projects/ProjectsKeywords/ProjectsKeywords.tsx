@@ -9,7 +9,7 @@ import {
 } from '../../../../variables/sliceStore';
 import '../../../../scss/Projects/ProjectsKeywords/ProjectsKeywords.scss';
 
-export default function ProjectsKeywords() {
+export default function ProjectsKeywords(props: { isDarkmode: boolean }) {
 	const projectsList = useSelector((state: RootState) => state.projectsList);
 	const projectsKeywords = useSelector((state: RootState) => state.projectsKeywords);
 	const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export default function ProjectsKeywords() {
 
 	return (
 		<Fragment>
-			<div id="project-keywords-box">
+			<div id="project-keywords-box" className={props.isDarkmode ? 'dark' : ''}>
 				{projectsKeywords.map((item, i) => (
 					<div
 						key={i}

@@ -10,7 +10,7 @@ export default function ProjectBox(props: projectsListType) {
 
 	return (
 		<Fragment>
-			<div id="project-box">
+			<div id="project-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="project-title">{props.projectInfo.title}</div>
 				<div className="project-description">{props.projectInfo.descriptionJa}</div>
 				<div className="project-info-url">
