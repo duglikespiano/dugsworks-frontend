@@ -13,6 +13,8 @@ $font-color-sub2-light: #56688b;
 $font-color-sub3-light: #bbc2d2;
 $font-color-sub4-light: #7e357a;
 $font-color-sub5-light: #bac4d6;
+$font-color-alert-light: #e4401b;
+$font-color-confirm-light: #7fe41b;
 
 $darkmode-toggle-icon-color-light: #ff8100;
 // End of lightmode
@@ -86,12 +88,11 @@ $content-box-padding: 2rem;
 }
 
 .shared-modal-box {
-	background-color: $font-color-main-dark;
+	background-color: $background-color-main-light;
 	width: 35rem;
 	height: 35rem;
 	padding: 15px;
 	border: $content-box-border;
-	border-color: $background-color-sub1-dark;
 	border-radius: $content-box-border-radius;
 }
 
@@ -103,12 +104,12 @@ $content-box-padding: 2rem;
 
 .shared-modal-icon {
 	font-size: 10rem;
-	color: $background-color-sub1-dark;
+	color: $font-color-sub1-light;
 }
 
 .shared-modal-text {
 	font-size: $font-size-emphasize;
-	color: $background-color-sub1-dark;
+	color: $font-color-sub1-light;
 	text-align: center;
 	margin: auto;
 	margin-top: 3rem;
@@ -123,13 +124,14 @@ $content-box-padding: 2rem;
 
 .shared-modal-confirm-icon {
 	width: 100%;
-	background-color: $font-color-emphasize-dark;
 	font-family: inherit;
-	font-size: 2.5rem;
+	font-size: calc(#{$font-size-emphasize * 0.75});
 	text-align: center;
-	border: $content-box-border;
-	border-color: $background-color-sub1-dark;
-	border-radius: calc(#{$content-box-border-radius/2});
+	border: none;
+	color: $background-color-emphasize-light;
+	background-color: $font-color-main-light;
+	padding: 0.25rem;
+	border-radius: calc(#{$content-box-border-radius/4});
 	cursor: pointer;
 }
 // End of modal

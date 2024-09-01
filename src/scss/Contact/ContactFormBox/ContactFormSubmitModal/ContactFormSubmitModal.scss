@@ -15,19 +15,31 @@
 		@extend .shared-modal-icon;
 	}
 
-	.contact-form-submit-modal-resulttext {
-		font-size: $font-size-emphasize;
-		color: $background-color-sub1-dark;
-		text-align: center;
-		margin: auto;
-		margin-top: 3rem;
-	}
-
 	.contact-form-submit-modal-confirm-icon-box {
 		@extend .shared-modal-confirm-icon-box;
 	}
 
 	.contact-form-submit-modal-confirm-icon {
 		@extend .shared-modal-confirm-icon;
+	}
+
+	&.dark {
+		.contact-form-submit-modal-content-box {
+			background-color: $font-color-main-dark;
+			border-color: $background-color-emphasize-dark;
+		}
+
+		.contact-form-submit-modal-checkicon {
+			color: $background-color-sub1-dark;
+		}
+
+		.contact-form-submit-modal-resulttext {
+			color: $background-color-sub1-dark;
+		}
+
+		.contact-form-submit-modal-confirm-icon {
+			background-color: $font-color-emphasize-dark;
+			border-color: $background-color-sub1-dark;
+		}
 	}
 }

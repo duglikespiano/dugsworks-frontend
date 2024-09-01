@@ -331,6 +331,7 @@ export interface messagesSlicePropsType {
 		message: string;
 		created_at: string | number;
 	};
+	isDarkmode: boolean;
 }
 
 type messegeSliceInitialStateType = messagesSliceType[];

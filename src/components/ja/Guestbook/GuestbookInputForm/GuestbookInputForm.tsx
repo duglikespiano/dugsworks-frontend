@@ -5,7 +5,7 @@ import ContactFormContentsRequireComponent from '../../Contact/ContactFormBox/Co
 import { messagesActions } from '../../../../variables/sliceStore';
 import '../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputForm.scss';
 
-export default function GuestbookInputForm() {
+export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
 
 	class Message {

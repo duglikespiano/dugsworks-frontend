@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import GuestbookMessage from './GuestbookMessage/GuestbookMessage';
 import { RootState, messagesSliceType, fetchedMessagesType, messagesActions } from '../../../../variables/sliceStore';
 
-export default function GuestbookMessages() {
+export default function GuestbookMessages(props: { isDarkmode: boolean }) {
 	const [isReadyToFetch, setIsReadyToFetch] = useState(true);
 
 	const messagesList = useSelector((state: RootState) => state.messagesList);
@@ -89,7 +89,7 @@ export default function GuestbookMessages() {
 	return (
 		<Fragment>
 			{messagesList.map((item: messagesSliceType, i: number) => (
-				<GuestbookMessage message={item} key={i} />
+				<GuestbookMessage message={item} isDarkmode={props.isDarkmode} key={i} />
 			))}
 		</Fragment>
 	);

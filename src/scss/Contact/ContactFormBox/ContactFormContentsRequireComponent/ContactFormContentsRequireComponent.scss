@@ -1,7 +1,10 @@
 @use '../../../variables/variables.scss' as *;
 
 #contact-form-contents-require-text {
-	color: $font-color-alert-dark;
+	color: $font-color-alert-light;
 	font-size: $font-size-sub;
 	padding-top: 0.25rem;
+	&.dark {
+		color: $font-color-alert-dark;
+	}
 }

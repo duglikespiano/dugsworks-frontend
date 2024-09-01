@@ -5,7 +5,7 @@ import ContactFormContentsRequireComponent from '../../Contact/ContactFormBox/Co
 import { messagesActions } from '../../../../variables/sliceStore';
 import '../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputForm.scss';
 
-export default function GuestbookInputForm() {
+export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 	const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
 
 	class Message {
@@ -160,7 +160,9 @@ export default function GuestbookInputForm() {
 
 	return (
 		<Fragment>
-			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
+			{!isFormFilledProperly && (
+				<GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} isDarkmode={props.isDarkmode} />
+			)}
 			<form id="guestbook-input-form" onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">
@@ -178,7 +180,9 @@ export default function GuestbookInputForm() {
 							value={enteredName}
 							ref={nameInputRef}
 						/>
-						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{nameTouched && nameInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 
 					<div className="guestbook-form-password-box">
@@ -196,7 +200,9 @@ export default function GuestbookInputForm() {
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
-						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 				</div>
 
@@ -214,7 +220,9 @@ export default function GuestbookInputForm() {
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
-					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+					{messageTouched && messageInputRef.current?.value.trim() === '' && (
+						<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+					)}
 				</div>
 
 				<div className="guestbook-form-submit-button-box">

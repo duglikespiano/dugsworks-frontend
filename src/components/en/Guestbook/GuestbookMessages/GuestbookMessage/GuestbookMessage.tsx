@@ -6,7 +6,7 @@ import GuestbookMessagePasswordModal from './GuestbookMessagePasswordModal/Guest
 import GuestbookMessageFetchResultModal from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
 import '../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessage.scss';
 
-export default function GuestbookMessage({ message }: messagesSlicePropsType) {
+export default function GuestbookMessage({ message }: messagesSlicePropsType, isDarkmode: boolean) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [isResultArrived, setIsResultArrived] = useState(false);
@@ -39,7 +39,7 @@ export default function GuestbookMessage({ message }: messagesSlicePropsType) {
 					messageId={message.id}
 				/>
 			)}
-			{isProcessing && <ProcessingModal />}
+			{isProcessing && <ProcessingModal isDarkmode={isDarkmode} />}
 			{isResultArrived && (
 				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
 			)}
