@@ -25,20 +25,21 @@
 
 	&.dark {
 		.contact-form-submit-modal-content-box {
-			background-color: $font-color-main-dark;
-			border-color: $background-color-emphasize-dark;
+			background-color: $background-color-main-dark;
+			border-color: $font-color-emphasize-dark;
 		}
 
 		.contact-form-submit-modal-checkicon {
-			color: $background-color-sub1-dark;
+			color: $font-color-main-dark;
 		}
 
 		.contact-form-submit-modal-resulttext {
-			color: $background-color-sub1-dark;
+			color: $font-color-main-dark;
 		}
 
 		.contact-form-submit-modal-confirm-icon {
-			background-color: $font-color-emphasize-dark;
+			color: $background-color-emphasize-dark;
+			background-color: $font-color-main-dark;
 			border-color: $background-color-sub1-dark;
 		}
 	}

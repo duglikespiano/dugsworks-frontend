@@ -53,14 +53,8 @@
 	&.dark {
 		border-color: $font-color-emphasize-dark;
 		.contact-form-submit-button {
-			width: 100%;
-			height: $font-size-main;
-			font-size: $font-size-sub;
 			color: $background-color-emphasize-dark;
 			background-color: $font-color-main-dark;
-			border: none;
-			border-radius: calc(#{$content-box-border-radius/5});
-			cursor: p;
 		}
 	}
 }
