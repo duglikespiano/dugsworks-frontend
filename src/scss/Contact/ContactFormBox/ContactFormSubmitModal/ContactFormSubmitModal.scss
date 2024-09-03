@@ -1,26 +1,63 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #contact-form-submit-modal {
 	@extend .shared-modal-background;
+	@include tab {
+		padding: 0 2rem;
+	}
 
 	.contact-form-submit-modal-content-box {
 		@extend .shared-modal-box;
+		@include tab {
+			width: 100%;
+			max-width: 35rem;
+			height: auto;
+		}
 	}
 
 	.contact-form-submit-modal-checkicon-box {
 		@extend .shared-modal-icon-box;
+		@include tab {
+			width: 7rem;
+			height: 7rem;
+			margin-top: 0;
+		}
 	}
 
 	.contact-form-submit-modal-checkicon {
 		@extend .shared-modal-icon;
+		@include tab {
+			width: 7rem;
+			height: 7rem;
+		}
+	}
+
+	.contact-form-submit-modal-resulttext {
+		@include tab {
+			font-size: calc(#{$font-size-emphasize * 0.8});
+			margin-top: 1rem;
+		}
+		@include sp {
+			font-size: calc(#{$font-size-emphasize * 0.8});
+		}
 	}
 
 	.contact-form-submit-modal-confirm-icon-box {
 		@extend .shared-modal-confirm-icon-box;
+		@include tab {
+			margin-top: 1rem;
+		}
 	}
 
 	.contact-form-submit-modal-confirm-icon {
 		@extend .shared-modal-confirm-icon;
+		@include tab {
+			font-size: calc(#{$font-size-emphasize * 0.7});
+		}
+		@include sp {
+			font-size: calc(#{$font-size-emphasize * 0.65});
+		}
 	}
 
 	&.dark {
