@@ -1,11 +1,17 @@
 @use '../variables/variables.scss' as *;
+@use '../variables/functions.scss' as *;
 
 #contact-box {
-	width: 40rem;
+	width: 100%;
+	max-width: 40rem;
+	padding: 0 1rem;
 	margin: auto;
 
 	.contact-box-title {
 		font-size: $font-size-emphasize;
 		margin-bottom: 1.5rem;
+		@include pc {
+			font-size: $font-size-main;
+		}
 	}
 }

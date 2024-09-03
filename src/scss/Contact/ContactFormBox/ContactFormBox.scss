@@ -1,9 +1,17 @@
 @use '../../variables/variables.scss' as *;
+@use '../../variables/functions.scss' as *;
 
 #contact-form {
 	border: $content-box-border;
 	border-radius: $content-box-border-radius;
 	padding: 2rem;
+	@include tab {
+		padding: 1rem;
+	}
+	@include sp {
+		border-radius: calc(#{$content-box-border-radius / 2});
+		padding: 0.5rem;
+	}
 
 	.contact-form-elements-box {
 		margin-bottom: calc(#{$submenu-title-gap * 1.5});
@@ -12,6 +20,9 @@
 	.contact-form-elements-title {
 		font-size: $font-size-main;
 		margin-bottom: calc(#{$submenu-title-gap / 2});
+		@include tab {
+			font-size: calc(#{$font-size-main * 0.75});
+		}
 	}
 
 	.contact-form-textinput {
@@ -25,6 +36,9 @@
 		border-width: 0.1rem;
 		border-radius: calc(#{$content-box-border-radius/5});
 		outline: none;
+		@include tab {
+			padding: 0.5rem;
+		}
 	}
 
 	.contact-form-textarea {
@@ -32,6 +46,9 @@
 		height: 18rem;
 		padding-top: 0.5rem;
 		resize: none;
+		@include tab {
+			padding: 0.5rem;
+		}
 	}
 
 	.contact-form-submit-button-box {
@@ -48,6 +65,9 @@
 		border: none;
 		border-radius: calc(#{$content-box-border-radius/5});
 		cursor: pointer;
+		@include tab {
+			font-size: calc(#{$font-size-sub * 0.9});
+		}
 	}
 
 	&.dark {
