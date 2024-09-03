@@ -1,20 +1,38 @@
 @use '../../../scss/variables/variables.scss' as *;
+@use '../../../scss/variables/functions.scss' as *;
 
 #processing-modal-background {
 	@extend .shared-modal-background;
+	@include tab {
+		padding: 0 2rem;
+	}
 
 	.processing-modal-content-box {
 		@extend .shared-modal-box;
 		height: 25rem;
+
+		@include tab {
+			width: 100%;
+			max-width: 35rem;
+			height: auto;
+		}
 	}
 
 	.processing-modal-hourglassicon-box {
 		@extend .shared-modal-icon-box;
 		margin-top: 4rem;
+		@include tab {
+			display: flex;
+			justify-content: center;
+			margin-top: 3rem;
+		}
 	}
 
 	.processing-modal-hourglassicon {
 		@extend .shared-modal-icon;
+		@include tab {
+			font-size: 8.5rem;
+		}
 	}
 
 	.contact-form-submit-modal-resulttext {
@@ -23,5 +41,25 @@
 
 	.processing-modal-text {
 		@extend .shared-modal-text;
+		@include tab {
+			font-size: calc(#{$font-size-emphasize * 0.9});
+			margin-top: 2rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&.dark {
+		.processing-modal-content-box {
+			background-color: $background-color-main-dark;
+			border-color: $font-color-emphasize-dark;
+		}
+
+		.processing-modal-hourglassicon {
+			color: $font-color-main-dark;
+		}
+
+		.processing-modal-text {
+			color: $font-color-main-dark;
+		}
 	}
 }

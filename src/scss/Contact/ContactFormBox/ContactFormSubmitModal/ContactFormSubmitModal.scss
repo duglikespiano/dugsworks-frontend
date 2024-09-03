@@ -38,9 +38,6 @@
 			font-size: calc(#{$font-size-emphasize * 0.8});
 			margin-top: 1rem;
 		}
-		@include sp {
-			font-size: calc(#{$font-size-emphasize * 0.8});
-		}
 	}
 
 	.contact-form-submit-modal-confirm-icon-box {
