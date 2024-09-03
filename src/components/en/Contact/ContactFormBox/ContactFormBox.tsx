@@ -15,7 +15,7 @@ export default function ContactFormBox(props: { isDarkmode: boolean }) {
 	const [messageTouched, setMessageTouched] = useState(false);
 
 	const [isFormReady, setIsFormReady] = useState(true);
-	const [isFormSubmitted, setIsFormSubmitted] = useState(true);
+	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [isProcessdProperly, setIsProcessdProperly] = useState(true);
 
