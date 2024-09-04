@@ -9,7 +9,7 @@ export default function ProfileText(props: { isDarkmode: boolean }) {
 			<div id="home-profile-texts-icons-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="home-profile-texts-box">
 					<p className="home-profile-hi">こんにちは! 私は </p>
-					<p className="home-profile-title ja">ジュニア開発者</p>
+					<p className="home-profile-title ja">ウェブ開発者</p>
 					<p className="home-profile-name ja">朴 秀浩です</p>
 					<p className="home-profile-furigana">(パク スホ)</p>
 					<p className="home-profile-aim"> - 遅くても地道に🐢</p>
