@@ -46,7 +46,7 @@
 
 	.contact-form-textarea {
 		@extend .contact-form-textinput;
-		height: 18rem;
+		height: 10rem;
 		padding-top: 0.5rem;
 		resize: none;
 		@include tab {

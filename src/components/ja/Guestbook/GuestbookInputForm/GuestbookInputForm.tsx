@@ -160,17 +160,19 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 
 	return (
 		<Fragment>
-			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
+			{!isFormFilledProperly && (
+				<GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} isDarkmode={props.isDarkmode} />
+			)}
 			<form id="guestbook-input-form" className={props.isDarkmode ? 'dark' : ''} onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">
-						<div className="guestbook-form-elements-title">お名前</div>
+						<div className="guestbook-form-elements-title ja">お名前</div>
 						<input
-							className="guestbook-form-textinput"
+							className="guestbook-form-textinput ja"
 							type={'text'}
 							id="name"
 							maxLength={30}
-							placeholder="お名前をご入力してください"
+							placeholder="お名前を入力"
 							onChange={nameInputChangeHandler}
 							onBlur={() => {
 								nameTouchedHandler(true);
@@ -178,17 +180,19 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							value={enteredName}
 							ref={nameInputRef}
 						/>
-						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{nameTouched && nameInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 
 					<div className="guestbook-form-password-box">
-						<div className="guestbook-form-elements-title">パスワード</div>
+						<div className="guestbook-form-elements-title ja">パスワード</div>
 						<input
-							className="guestbook-form-textinput"
+							className="guestbook-form-textinput ja"
 							type={'password'}
 							id="password"
 							maxLength={30}
-							placeholder="パスワードをご入力してください"
+							placeholder="パスワードを入力"
 							onChange={passwordInputChangeHandler}
 							onBlur={() => {
 								passwordTouchedHandler(true);
@@ -196,17 +200,19 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
-						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 				</div>
 
 				<div className="guestbook-form-elements-box">
-					<div className="guestbook-form-elements-title">メッセージ</div>
+					<div className="guestbook-form-elements-title ja">メッセージ</div>
 					<textarea
-						className="guestbook-form-textarea"
+						className="guestbook-form-textarea ja"
 						id="message"
 						maxLength={500}
-						placeholder={'メッセージをご入力ください'}
+						placeholder={'メッセージを入力'}
 						onChange={messageInputChangeHandler}
 						onBlur={() => {
 							messageTouchedHandler(true);
@@ -214,7 +220,9 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
-					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+					{messageTouched && messageInputRef.current?.value.trim() === '' && (
+						<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+					)}
 				</div>
 
 				<div className="guestbook-form-submit-button-box">

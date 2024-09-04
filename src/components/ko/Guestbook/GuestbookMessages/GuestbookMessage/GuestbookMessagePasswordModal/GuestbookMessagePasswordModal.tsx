@@ -77,6 +77,7 @@ export default function GuestbookMessagePasswordModal({
 		<Fragment>
 			<div
 				id="guestbook-mesasge-password-request-modal"
+				className={isDarkmode ? 'dark' : ''}
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {
@@ -85,11 +86,11 @@ export default function GuestbookMessagePasswordModal({
 				}}
 			>
 				<div id="guestbook-mesasge-password-request-modal-content-box" className={isDarkmode ? 'dark' : ''}>
-					<div className="guestbook-mesasge-password-request-modal-password-request-text">비밀번호를 입력해주세요</div>
+					<div className="guestbook-mesasge-password-request-modal-password-request-text">비밀번호를 입력</div>
 					<div className="guestbook-mesasge-password-request-modal-password-request-input-box">
 						<input
 							className="guestbook-mesasge-password-request-modal-password-request-input"
-							placeholder="비밀번호를 입력해주세요"
+							placeholder="비밀번호를 입력"
 							ref={passwordInputRef}
 						></input>
 					</div>

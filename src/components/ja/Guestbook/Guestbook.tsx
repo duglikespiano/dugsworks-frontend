@@ -8,7 +8,7 @@ export default function Guestbook() {
 	const { isDarkmode } = useContext(DarkmodeContext);
 	return (
 		<Fragment>
-			<div id="guestbook-box">
+			<div id="guestbook-box" className={isDarkmode ? 'dark' : ''}>
 				<div className="guestbook-box-title">芳名録</div>
 				<div className="guestbook-inputform-box-description">メッセージを残る為に下の様式を作成してください</div>
 				<GuestbookInputForm isDarkmode={isDarkmode} />

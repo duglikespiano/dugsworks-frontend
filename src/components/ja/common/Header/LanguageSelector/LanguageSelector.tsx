@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { languages } from '../../../../../variables/variables';
 import '../../../../../scss/common/Header/LanguageSelector/LanguageSelector.scss';
 
-export default function LanguageSelector() {
+export default function LanguageSelector(props: { isDarkmode: boolean }) {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -24,7 +24,7 @@ export default function LanguageSelector() {
 
 	return (
 		<Fragment>
-			<div id="language-selector-box">
+			<div id="language-selector-box" className={props.isDarkmode ? 'dark' : ''}>
 				<button
 					className="language-selector"
 					onClick={() => {

@@ -5,9 +5,10 @@ import '../../../../../scss/Contact/ContactFormBox/ContactFormSubmitModal/Contac
 interface props {
 	isFormSubmittedHandler: (boolean: boolean) => void;
 	isProcessdProperly: boolean;
+	isDarkmode: boolean;
 }
 
-export default function ContactFormSubmitModal({ isFormSubmittedHandler, isProcessdProperly }: props) {
+export default function ContactFormSubmitModal({ isFormSubmittedHandler, isProcessdProperly, isDarkmode }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -24,6 +25,7 @@ export default function ContactFormSubmitModal({ isFormSubmittedHandler, isProce
 	return (
 		<div
 			id="contact-form-submit-modal"
+			className={isDarkmode ? 'dark' : ''}
 			onClick={(event) => {
 				event.stopPropagation();
 				if (event.target === event.currentTarget) {

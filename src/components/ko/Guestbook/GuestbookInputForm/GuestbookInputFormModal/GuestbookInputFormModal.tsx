@@ -4,9 +4,10 @@ import '../../../../../scss/Guestbook/GuestbookInputForm/GuestbookInputFormModal
 
 interface props {
 	isFormFilledProperlyHandler: () => void;
+	isDarkmode: boolean;
 }
 
-export default function GuestbookInputFormModal({ isFormFilledProperlyHandler }: props) {
+export default function GuestbookInputFormModal({ isFormFilledProperlyHandler, isDarkmode }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed; 
@@ -23,6 +24,7 @@ export default function GuestbookInputFormModal({ isFormFilledProperlyHandler }:
 	return (
 		<div
 			id="contact-form-submit-modal"
+			className={isDarkmode ? 'dark' : ''}
 			onClick={(event) => {
 				event.stopPropagation();
 				if (event.target === event.currentTarget) {

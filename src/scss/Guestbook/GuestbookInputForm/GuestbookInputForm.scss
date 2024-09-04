@@ -37,6 +37,11 @@
 		@include tab {
 			font-size: calc(#{$font-size-main} * 0.75);
 		}
+		&.ja {
+			@include tab {
+				font-size: calc(#{$font-size-main} * 0.65);
+			}
+		}
 	}
 
 	.guestbook-form-textinput {
@@ -53,10 +58,17 @@
 			font-size: calc(#{$font-size-sub} * 0.8);
 			padding: 0.5rem;
 		}
-
 		&::placeholder {
 			@include sp {
 				font-size: calc(#{$font-size-sub} * 0.75);
+			}
+		}
+
+		&.ja {
+			&::placeholder {
+				@include tab {
+					font-size: calc(#{$font-size-sub} * 0.7);
+				}
 			}
 		}
 	}

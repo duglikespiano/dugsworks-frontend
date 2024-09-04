@@ -5,7 +5,7 @@ import '../../../../../scss/About/SkillSets/Skills/Skills.scss';
 export default function Skills(props: SkillSetsPropsType) {
 	return (
 		<Fragment>
-			<div id="skills">
+			<div id="skills" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="skillsets-title">{props.title}</div>
 				<ul className="skillsets-texts-box">
 					{props.skills.map((item: string, i: number) => (

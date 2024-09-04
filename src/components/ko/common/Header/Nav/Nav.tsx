@@ -3,12 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { menus } from '../../../../../variables/variables';
 import '../../../../../scss/common/Header/Nav/Nav.scss';
 
-export default function Nav() {
+export default function Nav(props: { isDarkmode: boolean }) {
 	const location = useLocation();
 
 	return (
 		<Fragment>
-			<ul id="nav-links">
+			<ul id="nav-links" className={props.isDarkmode ? 'dark' : ''}>
 				{menus.ko.map((item, i) => (
 					<li className="nav-link" key={i}>
 						<h2 className="category">

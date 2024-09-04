@@ -5,7 +5,7 @@ import ProcessingModal from '../../common/ProcessingModal/ProcessingModal';
 import GuestbookInputFormModal from '../../Guestbook/GuestbookInputForm/GuestbookInputFormModal/GuestbookInputFormModal';
 import '../../../../scss/Contact/ContactFormBox/ContactFormBox.scss';
 
-export default function ContactFormBox() {
+export default function ContactFormBox(props: { isDarkmode: boolean }) {
 	const [enteredName, setEnteredName] = useState('');
 	const [enteredEmail, setEnteredEmail] = useState('');
 	const [enteredMessage, setEnteredMessage] = useState('');
@@ -139,17 +139,18 @@ export default function ContactFormBox() {
 	};
 
 	return (
-		<form id="contact-form" onSubmit={submitHandler}>
-			{isProcessing && <ProcessingModal />}
+		<form id="contact-form" onSubmit={submitHandler} className={props.isDarkmode ? 'dark' : ''}>
+			{isProcessing && <ProcessingModal isDarkmode={props.isDarkmode} />}
 			{isFormSubmitted && (
 				<ContactFormSubmitModal
 					isFormSubmittedHandler={(boolean) => {
 						setIsFormSubmitted(boolean);
 					}}
 					isProcessdProperly={isProcessdProperly}
+					isDarkmode={props.isDarkmode}
 				/>
 			)}
-			{!isFormReady && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormReadyHandler} />}
+			{!isFormReady && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormReadyHandler} isDarkmode={props.isDarkmode} />}
 			<div className="contact-form-elements-box">
 				<div className="contact-form-elements-title">お名前</div>
 				<input
@@ -157,7 +158,7 @@ export default function ContactFormBox() {
 					type={'text'}
 					id="name"
 					maxLength={40}
-					placeholder="お名前をご記入ください"
+					placeholder="お名前を入力"
 					onChange={nameInputChangeHandler}
 					onBlur={() => {
 						nameTouchedHandler(true);
@@ -165,7 +166,9 @@ export default function ContactFormBox() {
 					value={enteredName}
 					ref={nameInputRef}
 				/>
-				{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+				{nameTouched && nameInputRef.current?.value.trim() === '' && (
+					<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+				)}
 			</div>
 
 			<div className="contact-form-elements-box">
@@ -175,7 +178,7 @@ export default function ContactFormBox() {
 					type={'email'}
 					id="email"
 					maxLength={40}
-					placeholder="Eメールをご記入ください"
+					placeholder="Eメールを記入"
 					onChange={emailInputChangeHandler}
 					onBlur={() => {
 						emailTouchedHandler(true);
@@ -183,7 +186,9 @@ export default function ContactFormBox() {
 					value={enteredEmail}
 					ref={emailInputRef}
 				/>
-				{emailTouched && emailInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+				{emailTouched && emailInputRef.current?.value.trim() === '' && (
+					<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+				)}
 			</div>
 
 			<div className="contact-form-elements-box">
@@ -192,7 +197,7 @@ export default function ContactFormBox() {
 					className="contact-form-textarea"
 					id="message"
 					maxLength={3000}
-					placeholder="メッセージをご記入ください"
+					placeholder="メッセージを記入"
 					onChange={messageInputChangeHandler}
 					onBlur={() => {
 						messageTouchedHandler(true);
@@ -200,7 +205,9 @@ export default function ContactFormBox() {
 					value={enteredMessage}
 					ref={messageInputRef}
 				/>
-				{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+				{messageTouched && messageInputRef.current?.value.trim() === '' && (
+					<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+				)}
 			</div>
 
 			<div className="contact-form-submit-button-box">

@@ -12,7 +12,7 @@ export default function Error() {
 					<FaRegFaceSurprise className="error-page-icon" />
 				</div>
 				<div className="error-page-text-oops">Oops!</div>
-				<div className="error-page-text">It seems like somethin's wrong!</div>
+				<div className="error-page-text">An error has occurred!</div>
 				<div className="error-page-text">Please contact to Dug!</div>
 			</div>
 		</Fragment>

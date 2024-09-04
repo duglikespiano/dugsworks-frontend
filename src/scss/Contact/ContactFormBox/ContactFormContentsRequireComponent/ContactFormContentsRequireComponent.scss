@@ -6,7 +6,10 @@
 	font-size: $font-size-sub;
 	padding-top: 0.25rem;
 	@include tab {
-		font-size: calc(#{$font-size-sub * 0.9});
+		font-size: calc(#{$font-size-sub * 0.8});
+	}
+	@include sp {
+		font-size: calc(#{$font-size-sub * 0.575});
 	}
 	&.dark {
 		color: $font-color-alert-dark;

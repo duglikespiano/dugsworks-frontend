@@ -40,11 +40,15 @@ export default function GuestbookMessage(props: { message: messagesSlicePropsTyp
 					isDarkmode={props.isDarkmode}
 				/>
 			)}
-			{isProcessing && <ProcessingModal />}
+			{isProcessing && <ProcessingModal isDarkmode={props.isDarkmode} />}
 			{isResultArrived && (
-				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
+				<GuestbookMessageFetchResultModal
+					isFetchedProperly={isFetchedProperly}
+					isResultArrivedHandler={isResultArrivedHandler}
+					isDarkmode={props.isDarkmode}
+				/>
 			)}
-			<div id="guestbook-message-box">
+			<div id="guestbook-message-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>
 					<RiDeleteBin6Line />{' '}
 				</div>

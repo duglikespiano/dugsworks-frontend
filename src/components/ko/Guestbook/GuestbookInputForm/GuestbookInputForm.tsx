@@ -160,7 +160,9 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 
 	return (
 		<Fragment>
-			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
+			{!isFormFilledProperly && (
+				<GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} isDarkmode={props.isDarkmode} />
+			)}
 			<form id="guestbook-input-form" className={props.isDarkmode ? 'dark' : ''} onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">
@@ -170,7 +172,7 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							type={'text'}
 							id="name"
 							maxLength={30}
-							placeholder="성함을 입력해주세요"
+							placeholder="성함을 입력"
 							onChange={nameInputChangeHandler}
 							onBlur={() => {
 								nameTouchedHandler(true);
@@ -178,7 +180,9 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							value={enteredName}
 							ref={nameInputRef}
 						/>
-						{nameTouched && nameInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{nameTouched && nameInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 
 					<div className="guestbook-form-password-box">
@@ -188,7 +192,7 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							type={'password'}
 							id="password"
 							maxLength={30}
-							placeholder="비밀번호를 입력해주세요"
+							placeholder="비밀번호를 입력"
 							onChange={passwordInputChangeHandler}
 							onBlur={() => {
 								passwordTouchedHandler(true);
@@ -196,7 +200,9 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 							value={enteredPassword}
 							ref={passwordInputRef}
 						/>
-						{passwordTouched && passwordInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+						{passwordTouched && passwordInputRef.current?.value.trim() === '' && (
+							<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+						)}
 					</div>
 				</div>
 
@@ -206,7 +212,7 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 						className="guestbook-form-textarea"
 						id="message"
 						maxLength={500}
-						placeholder={'메세지를 입력해주세요'}
+						placeholder={'메세지를 입력'}
 						onChange={messageInputChangeHandler}
 						onBlur={() => {
 							messageTouchedHandler(true);
@@ -214,7 +220,9 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 						value={enteredMessage}
 						ref={messageInputRef}
 					/>
-					{messageTouched && messageInputRef.current?.value.trim() === '' && <ContactFormContentsRequireComponent />}
+					{messageTouched && messageInputRef.current?.value.trim() === '' && (
+						<ContactFormContentsRequireComponent isDarkmode={props.isDarkmode} />
+					)}
 				</div>
 
 				<div className="guestbook-form-submit-button-box">
