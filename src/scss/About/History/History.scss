@@ -7,8 +7,8 @@
 	.history-title {
 		font-size: $font-size-emphasize;
 		margin-bottom: $menu-title-gap;
-		@include sp {
-			font-size: calc($font-size-emphasize * 0.8);
+		@include pc {
+			font-size: $font-size-main;
 		}
 	}
 

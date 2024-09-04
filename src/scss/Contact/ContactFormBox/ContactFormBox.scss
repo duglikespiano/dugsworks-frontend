@@ -20,8 +20,11 @@
 	.contact-form-elements-title {
 		font-size: $font-size-main;
 		margin-bottom: calc(#{$submenu-title-gap / 2});
+		@include pc {
+			font-size: calc(#{$font-size-main} * 0.8);
+		}
 		@include tab {
-			font-size: calc(#{$font-size-main * 0.75});
+			font-size: calc(#{$font-size-main} * 0.75);
 		}
 	}
 
