@@ -9,6 +9,7 @@ interface props {
 	isResultArrivedHandler: (result: boolean) => void;
 	isFetchedProperlyHandler: (result: boolean) => void;
 	messageId: number;
+	isDarkmode: boolean;
 }
 
 export default function GuestbookMessagePasswordModal({
@@ -17,6 +18,7 @@ export default function GuestbookMessagePasswordModal({
 	isResultArrivedHandler,
 	isFetchedProperlyHandler,
 	messageId,
+	isDarkmode,
 }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
@@ -82,7 +84,7 @@ export default function GuestbookMessagePasswordModal({
 					}
 				}}
 			>
-				<div className="guestbook-mesasge-password-request-modal-content-box">
+				<div id="guestbook-mesasge-password-request-modal-content-box" className={isDarkmode ? 'dark' : ''}>
 					<div className="guestbook-mesasge-password-request-modal-password-request-text">비밀번호를 입력해주세요</div>
 					<div className="guestbook-mesasge-password-request-modal-password-request-input-box">
 						<input

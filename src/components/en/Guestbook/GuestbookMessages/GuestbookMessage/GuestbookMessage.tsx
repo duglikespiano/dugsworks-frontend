@@ -37,6 +37,7 @@ export default function GuestbookMessage(props: { message: messagesSlicePropsTyp
 					isResultArrivedHandler={isResultArrivedHandler}
 					isFetchedProperlyHandler={(result) => isFetchedProperlyHandler(result)}
 					messageId={props.message.id}
+					isDarkmode={props.isDarkmode}
 				/>
 			)}
 			{isProcessing && <ProcessingModal isDarkmode={props.isDarkmode} />}

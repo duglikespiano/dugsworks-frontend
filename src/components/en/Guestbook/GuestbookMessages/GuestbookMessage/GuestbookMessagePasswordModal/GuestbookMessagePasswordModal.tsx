@@ -9,6 +9,7 @@ interface props {
 	isResultArrivedHandler: (result: boolean) => void;
 	isFetchedProperlyHandler: (result: boolean) => void;
 	messageId: number;
+	isDarkmode: boolean;
 }
 
 export default function GuestbookMessagePasswordModal({
@@ -17,6 +18,7 @@ export default function GuestbookMessagePasswordModal({
 	isResultArrivedHandler,
 	isFetchedProperlyHandler,
 	messageId,
+	isDarkmode,
 }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
@@ -74,7 +76,8 @@ export default function GuestbookMessagePasswordModal({
 	return (
 		<Fragment>
 			<div
-				className="guestbook-mesasge-password-request-modal"
+				id="guestbook-mesasge-password-request-modal"
+				className={isDarkmode ? 'dark' : ''}
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {
@@ -82,7 +85,7 @@ export default function GuestbookMessagePasswordModal({
 					}
 				}}
 			>
-				<div className="guestbook-mesasge-password-request-modal-content-box">
+				<div id="guestbook-mesasge-password-request-modal-content-box" className={isDarkmode ? 'dark' : ''}>
 					<div className="guestbook-mesasge-password-request-modal-password-request-text">Please input password</div>
 					<div className="guestbook-mesasge-password-request-modal-password-request-input-box">
 						<input
