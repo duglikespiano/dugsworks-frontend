@@ -1,4 +1,5 @@
 @use '../variables/variables.scss' as *;
+@use '../variables/functions.scss' as *;
 
 #error-page {
 	width: 100%;
@@ -6,19 +7,22 @@
 	margin: auto;
 
 	.error-page-icon-box {
-		width: 30%;
-		margin: auto;
+		display: flex;
+		justify-content: center;
 		margin-bottom: $menu-main-gap;
 	}
 
 	.error-page-icon {
 		font-size: 15rem;
-		color: $font-color-emphasize-dark;
+		color: $font-color-emphasize-light;
+		@include tab {
+			font-size: 10rem;
+		}
 	}
 
 	.error-page-text-oops {
 		font-size: $font-size-emphasize;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub1-light;
 		text-align: center;
 		margin-bottom: $menu-title-gap;
 	}
@@ -26,8 +30,20 @@
 	.error-page-text {
 		@extend .error-page-text-oops;
 		font-size: $font-size-main;
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
 		text-align: center;
 		margin-bottom: calc(#{$menu-title-gap/2});
+	}
+
+	&.dark {
+		.error-page-icon {
+			color: $font-color-emphasize-dark;
+		}
+		.error-page-text-oops {
+			color: $font-color-sub1-dark;
+		}
+		.error-page-text {
+			color: $font-color-sub2-dark;
+		}
 	}
 }
