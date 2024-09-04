@@ -1,4 +1,5 @@
 @use '../../../variables/variables.scss' as *;
+@use '../../../variables/functions.scss' as *;
 
 #guestbook-message-box {
 	position: relative;
@@ -8,13 +9,24 @@
 	border-radius: $content-box-border-radius;
 	padding: $content-box-padding;
 	margin-bottom: calc(#{$menu-contents-gap/2});
+	@include tab {
+		border-radius: calc(#{$content-box-border-radius/2});
+		padding-top: calc(#{$content-box-padding * 0.75});
+		padding-bottom: calc(#{$content-box-padding * 0.75});
+		padding-left: calc(#{$content-box-padding * 0.5});
+		padding-right: calc(#{$content-box-padding * 0.5});
+	}
 
 	.guestbook-message-delete-icon {
 		position: absolute;
-		left: 92.5%;
+		right: 1rem;
 		top: 15%;
 		font-size: calc(#{$font-size-main/1.5});
 		cursor: pointer;
+		@include tab {
+			top: 0.25rem;
+			right: 0.25rem;
+		}
 	}
 
 	.guestbook-message-writer-date-box {
@@ -24,21 +36,44 @@
 
 	.guestbook-message-writer {
 		font-size: calc(#{$font-size-main/1.5});
-		color: $font-color-emphasize-dark;
 		margin-bottom: calc(#{$submenu-margin/5});
+		@include tab {
+			font-size: calc(#{$font-size-main/2});
+		}
 	}
 
 	.guestbook-message-date {
 		font-size: calc(#{$font-size-content/2});
-		color: $font-color-sub2-dark;
+		color: $font-color-sub2-light;
 		font-weight: 500;
 		padding-left: 0.5rem;
 		padding-bottom: 0.5rem;
+		@include tab {
+			font-size: calc(#{$font-size-content/2.5});
+		}
 	}
 
 	.guestbook-message-text {
 		font-size: calc(#{$font-size-content});
-		color: $font-color-main-dark;
+		color: $font-color-main-light;
 		font-weight: 500;
+		@include tab {
+			font-size: calc(#{$font-size-content * 0.8});
+		}
+	}
+
+	&.dark {
+		border-color: $font-color-emphasize-dark;
+		.guestbook-message-writer {
+			color: $font-color-emphasize-dark;
+		}
+
+		.guestbook-message-date {
+			color: $font-color-sub2-dark;
+		}
+
+		.guestbook-message-text {
+			color: $font-color-main-dark;
+		}
 	}
 }

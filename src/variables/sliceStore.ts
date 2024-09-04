@@ -324,14 +324,11 @@ export type fetchedMessagesType = {
 };
 
 export interface messagesSlicePropsType {
-	message: {
-		id: number;
-		name: string;
-		password: string;
-		message: string;
-		created_at: string | number;
-	};
-	isDarkmode: boolean;
+	id: number;
+	name: string;
+	password: string;
+	message: string;
+	created_at: string | number;
 }
 
 type messegeSliceInitialStateType = messagesSliceType[];

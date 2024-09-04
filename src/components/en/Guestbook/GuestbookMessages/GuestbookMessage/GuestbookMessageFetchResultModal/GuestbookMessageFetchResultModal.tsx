@@ -4,9 +4,10 @@ import '../../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/Gues
 interface props {
 	isFetchedProperly: boolean;
 	isResultArrivedHandler: () => void;
+	isDarkmode: boolean;
 }
 
-export default function GuestbookMessageFetchResultModal({ isFetchedProperly, isResultArrivedHandler }: props) {
+export default function GuestbookMessageFetchResultModal({ isFetchedProperly, isResultArrivedHandler, isDarkmode }: props) {
 	useEffect(() => {
 		document.body.style.cssText = `
 			position: fixed;
@@ -23,7 +24,8 @@ export default function GuestbookMessageFetchResultModal({ isFetchedProperly, is
 	return (
 		<Fragment>
 			<div
-				className="guestbook-message-delete-fetch-result-modal"
+				id="guestbook-message-delete-fetch-result-modal"
+				className={isDarkmode ? 'dark' : ''}
 				onClick={(event) => {
 					event.stopPropagation();
 					if (event.target === event.currentTarget) {

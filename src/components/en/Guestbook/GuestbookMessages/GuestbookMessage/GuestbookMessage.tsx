@@ -6,7 +6,7 @@ import GuestbookMessagePasswordModal from './GuestbookMessagePasswordModal/Guest
 import GuestbookMessageFetchResultModal from './GuestbookMessageFetchResultModal/GuestbookMessageFetchResultModal';
 import '../../../../../scss/Guestbook/GuestbookMessages/GuestbookMessage/GuestbookMessage.scss';
 
-export default function GuestbookMessage({ message }: messagesSlicePropsType, isDarkmode: boolean) {
+export default function GuestbookMessage(props: { message: messagesSlicePropsType; isDarkmode: boolean }) {
 	const [isPasswordModalRequested, setIsPaswordModalRequested] = useState(false);
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [isResultArrived, setIsResultArrived] = useState(false);
@@ -36,22 +36,26 @@ export default function GuestbookMessage({ message }: messagesSlicePropsType, is
 					isProcessingHandler={(isProcessing) => isProcessingHandler(isProcessing)}
 					isResultArrivedHandler={isResultArrivedHandler}
 					isFetchedProperlyHandler={(result) => isFetchedProperlyHandler(result)}
-					messageId={message.id}
+					messageId={props.message.id}
 				/>
 			)}
-			{isProcessing && <ProcessingModal isDarkmode={isDarkmode} />}
+			{isProcessing && <ProcessingModal isDarkmode={props.isDarkmode} />}
 			{isResultArrived && (
-				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
+				<GuestbookMessageFetchResultModal
+					isFetchedProperly={isFetchedProperly}
+					isResultArrivedHandler={isResultArrivedHandler}
+					isDarkmode={props.isDarkmode}
+				/>
 			)}
-			<div id="guestbook-message-box">
+			<div id="guestbook-message-box" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>
 					<RiDeleteBin6Line />{' '}
 				</div>
 				<div className="guestbook-message-writer-date-box">
-					<div className="guestbook-message-writer">{message.name}</div>
-					<div className="guestbook-message-date">{message.created_at}</div>
+					<div className="guestbook-message-writer">{props.message.name}</div>
+					<div className="guestbook-message-date">{props.message.created_at}</div>
 				</div>
-				<div className="guestbook-message-text">{message.message}</div>
+				<div className="guestbook-message-text">{props.message.message}</div>
 			</div>
 		</Fragment>
 	);
