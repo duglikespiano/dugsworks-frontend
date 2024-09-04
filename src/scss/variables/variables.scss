@@ -16,7 +16,8 @@ $font-color-sub5-light: #bac4d6;
 $font-color-alert-light: #e4401b;
 $font-color-confirm-light: #7fe41b;
 
-$darkmode-toggle-icon-color-light: #ff8100;
+$darkmode-toggle-icon-color-light: rgb(255, 230, 0);
+
 // End of lightmode
 //
 //
@@ -39,6 +40,7 @@ $font-color-alert-dark: #e4401b;
 $font-color-confirm-dark: #7fe41b;
 
 $darkmode-toggle-icon-color-dark: rgb(255, 230, 0);
+// $darkmode-toggle-icon-color-dark: #ff8100;
 // End of darkmode
 //
 //

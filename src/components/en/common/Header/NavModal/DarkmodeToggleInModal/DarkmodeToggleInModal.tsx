@@ -9,8 +9,8 @@ export default function DarkmodeToggleInModal() {
 
 	return (
 		<div id="darkmode-toggle-in-modal" onClick={toggleDarkmode}>
-			<FiSun className={isDarkmode ? 'darkmode-toggle-in-modal-icon sun' : 'darkmode-toggle-in-modal-icon sun active'} />
-			<FiMoon className={isDarkmode ? 'darkmode-toggle-in-modal-icon moon active' : 'darkmode-toggle-in-modal-icon moon'} />
+			<FiSun className={isDarkmode ? 'darkmode-toggle-in-modal-icon sun active' : 'darkmode-toggle-in-modal-icon sun'} />
+			<FiMoon className={isDarkmode ? 'darkmode-toggle-in-modal-icon moon' : 'darkmode-toggle-in-modal-icon moon active'} />
 		</div>
 	);
 }

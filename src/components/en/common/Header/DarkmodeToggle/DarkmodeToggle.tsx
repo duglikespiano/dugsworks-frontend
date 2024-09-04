@@ -8,8 +8,8 @@ export default function DarkmodeToggle() {
 	const { isDarkmode, toggleDarkmode } = useContext(DarkmodeContext);
 	return (
 		<div id="darkmode-toggle" onClick={toggleDarkmode}>
-			<FiSun className={isDarkmode ? 'darkmode-toggle-icon sun' : 'darkmode-toggle-icon sun active'} />
-			<FiMoon className={isDarkmode ? 'darkmode-toggle-icon moon active' : 'darkmode-toggle-icon moon'} />
+			<FiSun className={isDarkmode ? 'darkmode-toggle-icon sun active' : 'darkmode-toggle-icon sun'} />
+			<FiMoon className={isDarkmode ? 'darkmode-toggle-icon moon ' : 'darkmode-toggle-icon moon active'} />
 		</div>
 	);
 }
