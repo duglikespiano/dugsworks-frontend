@@ -46,18 +46,25 @@
 		height: 3rem;
 		padding: 1rem;
 		box-sizing: border-box;
-		border: none;
+		border-color: black;
 		border-radius: calc(#{$content-box-border-radius/5});
 		outline: none;
 		@include tab {
 			font-size: calc(#{$font-size-sub} * 0.8);
 			padding: 0.5rem;
 		}
+
+		&::placeholder {
+			@include sp {
+				font-size: calc(#{$font-size-sub} * 0.75);
+			}
+		}
 	}
 
 	.guestbook-form-textarea {
 		@extend .guestbook-form-textinput;
 		height: calc(18rem / 3);
+		border-color: black;
 		padding-top: 0.5rem;
 		resize: none;
 	}
