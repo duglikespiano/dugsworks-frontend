@@ -4,6 +4,7 @@
 #skills {
 	margin-left: $submenu-margin;
 	@include tab {
+		margin-left: 0;
 		margin-bottom: calc($submenu-margin * 0.75);
 	}
 
@@ -11,8 +12,12 @@
 		font-size: $font-size-main;
 		color: $font-color-emphasize-light;
 		margin-bottom: $submenu-title-gap;
+		@include tab {
+			font-size: calc($font-size-main * 0.75);
+		}
 		@include sp {
 			font-size: calc($font-size-main * 0.8);
+			padding-left: 2rem;
 		}
 	}
 
@@ -21,13 +26,20 @@
 		@include pc {
 			font-size: 2.5rem;
 		}
+		@include tab {
+			padding-left: 0;
+		}
+		@include sp {
+			padding-left: 4rem;
+		}
 	}
 
 	.skillsets-texts {
 		font-size: $font-size-content;
 		color: $font-color-sub2-light;
-		@include sp {
-			font-size: calc($font-size-main * 0.65);
+		@include tab {
+			font-size: calc($font-size-main * 0.6);
+			margin-left: 1rem;
 		}
 	}
 
