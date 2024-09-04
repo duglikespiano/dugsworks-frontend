@@ -18,5 +18,18 @@
 		background-color: $content-box-border-color-light;
 		border: 0.2rem solid $content-box-border-color-light;
 		margin: auto;
+		@include tab {
+			border-width: 0.15rem;
+		}
+	}
+
+	&.dark {
+		.history-boxes-gap-line {
+			background-color: $font-color-emphasize-dark;
+			border: 0.2rem solid $font-color-emphasize-dark;
+			@include tab {
+				border-width: 0.15rem;
+			}
+		}
 	}
 }

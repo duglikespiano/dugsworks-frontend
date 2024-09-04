@@ -12,7 +12,7 @@ import '../../../../scss/About/History/History.scss';
 export default function History(props: { isDarkmode: boolean }) {
 	return (
 		<Fragment>
-			<div id="history">
+			<div id="history" className={props.isDarkmode ? 'dark' : ''}>
 				<div className="history-title">Brief History</div>
 				<HistoryBox history={afterHistory} isDarkmode={props.isDarkmode} />
 				<div className="history-boxes-gap-line"></div>
