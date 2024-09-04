@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from 'react';
+import { Fragment, useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import LanguageSelector from './LanguageSelector/LanguageSelector';
@@ -6,6 +6,7 @@ import Hamburger from './Hamburger/Hamburger';
 import NavModal from './NavModal/NavModal';
 import DarkmodeToggle from './DarkmodeToggle/DarkmodeToggle';
 import { DarkmodeContext } from '../../../../contexts/DarkmodeContext';
+import { setLocalStorageDarkmode } from '../../../../functions/commonFunctions';
 import '../../../../scss/common/Header/Header.scss';
 
 export default function Header() {
@@ -14,6 +15,14 @@ export default function Header() {
 	const [isNavModalActive, setIsNavModalActive] = useState(false);
 	const hamburgerHandler = (isHamburgerActive: boolean) => setIsHamburgerActive(!isHamburgerActive);
 	const navModalHandler = (isNavModalActive: boolean) => setIsNavModalActive(!isNavModalActive);
+
+	useEffect(() => {
+		if (setLocalStorageDarkmode() === 'dark') {
+			localStorage.setItem('dugsworks-darkmode', true.toString());
+		} else if (setLocalStorageDarkmode() === 'light') {
+			localStorage.setItem('dugsworks-darkmode', false.toString());
+		}
+	}, []);
 
 	return (
 		<Fragment>
