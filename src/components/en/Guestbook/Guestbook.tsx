@@ -8,7 +8,7 @@ export default function Guestbook() {
 	const { isDarkmode } = useContext(DarkmodeContext);
 	return (
 		<Fragment>
-			<div id="guestbook-box">
+			<div id="guestbook-box" className={isDarkmode ? 'dark' : ''}>
 				<div className="guestbook-box-title">Guestbook</div>
 				<div className="guestbook-inputform-box-description">Fill the form below to leave your message</div>
 				<GuestbookInputForm isDarkmode={isDarkmode} />

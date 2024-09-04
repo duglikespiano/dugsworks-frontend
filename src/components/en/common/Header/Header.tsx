@@ -17,6 +17,16 @@ export default function Header() {
 
 	return (
 		<Fragment>
+			<NavModal
+				isHamburgerActive={isHamburgerActive}
+				isNavModalActive={isNavModalActive}
+				hamburgerHandler={() => {
+					hamburgerHandler(isHamburgerActive);
+				}}
+				navModalHandler={() => {
+					navModalHandler(isNavModalActive);
+				}}
+			/>
 			<header id="header" className={isDarkmode ? 'dark' : ''}>
 				<h1
 					className="logo"
@@ -33,16 +43,6 @@ export default function Header() {
 				<LanguageSelector isDarkmode={isDarkmode} />
 				<DarkmodeToggle />
 				<Hamburger
-					isHamburgerActive={isHamburgerActive}
-					isNavModalActive={isNavModalActive}
-					hamburgerHandler={() => {
-						hamburgerHandler(isHamburgerActive);
-					}}
-					navModalHandler={() => {
-						navModalHandler(isNavModalActive);
-					}}
-				/>
-				<NavModal
 					isHamburgerActive={isHamburgerActive}
 					isNavModalActive={isNavModalActive}
 					hamburgerHandler={() => {

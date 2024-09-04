@@ -1,10 +1,14 @@
 @use '../../variables/variables.scss' as *;
+@use '../../variables/functions.scss' as *;
 
 #guestbook-input-form {
-	border: 0.3rem solid white;
+	border: $content-box-border;
 	border-radius: $content-box-border-radius;
 	padding: 2rem;
 	margin-bottom: $menu-contents-gap;
+	@include tab {
+		padding: 1rem;
+	}
 
 	.guestbook-form-name-password-box {
 		display: flex;
@@ -27,6 +31,12 @@
 	.guestbook-form-elements-title {
 		font-size: $font-size-main;
 		margin-bottom: calc(#{$submenu-title-gap} / 2);
+		@include pc {
+			font-size: calc(#{$font-size-main} * 0.9);
+		}
+		@include tab {
+			font-size: calc(#{$font-size-main} * 0.8);
+		}
 	}
 
 	.guestbook-form-textinput {
@@ -39,6 +49,10 @@
 		border: none;
 		border-radius: calc(#{$content-box-border-radius/5});
 		outline: none;
+		@include tab {
+			font-size: calc(#{$font-size-sub} * 0.8);
+			padding: 0.5rem;
+		}
 	}
 
 	.guestbook-form-textarea {
@@ -57,10 +71,24 @@
 		width: 100%;
 		height: $font-size-main;
 		font-size: $font-size-sub;
-		color: $background-color-emphasize-dark;
-		background-color: $font-color-main-dark;
+		color: $background-color-emphasize-light;
+		background-color: $font-color-main-light;
 		border: none;
 		border-radius: calc(#{$content-box-border-radius/5});
 		cursor: pointer;
+	}
+
+	&.dark {
+		border-color: $font-color-emphasize-dark;
+		.guestbook-form-textinput {
+			color: $font-color-main-light;
+		}
+		.guestbook-form-textarea {
+			color: $font-color-main-light;
+		}
+		.guestbook-form-submit-button {
+			color: $font-color-main-light;
+			background-color: $font-color-main-dark;
+		}
 	}
 }

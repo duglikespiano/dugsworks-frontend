@@ -72,8 +72,14 @@
 
 	&.dark {
 		border-color: $font-color-emphasize-dark;
+		.contact-form-textinput {
+			color: $font-color-main-light;
+		}
+		.contact-form-textarea {
+			color: $font-color-main-light;
+		}
 		.contact-form-submit-button {
-			color: $background-color-emphasize-dark;
+			color: $font-color-main-light;
 			background-color: $font-color-main-dark;
 		}
 	}

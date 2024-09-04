@@ -12,6 +12,7 @@
 		@include tab {
 			width: 100%;
 			max-width: 35rem;
+			padding-bottom: 1.5rem;
 			height: auto;
 		}
 	}
@@ -34,6 +35,9 @@
 	}
 
 	.contact-form-submit-modal-resulttext {
+		font-size: calc(#{$font-size-emphasize * 0.8});
+		text-align: center;
+		margin-top: 3rem;
 		@include tab {
 			font-size: calc(#{$font-size-emphasize * 0.8});
 			margin-top: 1rem;
@@ -72,7 +76,7 @@
 		}
 
 		.contact-form-submit-modal-confirm-icon {
-			color: $background-color-emphasize-dark;
+			color: $font-color-main-light;
 			background-color: $font-color-main-dark;
 			border-color: $background-color-sub1-dark;
 		}

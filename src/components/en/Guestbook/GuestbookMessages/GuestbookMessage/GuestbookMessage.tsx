@@ -43,7 +43,7 @@ export default function GuestbookMessage({ message }: messagesSlicePropsType, is
 			{isResultArrived && (
 				<GuestbookMessageFetchResultModal isFetchedProperly={isFetchedProperly} isResultArrivedHandler={isResultArrivedHandler} />
 			)}
-			<div className="guestbook-message-box">
+			<div id="guestbook-message-box">
 				<div className="guestbook-message-delete-icon" onClick={isPasswordModalRequestedHandler}>
 					<RiDeleteBin6Line />{' '}
 				</div>

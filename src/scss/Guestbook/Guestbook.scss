@@ -1,13 +1,18 @@
 @use '../variables/variables.scss' as *;
+@use '../variables/functions.scss' as *;
 
 #guestbook-box {
-	width: 50rem;
+	width: 100%;
+	max-width: 50rem;
+	padding: 0 1rem;
 	margin: auto;
 
 	.guestbook-box-title {
 		font-size: $font-size-emphasize;
-		color: $font-color-emphasize-dark;
 		margin-bottom: calc(1.5rem / 2);
+		@include pc {
+			font-size: $font-size-main;
+		}
 	}
 
 	.horizontalrule {
@@ -17,8 +22,17 @@
 	.guestbook-inputform-box-description {
 		font-size: $font-size-sub;
 		font-weight: 900;
-		color: $font-color-sub1-dark;
+		color: $font-color-sub1-light;
 		margin-bottom: calc(#{$submenu-margin/2});
 		margin-left: $submenu-margin;
+		@include tab {
+			margin-left: calc(#{$submenu-margin/2});
+		}
+	}
+
+	&.dark {
+		.guestbook-inputform-box-description {
+			color: $font-color-sub1-dark;
+		}
 	}
 }

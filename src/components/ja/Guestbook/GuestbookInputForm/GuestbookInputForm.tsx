@@ -161,7 +161,7 @@ export default function GuestbookInputForm(props: { isDarkmode: boolean }) {
 	return (
 		<Fragment>
 			{!isFormFilledProperly && <GuestbookInputFormModal isFormFilledProperlyHandler={isFormFilledProperlyHandler} />}
-			<form id="guestbook-input-form" onSubmit={submitHandler}>
+			<form id="guestbook-input-form" className={props.isDarkmode ? 'dark' : ''} onSubmit={submitHandler}>
 				<div className="guestbook-form-name-password-box">
 					<div className="guestbook-form-name-box">
 						<div className="guestbook-form-elements-title">お名前</div>
