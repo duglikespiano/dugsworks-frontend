@@ -18,6 +18,7 @@
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
+		@include basicTransition;
 		&:hover {
 			color: $font-color-emphasize-light;
 		}
