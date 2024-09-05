@@ -7,7 +7,7 @@ export default function NavInModal(props: { hamburgerHandler: () => void; navMod
 
 	return (
 		<ul id="nav-in-modal-links">
-			{menus.ko.map((item, i) => (
+			{menus.ja.map((item, i) => (
 				<li className="nav-in-modal-link" key={i}>
 					<h2 className="category">
 						<Link
