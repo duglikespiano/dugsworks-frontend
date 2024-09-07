@@ -17,7 +17,8 @@
 
 - Project title : dugsworks_frontend
 - URL : https://dugsworks.netlify.app
-- Period : Sep 29 2023 - Oct 31 2023 (1month)
+- Period1 : Sep 29 2023 - Oct 31 2023 (1month)
+- Period1 : Aug 14 2023 - Sep 06 2023 (1month)
 - Member(s) : Dug Park
 - Tech stack : </br>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
@@ -41,6 +42,11 @@
 
 ### 3. Development note
 
+- OGP applied(20240906)
+- Japanese font changed(20240905)
+- Responsive layout applied(20240905)
+- Darkmode applied(20240827)
+- CSS Simplified(20240820)
 - Messages delete API on guestbook page added(Oct 26 2023)
 - Guestbook page connected with backend(Oct 21 2023)
 - Contact page connected with backend(Oct 16 2023)
@@ -56,5 +62,4 @@
 
 ### 4. What needs to get improved
 
-- Applying responsive web
-- Applying dark/light mode
+-
