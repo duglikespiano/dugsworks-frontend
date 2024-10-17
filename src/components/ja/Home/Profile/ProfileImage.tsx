@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import '../../../../scss/Home/Profile/ProfileImage.scss';
-import profileImage from '../../../../images/profile-image.jpg';
+import profileImage from '../../../../images/profile.jpg';
 
 export default function ProfileImage() {
 	return (
