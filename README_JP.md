@@ -18,7 +18,7 @@
 - Project タイトル: dugsworks_frontend
 - URL : https://dugsworks.netlify.app
 - 期間１ : 2023.09.29 - 2023.10.31 (1 ヶ月)
-- 期間１ : 2024.08.14 - 2024.09.06 (1 ヶ月)
+- 期間 2 : 2024.08.14 - 2024.09.06 (1 ヶ月)
 - 人員 : 1 人
 - 技術スタック : </br>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
