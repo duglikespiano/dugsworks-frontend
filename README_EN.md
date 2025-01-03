@@ -18,7 +18,7 @@
 - Project title : dugsworks_frontend
 - URL : https://dugsworks.netlify.app
 - Period1 : Sep 29 2023 - Oct 31 2023 (1month)
-- Period1 : Aug 14 2023 - Sep 06 2023 (1month)
+- Period2 : Aug 14 2024 - Sep 06 2024 (1month)
 - Member(s) : Dug Park
 - Tech stack : </br>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
