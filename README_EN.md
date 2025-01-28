@@ -63,4 +63,4 @@
 ### 4. What needs to get improved
 
 - Improving messages loading time for guestbook
-- Converting framework into next.js
+- Migrating framework to Astro
